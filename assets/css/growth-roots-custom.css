@@ -1,0 +1,97 @@
+/* Growth Roots Custom Brand Colors */
+/* 
+   Primary Green: #296c3f (Dark Spring Green)
+   Secondary Green: #3f7d46 (Fern Green) 
+   Accent Green: #5a994d (Asparagus)
+   Dark: #0e1f2d (Rich Black)
+   Light: #f5f5f0 (Baby Powder)
+*/
+
+:root {
+    --gr-primary: #296c3f;
+    --gr-secondary: #3f7d46;
+    --gr-accent: #5a994d;
+    --gr-dark: #0e1f2d;
+    --gr-light: #f5f5f0;
+}
+
+/* Override orange theme with green */
+.has-theme-orange .rs-btn,
+.rs-btn.has-theme-orange {
+    background-color: var(--gr-primary) !important;
+}
+
+.has-theme-orange .rs-btn:hover,
+.rs-btn.has-theme-orange:hover {
+    background-color: var(--gr-secondary) !important;
+}
+
+.rs-theme-orange {
+    color: var(--gr-accent) !important;
+}
+
+.primary-bg {
+    background-color: var(--gr-dark) !important;
+}
+
+/* Button hover effects */
+.rs-btn.has-theme-orange:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(41, 108, 63, 0.3);
+}
+
+/* Section backgrounds */
+.rs-about-area,
+.rs-services-area {
+    position: relative;
+}
+
+/* Links and accents */
+a:hover {
+    color: var(--gr-accent);
+}
+
+.has-stroke {
+    color: var(--gr-primary);
+}
+
+/* Navigation */
+.main-menu ul li a:hover {
+    color: var(--gr-accent);
+}
+
+/* Counter and stats */
+.rs-counter-number {
+    color: var(--gr-accent);
+}
+
+/* Service cards */
+.rs-services-item:hover {
+    border-color: var(--gr-primary);
+}
+
+/* Social icons */
+.rs-theme-social.has-orange a:hover {
+    background-color: var(--gr-primary);
+}
+
+/* Pagination */
+.rs-pagination.has-theme-orange .swiper-pagination-bullet-active {
+    background-color: var(--gr-primary);
+}
+
+/* Custom animations */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.rs-banner-title {
+    animation: slideInFromLeft 1s ease-out;
+}

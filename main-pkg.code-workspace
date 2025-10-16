@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../Users/abdelrahman_yosry/Downloads/industrie-factory-industry-html-template-2025-10-09-14-45-49-utc/main-pkg"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "main-pkg"
+	}
+}
