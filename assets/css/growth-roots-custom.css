@@ -359,3 +359,12 @@ a:hover {
 .rs-contact-form.rs-contact-one.has-robotic {
     background-color: var(--gr-primary) !important;
 }
+
+.rs-footer-area.rs-footer-two.has-space.has-theme-orange.has-bg-thumb {
+    background-color: var(--gr-primary) !important;
+}
+
+.rs-brand-area.rs-brand-five.section-space-bottom {
+    padding-top: 120px !important;
+    padding-bottom: 0 !important;
+}
