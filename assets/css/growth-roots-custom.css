@@ -355,3 +355,7 @@ a:hover {
     padding: 30px 0px;
     background-color:#296c3f;
 }
+
+.rs-contact-form.rs-contact-one.has-robotic {
+    background-color: var(--gr-primary) !important;
+}
