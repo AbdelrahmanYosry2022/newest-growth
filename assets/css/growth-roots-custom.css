@@ -184,6 +184,13 @@ a:hover {
     border-bottom: 1px solid rgba(41, 108, 63, 0.15);
 }
 
+.rs-services-ten .rs-services-tab-anim .tab-pane,
+.rs-services-ten .rs-services-tab-anim .tab-pane .rs-services-tab-item,
+.rs-services-one .rs-services-tab-anim .tab-pane .rs-services-tab-content-wrapper {
+    animation: none !important;
+    -webkit-animation: none !important;
+}
+
 /* Pagination */
 .rs-pagination.has-theme-orange .swiper-pagination-bullet-active {
     background-color: var(--gr-primary);
