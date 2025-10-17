@@ -197,13 +197,13 @@ h6, .body__overlay {
   --rs-white: #FFFFFF;
   --rs-black: #1F1F1F;
   --rs-light: #eee;
-  --rs-theme-orange: #EA5501;
+  --rs-theme-orange: #5a994d;
   --rs-theme-red: #E30613;
   --rs-theme-blue: #005EB8;
   --rs-theme-light-blue: #0D80CE;
   --rs-theme-green: #023B4A;
   --rs-theme-light-green: #507A7C;
-  --rs-theme-yellow: #F7C600;
+  --rs-theme-yellow: #5a994d;
   --rs-theme-deep-blue: #3B37FD;
   --rs-text-primary: #616161;
   --rs-text-secondary: #CBCCCD;
@@ -2879,14 +2879,7 @@ textarea:focus {
 .rs-section-subtitle.has-theme-light-blue {
   color: var(--rs-theme-light-blue);
 }
-.rs-section-subtitle.has-stroke {
-  -webkit-text-stroke-color: rgba(234, 85, 1, 0.65);
-  stroke: rgba(234, 85, 1, 0.65);
-  letter-spacing: 4.6px;
-  color: rgba(2, 1, 1, 0);
-  -webkit-text-stroke-width: 1px;
-  stroke-width: 1px;
-}
+
 .rs-section-subtitle.has-theme-deep-blue {
   color: var(--rs-theme-deep-blue);
 }
@@ -7754,15 +7747,14 @@ body.rtl .rs-theme-dir-slide {
   z-index: -1;
 }
 .rs-banner-seven .rs-banner-bg-thumb-two {
-  position: absolute;
-  width: 100%;
+  width: 90%;
   height: 100%;
-  top: 0;
+  margin: auto 5%;
   inset-inline-start: 0;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
-  border-radius: 140px 140px 140px 140px;
+  border-radius: 80px 80px 80px 80px;
 }
 .rs-banner-seven .rs-banner-subtitle {
   font-size: 18px;

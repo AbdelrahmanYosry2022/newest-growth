@@ -95,3 +95,29 @@ a:hover {
 .rs-banner-title {
     animation: slideInFromLeft 1s ease-out;
 }
+
+.rs-services-area.primary-bg {
+    background-color: rgb(247, 247, 247) !important;
+}
+
+.rs-services-ten .rs-section-subtitle,
+.rs-services-ten .rs-section-title,
+.rs-services-ten .rs-section-title span {
+    color: var(--gr-dark);
+}
+
+.rs-services-ten .rs-services-tab-number,
+.rs-services-ten .rs-services-icon svg path {
+    color: var(--gr-primary);
+    fill: var(--gr-primary);
+}
+
+.rs-services-ten .rs-btn {
+    background-color: var(--gr-primary);
+    border-color: var(--gr-primary);
+}
+
+.rs-services-ten .rs-btn:hover {
+    background-color: var(--gr-secondary);
+    border-color: var(--gr-secondary);
+}
