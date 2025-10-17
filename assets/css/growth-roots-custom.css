@@ -426,3 +426,15 @@ a:hover {
 .rs-contact-form.rs-contact-one.has-white textarea::placeholder {
     color: rgba(245, 245, 240, 0.8);
 }
+
+
+.rs-breadcrumb-one {
+  padding-top: 280px;
+  padding-bottom: 180px;
+}
+
+/* History section background */
+.rs-history-bg-thumb {
+    background-color: var(--gr-light) !important;
+    background-image: none !important;
+}
