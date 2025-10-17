@@ -9,6 +9,7 @@
         gsap_rs_custom_cursor();
         gsap_rs_image_reveal();
         gsap_fixed_elements();
+        gsap_rs_services_tab_anim();
     });
 
     // Split Text
@@ -192,6 +193,34 @@
             const match = className.match(regex);
             return match !== null ? parseInt(match[1]) : defaultValue;
         }
+    }
+
+    // Services tab reveal
+    function gsap_rs_services_tab_anim() {
+        const tabItems = document.querySelectorAll('.rs-services-tab-anim .rs-services-tab-item');
+        if (!tabItems.length) {
+            return;
+        }
+        gsap.registerPlugin(ScrollTrigger);
+        tabItems.forEach((item) => {
+            gsap.fromTo(
+                item,
+                { opacity: 0, y: 60 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    ease: 'power2.out',
+                    duration: 0.8,
+                    reverseDelay: 0.4,
+                    scrollTrigger: {
+                        trigger: item,
+                        start: 'top 92%',
+                        end: 'top 35%',
+                        toggleActions: 'play none none reverse',
+                    },
+                }
+            );
+        });
     }
 
     // Custom Cursor

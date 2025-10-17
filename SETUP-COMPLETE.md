@@ -35,7 +35,7 @@
 3. ✅ **Operations Management** - Expert daily oversight
 4. ✅ **Training Programs** - Workforce development
 5. ✅ **Product Development** - Recipe formulation
-6. ✅ **Raw Materials Supply** - Premium Ricatto ingredients
+6. ✅ **Raw Materials Supply** - Premium Frozo
 7. ✅ **Factory Restructuring** - Transform struggling operations
 8. ✅ **Restaurant Support** - Restaurant & chain solutions
 
