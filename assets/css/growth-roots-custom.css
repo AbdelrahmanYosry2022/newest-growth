@@ -109,6 +109,16 @@
     box-shadow: none;
 }
 
+.rs-btn.has-theme-orange .icon-box svg,
+.has-theme-orange .rs-btn .icon-box svg {
+    fill: var(--gr-light) !important;
+}
+
+.rs-btn.has-theme-orange:hover .icon-box svg,
+.has-theme-orange .rs-btn:hover .icon-box svg {
+    fill: var(--gr-light) !important;
+}
+
 /* Section backgrounds */
 .rs-about-area,
 .rs-services-area {
@@ -161,6 +171,17 @@ a:hover {
     background-color: var(--gr-primary);
     color: var(--gr-light);
     border-color: transparent;
+}
+
+.rs-banner-seven .rs-banner-bg-thumb-two {
+    background-position: center center;
+}
+
+.rs-sticky {
+    background: rgb(255, 255, 255) !important;
+    backdrop-filter: blur(26px);
+    -webkit-backdrop-filter: blur(26px);
+    border-bottom: 1px solid rgba(41, 108, 63, 0.15);
 }
 
 /* Pagination */
