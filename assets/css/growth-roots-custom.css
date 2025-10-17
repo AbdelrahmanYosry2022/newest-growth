@@ -367,7 +367,12 @@ a:hover {
 
 .rs-brand-area.rs-brand-five.section-space-bottom {
     padding-top: 120px !important;
-    padding-bottom: 0 !important;
+    padding-bottom: 0px !important;
+}
+
+.rs-brand-area.rs-brand-five.section-space-bottom.services-brand-spacing {
+    padding-top: 120px !important;
+    padding-bottom: 120px !important;
 }
 
 .rs-footer-widget-stroke-text img {
@@ -387,4 +392,37 @@ a:hover {
 
 .rs-footer-widget.footer-2-col-2 {
     padding-left: 32px;
+}
+
+.rs-category-area.rs-category-one.has-theme-orange {
+    background-color: var(--gr-primary) !important;
+}
+
+.rs-category-area.rs-category-one.has-theme-orange .rs-category-bg-thumb,
+.rs-work-step-area.rs-work-step-five .rs-work-step-bg-thumb {
+    display: none !important;
+}
+
+.rs-contact-form.rs-contact-one.has-white {
+    background-color: var(--gr-primary) !important;
+    color: var(--gr-light);
+}
+
+.rs-contact-form.rs-contact-one.has-white .rs-contact-form-title,
+.rs-contact-form.rs-contact-one.has-white .descrip,
+.rs-contact-form.rs-contact-one.has-white label,
+.rs-contact-form.rs-contact-one.has-white input,
+.rs-contact-form.rs-contact-one.has-white textarea {
+    color: var(--gr-light);
+}
+
+.rs-contact-form.rs-contact-one.has-white input,
+.rs-contact-form.rs-contact-one.has-white textarea {
+    border-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.rs-contact-form.rs-contact-one.has-white input::placeholder,
+.rs-contact-form.rs-contact-one.has-white textarea::placeholder {
+    color: rgba(245, 245, 240, 0.8);
 }
