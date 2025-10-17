@@ -83,25 +83,29 @@
                         </div>
                     </div>
                     <div class="rs-header-menu">
-                        <div class="rs-theme-social has-transparent has-orange">
-                            <a href="#" id="lang-toggle" class="language-toggle" style="margin-right: 15px; font-weight: 600;">
-                                <i class="ri-global-line"></i> EN | AR
-                            </a>
-                            <a href="#"><i class="ri-twitter-x-line"></i></a>
-                            <a href="#"><i class="ri-facebook-fill"></i></a>
-                            <a href="#"><i class="ri-linkedin-fill"></i></a>
-                            <a href="#"><i class="ri-instagram-line"></i></a>
+                        <div class="rs-header-utility">
+                            <div class="rs-language-toggle">
+                                <a href="#" class="language-toggle" aria-haspopup="true" aria-expanded="false">
+                                    <i class="ri-global-line"></i>
+                                </a>
+                                <div class="language-menu" role="menu">
+                                    <a href="#" role="menuitem">EN</a>
+                                    <a href="#" role="menuitem">AR</a>
+                                </div>
+                            </div>
+                            <div class="rs-theme-social has-transparent has-orange">
+                                <a href="#"><i class="ri-facebook-fill"></i></a>
+                                <a href="#"><i class="ri-linkedin-fill"></i></a>
+                                <a href="#"><i class="ri-instagram-line"></i></a>
+                            </div>
                         </div>
                         <nav id="mobile-menu" class="main-menu">
                             <ul class="multipage-menu">
                                 <li>
                                     <a href="index.html">Home</a>
                                 </li>
-                                <li>
-                                    <a href="about.html">About Us</a>
-                                </li>
                                 <li class="menu-item-has-children">
-                                    <a href="services.html">Our Services</a>
+                                    <a href="services.html">Services</a>
                                     <ul class="submenu last-children">
                                         <li><a href="services.html">All Services</a></li>
                                         <li><a href="services-details.html">Factory Establishment</a></li>
@@ -115,20 +119,24 @@
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="shop.html">Our Products</a>
+                                    <a href="shop.html">Products</a>
                                     <ul class="submenu last-children">
-                                        <li><a href="shop.html">Ricatto Products</a></li>
+                                        <li><a href="shop.html">Ricetto Products</a></li>
                                         <li><a href="shop.html">Kaya Steel Equipment</a></li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="portfolio.html">Success Stories</a>
+                                    <a href="about.html">About Us</a>
                                 </li>
                                 <li>
-                                    <a href="faq.html">FAQ</a>
+                                    <a href="contact.html">Contact</a>
                                 </li>
-                                <li>
-                                    <a href="contact.html">Contact Us</a>
+                                <li class="menu-item-has-children">
+                                    <a href="#">More</a>
+                                    <ul class="submenu last-children">
+                                        <li><a href="portfolio.html">Success Stories</a></li>
+                                        <li><a href="faq.html">FAQ</a></li>
+                                    </ul>
                                 </li>
                             </ul>
                         </nav>
@@ -149,19 +157,15 @@
                         </div>
                         <!-- search area end -->
                         <div class="rs-header-btn">
-                            <a class="rs-btn has-theme-orange has-icon has-bg has-large-radius" href="contact.html">Get In Touch
+                            <a class="rs-btn has-theme-orange has-icon has-bg has-large-radius" href="contact.html">Get in Touch
                                 <span class="icon-box">
-                                <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                    <path
-                                        d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z">
-                                    </path>
-                                </svg>
-                                <svg class="icon-second" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                    <path
-                                        d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z">
-                                    </path>
-                                </svg>
-                            </span>
+                                    <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                        <path d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z"></path>
+                                    </svg>
+                                    <svg class="icon-second" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                        <path d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z"></path>
+                                    </svg>
+                                </span>
                             </a>
                         </div>
                         <div class="rs-header-hamburger">
@@ -725,7 +729,11 @@
                             <div class="rs-services-tab">
                                 <ul class="nav nav-pills" id="pills-tab2" role="tablist">
                                     <li class="nav-item active" role="presentation">
-                                        <span class="rs-services-tab-number">01</span>
+                                        <div class="rs-services-tab-brand">
+                                            <div class="rs-services-tab-logo">
+                                                <img src="./public/photos/LayeredScrollGallery/Logos/growth-roots-logo.png" alt="Growth Roots logo">
+                                            </div>
+                                        </div>
                                         <button class="nav-link active" id="pills-item-eight-tab" data-bs-toggle="pill" data-bs-target="#pills-item-eight" type="button" role="tab" aria-controls="pills-item-eight" aria-selected="true">
                                             Growth Roots <span class="rs-services-icon"><svg xmlns="http://www.w3.org/2000/svg" width="51" height="12" viewBox="0 0 51 12" fill="none">
                                                     <path d="M50.5303 6.53033C50.8232 6.23744 50.8232 5.76256 50.5303 5.46967L45.7574 0.696699C45.4645 0.403806 44.9896 0.403806 44.6967 0.696699C44.4038 0.989593 44.4038 1.46447 44.6967 1.75736L48.9393 6L44.6967 10.2426C44.4038 10.5355 44.4038 11.0104 44.6967 11.3033C44.9896 11.5962 45.4645 11.5962 45.7574 11.3033L50.5303 6.53033ZM0 6.75H50V5.25H0V6.75Z" fill="#296c3f"></path>
@@ -733,24 +741,24 @@
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <span class="rs-services-tab-number">02</span>
+                                        <div class="rs-services-tab-brand">
+                                            <div class="rs-services-tab-logo">
+                                                <img src="public/photos/LayeredScrollGallery/Logos/kaya-logo.png" alt="Kaya Steel logo">
+                                            </div>
+                                        </div>
                                         <button class="nav-link" id="pills-item-nine-tab" data-bs-toggle="pill" data-bs-target="#pills-item-nine" type="button" role="tab" aria-controls="pills-item-nine" aria-selected="false"> Kaya Steel <span class="rs-services-icon"><svg xmlns="http://www.w3.org/2000/svg" width="51" height="12" viewBox="0 0 51 12" fill="none">
                                                     <path d="M50.5303 6.53033C50.8232 6.23744 50.8232 5.76256 50.5303 5.46967L45.7574 0.696699C45.4645 0.403806 44.9896 0.403806 44.6967 0.696699C44.4038 0.989593 44.4038 1.46447 44.6967 1.75736L48.9393 6L44.6967 10.2426C44.4038 10.5355 44.4038 11.0104 44.6967 11.3033C44.9896 11.5962 45.4645 11.5962 45.7574 11.3033L50.5303 6.53033ZM0 6.75H50V5.25H0V6.75Z" fill="#296c3f"></path>
                                                 </svg></span>
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <span class="rs-services-tab-number">03</span>
+                                        <div class="rs-services-tab-brand">
+                                            <div class="rs-services-tab-logo">
+                                                <img src="public/photos/LayeredScrollGallery/Logos/ricetto-logo.png" alt="Ricetto logo">
+                                            </div>
+                                        </div>
                                         <button class="nav-link" id="pills-item-ten-tab" data-bs-toggle="pill" data-bs-target="#pills-item-ten" type="button" role="tab" aria-controls="pills-item-ten" aria-selected="false">
                                             Ricetto<span class="rs-services-icon"><svg xmlns="http://www.w3.org/2000/svg" width="51" height="12" viewBox="0 0 51 12" fill="none">
-                                                    <path d="M50.5303 6.53033C50.8232 6.23744 50.8232 5.76256 50.5303 5.46967L45.7574 0.696699C45.4645 0.403806 44.9896 0.403806 44.6967 0.696699C44.4038 0.989593 44.4038 1.46447 44.6967 1.75736L48.9393 6L44.6967 10.2426C44.4038 10.5355 44.4038 11.0104 44.6967 11.3033C44.9896 11.5962 45.4645 11.5962 45.7574 11.3033L50.5303 6.53033ZM0 6.75H50V5.25H0V6.75Z" fill="#296c3f"></path>
-                                                </svg></span>
-                                        </button>
-                                    </li>
-                                    <li class="nav-item" role="presentation">
-                                        <span class="rs-services-tab-number">04</span>
-                                        <button class="nav-link" id="pills-item-eleven-tab" data-bs-toggle="pill" data-bs-target="#pills-item-eleven" type="button" role="tab" aria-controls="pills-item-eleven" aria-selected="false">
-                                            Frozo<span class="rs-services-icon"><svg xmlns="http://www.w3.org/2000/svg" width="51" height="12" viewBox="0 0 51 12" fill="none">
                                                     <path d="M50.5303 6.53033C50.8232 6.23744 50.8232 5.76256 50.5303 5.46967L45.7574 0.696699C45.4645 0.403806 44.9896 0.403806 44.6967 0.696699C44.4038 0.989593 44.4038 1.46447 44.6967 1.75736L48.9393 6L44.6967 10.2426C44.4038 10.5355 44.4038 11.0104 44.6967 11.3033C44.9896 11.5962 45.4645 11.5962 45.7574 11.3033L50.5303 6.53033ZM0 6.75H50V5.25H0V6.75Z" fill="#296c3f"></path>
                                                 </svg></span>
                                         </button>
@@ -813,28 +821,6 @@
                                             </div>
                                             <div class="rs-services-tab-btn">
                                                 <a class="rs-btn has-theme-orange has-icon has-bg" href="services.html">Upskill Your Team
-                                                    <span class="icon-box">
-                                                        <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                                            <path d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z"></path>
-                                                        </svg>
-                                                        <svg class="icon-second" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                                            <path d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z"></path>
-                                                        </svg>
-                                                    </span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="pills-item-eleven" role="tabpanel" aria-labelledby="pills-item-eleven-tab" tabindex="0">
-                                    <div class="rs-services-tab-item">
-                                        <div class="rs-services-bg-thumb" data-background="public/photos/LayeredScrollGallery/Whisk_4f255331ef2175eb7f1470c03de3a5b1dr.jpeg"></div>
-                                        <div class="rs-services-tab-content">
-                                            <div class="rs-services-descrip">
-                                                <p>Our food scientists craft premium SKUs, source signature ingredients, and scale production.</p>
-                                            </div>
-                                            <div class="rs-services-tab-btn">
-                                                <a class="rs-btn has-theme-orange has-icon has-bg" href="services.html">Launch New Products
                                                     <span class="icon-box">
                                                         <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                                                             <path d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z"></path>
@@ -937,15 +923,6 @@
 
         <!-- portfolio area start -->
         <section class="rs-portfolio-area section-space rs-portfolio-seven rs-swiper">
-            <div class="rs-portfolio-shape">
-                <img src="assets/images/shape/robo-arm-01.png" alt="image">
-            </div>
-            <div class="rs-portfolio-shape-two has-reverse">
-                <img class="gsap-rotate-anti" src="assets/images/shape/gear-shape-01.png" alt="">
-            </div>
-            <div class="rs-portfolio-shape-three">
-                <img class="gsap-rotate" src="assets/images/shape/gear-shape-02.png" alt="">
-            </div>
             <div class="container">
                 <div class="row  g-5 justify-content-center section-title-space align-items-center">
                     <div class="col-xxl-6 col-xl-7 col-lg-8 col-md-8 col-sm-10">
