@@ -21,12 +21,12 @@
 /* Arabic Language Styles */
 html[lang="ar"],
 html[lang="ar"] body {
-    font-family: 'Cairo', sans-serif !important;
+    font-family: 'Cairo', sans-serif;
     direction: rtl;
 }
 
-html[lang="ar"] * {
-    font-family: 'Cairo', sans-serif !important;
+html[lang="ar"] *:not(i):not([class*="ri-"]):not([class*="fa-"]):not([class*="icon"]) {
+    font-family: 'Cairo', sans-serif;
 }
 
 /* RTL adjustments */
@@ -151,6 +151,7 @@ html[lang="ar"] .rs-banner-content {
 
 html[lang="ar"] .rs-banner-title-wrpper {
     text-align: center;
+    margin-bottom: 48px;
 }
 
 html[lang="ar"] .rs-about-tab .nav-pills {
