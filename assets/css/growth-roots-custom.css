@@ -61,8 +61,18 @@ html[lang="ar"] .rs-header-area .rs-header-right {
     justify-self: start;
 }
 
+html[lang="ar"] .main-menu > ul {
+    
+    align-items: center;
+}
+
 html[lang="ar"] .main-menu ul li {
-    float: right;
+    float: none;
+    display: flex;
+}
+
+html[lang="ar"] .main-menu > ul > li > a {
+    justify-content: flex-end;
 }
 
 html[lang="ar"] .rs-banner-btn {
@@ -135,8 +145,22 @@ html[lang="ar"] .rs-footer-widget.footer-2-col-2 {
 }
 
 html[lang="ar"] .submenu {
-    right: auto;
-    left: 0;
+    left: auto;
+    right: 0;
+    width: auto;
+    min-width: 200px;
+}
+
+html[lang="ar"] .submenu ul {
+    inset-inline-start: auto;
+    inset-inline-end: 100%;
+    width: auto;
+    min-width: 200px;
+}
+
+html[lang="ar"] .submenu li a {
+    text-align: right;
+    padding: 12px 20px;
 }
 
 html[lang="ar"] .rs-about-thumb-wrapper {
@@ -279,6 +303,19 @@ html[lang="ar"] .rs-about-content-wrapper .rs-section-title-wrapper {
     position: relative;
 }
 
+/* Transparent hover bridge to keep hover while moving from button to menu */
+.rs-language-toggle::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 0;
+    height: 10px; /* match the gap value below */
+    width: 160px; /* cover the menu width */
+    background: transparent;
+    pointer-events: auto; /* keeps :hover on parent while traversing the gap */
+    z-index: 9; /* below the menu (menu has z-index:10) */
+}
+
 .rs-language-toggle .language-toggle {
     width: 42px;
     height: 42px;
@@ -301,7 +338,7 @@ html[lang="ar"] .rs-about-content-wrapper .rs-section-title-wrapper {
 
 .rs-language-toggle .language-menu {
     position: absolute;
-    top: calc(100% + 10px);
+    top: calc(100% + 10px); /* restore visual gap; matched by the hover bridge */
     right: 0;
     display: none;
     flex-direction: column;
