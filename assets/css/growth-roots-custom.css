@@ -85,6 +85,16 @@ html[lang="ar"] .rs-elements-portfolio-area .rs-section-subtitle {
     text-align: center;
 }
 
+html[lang="ar"] .rs-portfolio-area .rs-section-title-wrapper {
+    text-align: center;
+    align-items: center;
+}
+
+html[lang="ar"] .rs-portfolio-area .rs-section-title {
+    text-align: center;
+    line-height: 1.7;
+}
+
 html[lang="ar"] .rs-services-ten .rs-services-tab .nav-link {
     gap: 65px;
     padding-inline-end: 70px;

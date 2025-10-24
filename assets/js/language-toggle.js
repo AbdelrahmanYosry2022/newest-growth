@@ -114,6 +114,39 @@
             'why.item3Title': 'Proven Track Record',
             'why.item3Desc': '20+ years of successful projects across Egypt, transforming visions into profitable realities.',
 
+            // Success Stories Section
+            'success.subtitle': 'Success Stories',
+            'success.title': 'Discover our <span class="rs-theme-orange">successful projects</span> across Egypt',
+            'success.itemFactoryEstablishment': 'Factory Establishment',
+            'success.itemFactoryDesc': 'Complete Poultry Factory Setup',
+            'success.itemEquipmentSupply': 'Equipment Supply',
+            'success.itemEquipmentDesc': 'Kaya Steel Production Lines',
+            'success.itemRestructuring': 'Restructuring',
+            'success.itemRestructuringDesc': 'Meat Factory Transformation',
+
+            // Counter Section
+            'metrics.factoryLaunches': 'Factories launched with Growth Roots',
+            'metrics.efficiencyGain': 'Average efficiency improvement',
+            'metrics.mealCapacity': 'Million meals of annual capacity',
+            'metrics.trainingHours': 'Hours of technical training delivered',
+
+            // Work Process Section
+            'work.subtitle': 'Work Process',
+            'work.title': 'How we <span class="rs-theme-orange">complete</span> work',
+            'work.step1Title': 'Product Design and Planning',
+            'work.step1Desc': 'The point of using Lorem Ipsum is that it has more-or-less normal.',
+            'work.step2Title': 'Component Sourcing and Procurement',
+            'work.step2Desc': 'Reader will be distracted by the readable content of a page when looking.',
+            'work.step3Title': 'Testing and Quality Control',
+            'work.step3Desc': 'Packages and web page editors now use as their default model.',
+            'work.step4Title': 'Final Assembly and Integration',
+            'work.step4Desc': 'The standard chunk of Lorem Ipsum used since the 1500s is reproduced below.',
+
+            // Contact Section
+            'contact.title': 'Have any Question?',
+            'contact.description': 'The point of using Lorem Ipsum is that it has more-or-less normal',
+            'contact.button': 'Send Message',
+
             // Slider Text
             'slider.establishment': 'Establishment',
             'slider.equipments': 'Equipments',
@@ -243,6 +276,39 @@
             'why.item2Desc': 'شراكتنا مع كايا ستيل تضمن معدات عالية الجودة مصنّعة بمعايير أوروبية صارمة.',
             'why.item3Title': 'سجل نجاح مثبت',
             'why.item3Desc': 'أكثر من 20 عامًا من المشاريع الناجحة في مصر نحول الرؤى إلى واقع مربح.',
+
+            // Success Stories Section
+            'success.subtitle': 'قصص النجاح',
+            'success.title': 'اكتشف <span class="rs-theme-orange">قصص نجاحنا</span> في مختلف أنحاء مصر',
+            'success.itemFactoryEstablishment': 'تأسيس المصانع',
+            'success.itemFactoryDesc': 'تنفيذ كامل لمصانع الدواجن',
+            'success.itemEquipmentSupply': 'توريد المعدات',
+            'success.itemEquipmentDesc': 'خطوط إنتاج كايا ستيل',
+            'success.itemRestructuring': 'إعادة الهيكلة',
+            'success.itemRestructuringDesc': 'تحويل مصانع اللحوم المتعثرة',
+
+            // Counter Section
+            'metrics.factoryLaunches': 'مصانع أطلقناها مع جروث رووتس',
+            'metrics.efficiencyGain': 'متوسط تحسن الكفاءة',
+            'metrics.mealCapacity': 'ملايين الوجبات من الطاقة الإنتاجية السنوية',
+            'metrics.trainingHours': 'ساعات التدريب التقني المقدمة',
+
+            // Work Process Section
+            'work.subtitle': 'عملية العمل',
+            'work.title': 'كيف نُكمل <span class="rs-theme-orange">العمل</span>',
+            'work.step1Title': 'تصميم المنتج والتخطيط',
+            'work.step1Desc': 'تكمن فائدة استخدام لوريم إيبسوم في أنه يشبه النص الطبيعي إلى حد كبير.',
+            'work.step2Title': 'توريد المكوّنات وشراؤها',
+            'work.step2Desc': 'قد يتشتت القارئ بسبب محتوى الصفحة عند الاطلاع عليه.',
+            'work.step3Title': 'الاختبار وضبط الجودة',
+            'work.step3Desc': 'تعتمد حزم البرمجيات ومحررات الصفحات عليه كنموذج افتراضي.',
+            'work.step4Title': 'التجميع النهائي والتكامل',
+            'work.step4Desc': 'يُعاد استخدام المقطع القياسي من لوريم إيبسوم منذ القرن السادس عشر حتى الآن.',
+
+            // Contact Section
+            'contact.title': 'هل لديك أي استفسار؟',
+            'contact.description': 'تكمن فائدة استخدام لوريم إيبسوم في أنه يشبه النص الطبيعي إلى حد كبير.',
+            'contact.button': 'أرسل الرسالة',
 
             // Slider Text
             'slider.establishment': 'التأسيس',
