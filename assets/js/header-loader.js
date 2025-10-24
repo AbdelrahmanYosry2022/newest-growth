@@ -161,5 +161,16 @@
         if (typeof window.initLanguageToggle === 'function') {
             window.initLanguageToggle();
         }
+
+        if (window.jQuery && typeof window.jQuery.fn.meanmenu === 'function') {
+            const mobileMenuContainer = document.querySelector('.mobile-menu');
+            if (mobileMenuContainer && !mobileMenuContainer.querySelector('.mean-nav')) {
+                window.jQuery('#mobile-menu').meanmenu({
+                    meanMenuContainer: '.mobile-menu',
+                    meanScreenWidth: '1199',
+                    meanExpand: ['<i class="fa-regular fa-plus"></i>'],
+                });
+            }
+        }
     }
 })();
