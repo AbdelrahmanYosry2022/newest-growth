@@ -147,6 +147,26 @@
             'contact.description': 'The point of using Lorem Ipsum is that it has more-or-less normal',
             'contact.button': 'Send Message',
 
+            // Footer Section
+            'footer.aboutTitle': 'About Growth Roots',
+            'footer.aboutDescription': "Egypt's leading provider of comprehensive food manufacturing solutions, specializing in meat and poultry production facilities.",
+            'footer.linksTitle': 'Useful Links',
+            'footer.linkAbout': 'About Us',
+            'footer.linkServices': 'Our Services',
+            'footer.linkPortfolio': 'Success Stories',
+            'footer.linkFaq': 'FAQ',
+            'footer.linkContact': 'Contact Us',
+            'footer.addressTitle': 'Office Address',
+            'footer.address': 'Cairo, Egypt<br>Industrial Zone',
+            'footer.emailTitle': 'Email Address',
+            'footer.emailPrompt': 'Ready to start your project?',
+            'footer.email': 'info@growthroots.com',
+            'footer.phoneTitle': 'Phone Number',
+            'footer.phonePrimary': '+20 xxx xxx xxxx',
+            'footer.phoneSecondary': '+20 xxx xxx xxxx',
+            'footer.followTitle': 'Follow Us',
+            'footer.copyright': '© <span id="year">2025</span> Growth Roots. All Rights Reserved. | Your Complete Food Manufacturing Partner',
+
             // Slider Text
             'slider.establishment': 'Establishment',
             'slider.equipments': 'Equipments',
@@ -309,6 +329,26 @@
             'contact.title': 'هل لديك أي استفسار؟',
             'contact.description': 'تكمن فائدة استخدام لوريم إيبسوم في أنه يشبه النص الطبيعي إلى حد كبير.',
             'contact.button': 'أرسل الرسالة',
+
+            // Footer Section
+            'footer.aboutTitle': 'عن جروث رووتس',
+            'footer.aboutDescription': 'المزود الرائد في مصر للحلول الشاملة للتصنيع الغذائي والمتخصص في منشآت إنتاج اللحوم والدواجن.',
+            'footer.linksTitle': 'روابط مفيدة',
+            'footer.linkAbout': 'من نحن',
+            'footer.linkServices': 'خدماتنا',
+            'footer.linkPortfolio': 'قصص النجاح',
+            'footer.linkFaq': 'الأسئلة الشائعة',
+            'footer.linkContact': 'تواصل معنا',
+            'footer.addressTitle': 'عنوان المكتب',
+            'footer.address': 'القاهرة، مصر<br>المنطقة الصناعية',
+            'footer.emailTitle': 'البريد الإلكتروني',
+            'footer.emailPrompt': 'مستعد لبدء مشروعك؟',
+            'footer.email': 'info@growthroots.com',
+            'footer.phoneTitle': 'رقم الهاتف',
+            'footer.phonePrimary': '+20 xxx xxx xxxx',
+            'footer.phoneSecondary': '+20 xxx xxx xxxx',
+            'footer.followTitle': 'تابعنا',
+            'footer.copyright': '© <span id="year">2025</span> جروث رووتس. جميع الحقوق محفوظة. | شريكك الكامل في التصنيع الغذائي',
 
             // Slider Text
             'slider.establishment': 'التأسيس',
