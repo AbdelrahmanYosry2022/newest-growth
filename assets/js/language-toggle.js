@@ -5,7 +5,7 @@
 
 (function() {
     'use strict';
-    
+
     // Get current language from localStorage or default to 'en'
     let currentLang = localStorage.getItem('siteLanguage') || 'en';
     
@@ -90,7 +90,7 @@
             'services.restructuringDesc': 'Transform struggling operations into profitable facilities with comprehensive assessments.',
             'services.restaurantSupport': 'Restaurant Support',
             'services.restaurantSupportDesc': 'Specialized solutions for restaurants and food chains to improve operations and consistency.',
-            
+
             // Sub-Brands Section
             'subbrands.subtitle': 'Sub-Brands',
             'subbrands.title': 'Our Growth Roots Family',
@@ -165,7 +165,7 @@
             'footer.phonePrimary': '+20 xxx xxx xxxx',
             'footer.phoneSecondary': '+20 xxx xxx xxxx',
             'footer.followTitle': 'Follow Us',
-            'footer.copyright': '© <span id="year">2025</span> Growth Roots. All Rights Reserved. | Your Complete Food Manufacturing Partner',
+            'footer.copyright': ' 2025 Growth Roots. All Rights Reserved. | Your Complete Food Manufacturing Partner',
 
             // Slider Text
             'slider.establishment': 'Establishment',
@@ -228,7 +228,7 @@
             // About Section
             'about.subtitle': 'عن جروث روتس',
             'about.title': 'شريكك الموثوق لأكثر من <span class="rs-theme-orange">20 عامًا</span> في صناعة الغذاء',
-            'about.description': 'جروث رووتس هي المزود الرائد في مصر للحلول الشاملة لصناعة الغذاء، متخصصون في منشآت إنتاج اللحوم والدواجن.',
+            'about.description': 'جروث رووتس هي المزود الرائد في مصر للحلول الشاملة للتصنيع الغذائي والمتخصص في منشآت إنتاج اللحوم والدواجن.',
             'about.ourMission': 'رسالتنا',
             'about.missionText': 'نزرع بذور الجودة لنحصد مستقبلاً صحيًا ومزدهرًا لصناعة الغذاء في مصر.',
             'about.whyChoose': 'لماذا تختار جروث روتس؟',
@@ -348,16 +348,16 @@
             'footer.phonePrimary': '+20 xxx xxx xxxx',
             'footer.phoneSecondary': '+20 xxx xxx xxxx',
             'footer.followTitle': 'تابعنا',
-            'footer.copyright': '© <span id="year">2025</span> جروث رووتس. جميع الحقوق محفوظة. | شريكك الكامل في التصنيع الغذائي',
+            'footer.copyright': ' 2025 جروث رووتس. جميع الحقوق محفوظة. | شريكك الكامل في التصنيع الغذائي',
 
             // Slider Text
-            'slider.establishment': 'التأسيس',
-            'slider.equipments': 'المعدات',
-            'slider.operations': 'العمليات',
-            'slider.training': 'التدريب',
-            'slider.ingredients': 'المواد الخام',
-            'slider.restructuring': 'إعادة الهيكلة',
-            'slider.support': 'حلول الدعم',
+            'slider.establishment': 'تأسيس',
+            'slider.equipments': 'معدات',
+            'slider.operations': 'عمليات',
+            'slider.training': 'تدريب',
+            'slider.ingredients': 'مواد خام',
+            'slider.restructuring': 'إعادة هيكلة',
+            'slider.support': 'حلول دعم',
             
             // CTA Section
             'cta.title': 'مستعد لبدء مشروع التصنيع الغذائي؟',
@@ -366,7 +366,7 @@
             'cta.callUs': 'اتصل بنا الآن',
             
             // Footer
-            'footer.aboutGrowthRoots': 'عن جروث روتس',
+            'footer.aboutGrowthRoots': 'عن جروث رووتس',
             'footer.aboutText': 'المزود الرائد في مصر للحلول الشاملة لصناعة الغذاء، متخصصون في منشآت إنتاج اللحوم والدواجن.',
             'footer.usefulLinks': 'روابط مفيدة',
             'footer.officeAddress': 'عنوان المكتب',
@@ -375,7 +375,7 @@
             'footer.readyToStart': 'مستعد لبدء مشروعك؟',
             'footer.phoneNumber': 'رقم الهاتف',
             'footer.followUs': 'تابعنا',
-            'footer.copyright': 'جروث روتس. جميع الحقوق محفوظة. | شريكك الكامل في التصنيع الغذائي'
+            'footer.copyright': 'جروث رووتس. جميع الحقوق محفوظة. | شريكك الكامل في التصنيع الغذائي'
         }
     };
     
@@ -444,29 +444,37 @@
     }
 
     // Add event listeners to language toggle links
-    function attachLanguageListeners() {
+    function bindLanguageToggleHandlers() {
         document.querySelectorAll('.language-menu a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const lang = this.getAttribute('data-lang');
-                if (lang && lang !== currentLang) {
-                    localStorage.setItem('siteLanguage', lang);
-                    currentLang = lang;
-                    updateLanguageButtons();
-                    window.location.reload();
-                }
-            });
+            link.addEventListener('click', onLanguageToggleClick);
         });
+    }
+
+    function onLanguageToggleClick(event) {
+        event.preventDefault();
+        const lang = this.getAttribute('data-lang');
+        if (lang && lang !== currentLang) {
+            localStorage.setItem('siteLanguage', lang);
+            currentLang = lang;
+            updateLanguageButtons();
+            window.location.reload();
+        }
     }
 
     // Initialize when DOM is ready
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', function() {
-            initLanguage();
-            attachLanguageListeners();
-        });
+        document.addEventListener('DOMContentLoaded', initialize);
     } else {
-        initLanguage();
-        attachLanguageListeners();
+        initialize();
     }
+
+    function initialize() {
+        initLanguage();
+        bindLanguageToggleHandlers();
+    }
+
+    // expose helpers for dynamically injected header
+    window.attachLanguageToggle = bindLanguageToggleHandlers;
+    window.initLanguageToggle = initLanguage;
+
 })();
