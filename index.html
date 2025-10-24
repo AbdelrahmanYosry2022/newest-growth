@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -89,8 +89,8 @@
                                     <i class="ri-global-line"></i>
                                 </a>
                                 <div class="language-menu" role="menu">
-                                    <a href="#" role="menuitem">EN</a>
-                                    <a href="#" role="menuitem">AR</a>
+                                    <a href="#" role="menuitem" data-lang="en">EN</a>
+                                    <a href="#" role="menuitem" data-lang="ar">AR</a>
                                 </div>
                             </div>
                             <div class="rs-theme-social has-transparent has-orange">
@@ -102,40 +102,40 @@
                         <nav id="mobile-menu" class="main-menu">
                             <ul class="multipage-menu">
                                 <li>
-                                    <a href="index.html">Home</a>
+                                    <a href="index.html" data-i18n="nav.home">Home</a>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="services.html">Services</a>
+                                    <a href="services.html" data-i18n="nav.services">Services</a>
                                     <ul class="submenu last-children">
-                                        <li><a href="services.html">All Services</a></li>
-                                        <li><a href="services-details.html">Factory Establishment</a></li>
-                                        <li><a href="services-details.html">Equipment Supply</a></li>
-                                        <li><a href="services-details.html">Operations Management</a></li>
-                                        <li><a href="services-details.html">Training Programs</a></li>
-                                        <li><a href="services-details.html">Product Development</a></li>
-                                        <li><a href="services-details.html">Raw Materials Supply</a></li>
-                                        <li><a href="services-details.html">Restructuring</a></li>
-                                        <li><a href="services-details.html">Restaurant Support</a></li>
+                                        <li><a href="services.html" data-i18n="nav.allServices">All Services</a></li>
+                                        <li><a href="services-details.html" data-i18n="nav.factoryEstablishment">Factory Establishment</a></li>
+                                        <li><a href="services-details.html" data-i18n="nav.equipmentSupply">Equipment Supply</a></li>
+                                        <li><a href="services-details.html" data-i18n="nav.operationsManagement">Operations Management</a></li>
+                                        <li><a href="services-details.html" data-i18n="nav.trainingPrograms">Training Programs</a></li>
+                                        <li><a href="services-details.html" data-i18n="nav.productDevelopment">Product Development</a></li>
+                                        <li><a href="services-details.html" data-i18n="nav.rawMaterialsSupply">Raw Materials Supply</a></li>
+                                        <li><a href="services-details.html" data-i18n="nav.restructuring">Restructuring</a></li>
+                                        <li><a href="services-details.html" data-i18n="nav.restaurantSupport">Restaurant Support</a></li>
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="shop.html">Products</a>
+                                    <a href="#" data-i18n="nav.products">Products</a>
                                     <ul class="submenu last-children">
-                                        <li><a href="shop.html">Ricetto Products</a></li>
-                                        <li><a href="shop.html">Kaya Steel Equipment</a></li>
+                                        <li><a href="ricatto-products.html" data-i18n="nav.ricattoProducts">Ricatto Products</a></li>
+                                        <li><a href="kaya-products.html" data-i18n="nav.kayaEquipment">Kaya Steel Equipment</a></li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="about.html">About Us</a>
+                                    <a href="about.html" data-i18n="nav.about">About Us</a>
                                 </li>
                                 <li>
-                                    <a href="contact.html">Contact</a>
+                                    <a href="contact.html" data-i18n="nav.contact">Contact</a>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="#">More</a>
+                                    <a href="#" data-i18n="nav.more">More</a>
                                     <ul class="submenu last-children">
-                                        <li><a href="portfolio.html">Success Stories</a></li>
-                                        <li><a href="faq.html">FAQ</a></li>
+                                        <li><a href="success-stories.html" data-i18n="nav.successStories">Success Stories</a></li>
+                                        <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -143,7 +143,7 @@
                     </div>
                     <div class="rs-header-right">
                         <div class="rs-header-btn">
-                            <a class="rs-btn has-theme-orange has-icon has-bg has-large-radius" href="contact.html">Get in Touch
+                            <a class="rs-btn has-theme-orange has-icon has-bg has-large-radius" href="contact.html"><span data-i18n="nav.getInTouch">Get in Touch</span>
                                 <span class="icon-box">
                                     <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                                         <path d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z"></path>
@@ -192,40 +192,6 @@
                     <div class="offcanvas-about mb-30 d-none d-sm-block">
                         <p>Growth Roots is Egypt's premier partner for food manufacturing excellence. We provide comprehensive solutions from factory establishment to operations, serving meat and poultry producers with over 20 years of experience.
                         </p>
-                    </div>
-                    <div class="offcanvas-gallery d-none d-sm-block">
-                        <div class="offcanvas-gallery-thumb-wrapper">
-                            <div class="offcanvas-popup-thumb">
-                                <a class="popup-image" href="assets/images/gallery/gallery-thumb-01.png">
-                                    <img src="assets/images/gallery/gallery-thumb-01.png" alt="image">
-                                </a>
-                            </div>
-                            <div class="offcanvas-popup-thumb">
-                                <a class="popup-image" href="assets/images/gallery/gallery-thumb-02.png">
-                                    <img src="assets/images/gallery/gallery-thumb-02.png" alt="image">
-                                </a>
-                            </div>
-                            <div class="offcanvas-popup-thumb">
-                                <a class="popup-image" href="assets/images/gallery/gallery-thumb-03.png">
-                                    <img src="assets/images/gallery/gallery-thumb-03.png" alt="image">
-                                </a>
-                            </div>
-                            <div class="offcanvas-popup-thumb">
-                                <a class="popup-image" href="assets/images/gallery/gallery-thumb-04.png">
-                                    <img src="assets/images/gallery/gallery-thumb-04.png" alt="image">
-                                </a>
-                            </div>
-                            <div class="offcanvas-popup-thumb">
-                                <a class="popup-image" href="assets/images/gallery/gallery-thumb-05.png">
-                                    <img src="assets/images/gallery/gallery-thumb-05.png" alt="image">
-                                </a>
-                            </div>
-                            <div class="offcanvas-popup-thumb">
-                                <a class="popup-image" href="assets/images/gallery/gallery-thumb-01.png">
-                                    <img src="assets/images/gallery/gallery-thumb-01.png" alt="image">
-                                </a>
-                            </div>
-                        </div>
                     </div>
                     <div class="mobile-menu">
                         <div class="rs-offcanvas-menu mb-25">
@@ -299,12 +265,12 @@
                     <div class="col-xl-12">
                         <div class="rs-banner-wrapper">
                             <div class="rs-banner-content">
-                                <span class="rs-banner-subtitle">
+                                <span class="rs-banner-subtitle" data-i18n="hero.subtitle">
                            Egypt's Leading Food Manufacturing Partner
                         </span>
                                 <div class="rs-banner-title-wrpper">
-                                    <h1 class="rs-banner-title">Growth Roots</h1>
-                                    <h1 class="rs-banner-title has-stroke">Growth Roots</h1>
+                                    <h1 class="rs-banner-title" data-i18n="hero.brandName">Growth Roots</h1>
+                                    <h1 class="rs-banner-title has-stroke" data-i18n="hero.brandName">Growth Roots</h1>
                                 </div>
                                 <div class="rs-banner-btn">
                                     <div class="rs-rotate-btn">
@@ -364,33 +330,33 @@
                                                 <span class="prefix">+</span>
                                             </div>
                                         </div>
-                                        <span class="rs-counter-title"><span class="large-text">Highly</span> Specialised <br>
+                                        <span class="rs-counter-title" data-i18n="counter.highlySpecialised"><span class="large-text">Highly</span> Specialised <br>
                                  Employees</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="rs-about-content-wrapper">
                                 <div class="rs-section-title-wrapper">
-                                    <span class="rs-section-subtitle has-stroke justify-content-start">
+                                    <span class="rs-section-subtitle has-stroke justify-content-start" data-i18n="about.subtitle">
                               About Growth Roots
                            </span>
-                                    <h2 class="rs-section-title rs-split-text-enable split-in-fade">Your trusted partner for <span
+                                    <h2 class="rs-section-title rs-split-text-enable split-in-fade" data-i18n="about.title">Your trusted partner for <span
                                  class="rs-theme-orange">over 20 years</span> in food manufacturing</h2>
-                                    <p class="descrip">Growth Roots is Egypt's leading provider of comprehensive food manufacturing solutions, specializing in meat and poultry production facilities.</p>
+                                    <p class="descrip" data-i18n="about.description">Growth Roots is Egypt's leading provider of comprehensive food manufacturing solutions, specializing in meat and poultry production facilities.</p>
                                 </div>
                                 <div class="rs-about-tab">
                                     <ul class="nav nav-pills" id="pills-tab" role="tablist">
                                         <li class="nav-item active" role="presentation">
-                                            <button class="nav-link active" id="pills-item-one-tab" data-bs-toggle="pill" data-bs-target="#pills-item-one" type="button" role="tab" aria-controls="pills-item-one" aria-selected="true">
+                                            <button class="nav-link active" id="pills-item-one-tab" data-bs-toggle="pill" data-bs-target="#pills-item-one" type="button" role="tab" aria-controls="pills-item-one" aria-selected="true" data-i18n="about.ourHistory">
                                                 Our History
                                             </button>
                                         </li>
                                         <li class="nav-item" role="presentation">
-                                            <button class="nav-link" id="pills-item-two-tab" data-bs-toggle="pill" data-bs-target="#pills-item-two" type="button" role="tab" aria-controls="pills-item-two" aria-selected="false"> Our Mission
+                                            <button class="nav-link" id="pills-item-two-tab" data-bs-toggle="pill" data-bs-target="#pills-item-two" type="button" role="tab" aria-controls="pills-item-two" aria-selected="false" data-i18n="about.ourMission"> Our Mission
                                             </button>
                                         </li>
                                         <li class="nav-item" role="presentation">
-                                            <button class="nav-link" id="pills-item-three-tab" data-bs-toggle="pill" data-bs-target="#pills-item-three" type="button" role="tab" aria-controls="pills-item-three" aria-selected="false">
+                                            <button class="nav-link" id="pills-item-three-tab" data-bs-toggle="pill" data-bs-target="#pills-item-three" type="button" role="tab" aria-controls="pills-item-three" aria-selected="false" data-i18n="about.ourVision">
                                                 Our Vision
                                             </button>
                                         </li>
@@ -400,17 +366,17 @@
                                     <div class="tab-content rs-about-tab-anim" id="pills-tabContent">
                                         <div class="tab-pane fade show active" id="pills-item-one" role="tabpanel" aria-labelledby="pills-item-one-tab" tabindex="0">
                                             <div class="rs-about-tab-content">
-                                                <p>Founded with a vision to revolutionize Egypt's food manufacturing sector, Growth Roots has grown from a specialized consultancy to a comprehensive industrial partner. Our journey spans over two decades of transforming ideas into successful, profitable food production facilities.</p>
+                                                <p data-i18n="about.historyText">Founded with a vision to revolutionize Egypt's food manufacturing sector, Growth Roots has grown from a specialized consultancy to a comprehensive industrial partner. Our journey spans over two decades of transforming ideas into successful, profitable food production facilities.</p>
                                                 <div class="rs-about-feature-list">
                                                     <div class="rs-list-item has-theme-orange">
                                                         <ul>
                                                             <li>
                                                                 <i class="fa-regular fa-check"></i>
-                                                                20+ Years Industry Experience
+                                                                <span data-i18n="about.feature1">20+ Years Industry Experience</span>
                                                             </li>
                                                             <li>
                                                                 <i class="fa-regular fa-check"></i>
-                                                                Complete A-to-Z Solutions
+                                                                <span data-i18n="about.feature2">Complete A-to-Z Solutions</span>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -419,17 +385,17 @@
                                         </div>
                                         <div class="tab-pane fade" id="pills-item-two" role="tabpanel" aria-labelledby="pills-item-two-tab" tabindex="0">
                                             <div class="rs-about-tab-content">
-                                                <p>To empower food manufacturers with world-class solutions that transform ideas into profitable, sustainable businesses. We're committed to being more than a service provider—we're your partner in success, ensuring quality, efficiency, and growth at every stage.</p>
+                                                <p data-i18n="about.missionText2">To empower food manufacturers with world-class solutions that transform ideas into profitable, sustainable businesses. We're committed to being more than a service provider—we're your partner in success, ensuring quality, efficiency, and growth at every stage.</p>
                                                 <div class="rs-about-feature-list">
                                                     <div class="rs-list-item has-theme-orange">
                                                         <ul>
                                                             <li>
                                                                 <i class="fa-regular fa-check"></i>
-                                                                Partnership-Driven Approach
+                                                                <span data-i18n="about.feature3">Partnership-Driven Approach</span>
                                                             </li>
                                                             <li>
                                                                 <i class="fa-regular fa-check"></i>
-                                                                Quality & Safety Standards
+                                                                <span data-i18n="about.feature4">Quality & Innovation Focus</span>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -438,17 +404,17 @@
                                         </div>
                                         <div class="tab-pane fade" id="pills-item-three" role="tabpanel" aria-labelledby="pills-item-three-tab" tabindex="0">
                                             <div class="rs-about-tab-content">
-                                                <p>To be the most trusted name in food manufacturing solutions across Egypt and the region, setting the benchmark for excellence, innovation, and partnership. We envision a future where every food producer has access to world-class support to achieve their full potential.</p>
+                                                <p data-i18n="about.visionText">To be the most trusted name in food manufacturing solutions across Egypt and the region, setting the benchmark for excellence, innovation, and partnership. We envision a future where every food producer has access to world-class support to achieve their full potential.</p>
                                                 <div class="rs-about-feature-list">
                                                     <div class="rs-list-item has-theme-orange">
                                                         <ul>
                                                             <li>
                                                                 <i class="fa-regular fa-check"></i>
-                                                                Regional Industry Leadership
+                                                                <span data-i18n="about.feature5">Regional Industry Leadership</span>
                                                             </li>
                                                             <li>
                                                                 <i class="fa-regular fa-check"></i>
-                                                                Innovation & Excellence
+                                                                <span data-i18n="about.feature6">Innovation & Excellence</span>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -471,10 +437,10 @@
                 <div class="row g-5 justify-content-center section-title-space align-items-center">
                     <div class="col-xl-9 col-lg-10">
                         <div class="rs-section-title-wrapper text-center">
-                            <span class="rs-section-subtitle has-stroke">
+                            <span class="rs-section-subtitle has-stroke" data-i18n="services.subtitle">
                         Our Comprehensive Services
                      </span>
-                            <h2 class="rs-section-title rs-split-text-enable split-in-fade">Complete <span
+                            <h2 class="rs-section-title rs-split-text-enable split-in-fade" data-i18n="services.title">Complete <span
                            class="rs-theme-orange">food manufacturing
                            solutions</span> from start to finish</h2>
                         </div>
@@ -491,9 +457,9 @@
                                                 <img src="assets/images/services/services-thumb-24.png" alt="Factory Establishment">
                                             </div>
                                             <div class="rs-services-content">
-                                                <h5 class="rs-services-title"><a href="services-details.html">Factory Establishment</a></h5>
+                                                <h5 class="rs-services-title"><a href="services-details.html" data-i18n="services.factoryEstablishment">Factory Establishment</a></h5>
                                                 <div class="rs-services-descrip">
-                                                    <p>Complete feasibility studies, facility design, and construction oversight to turn your vision into reality.</p>
+                                                    <p data-i18n="services.factoryEstablishmentDesc">Complete feasibility studies, facility design, and construction oversight to turn your vision into reality.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -504,9 +470,9 @@
                                                 <img src="assets/images/services/services-thumb-25.png" alt="Equipment Supply">
                                             </div>
                                             <div class="rs-services-content">
-                                                <h5 class="rs-services-title"><a href="services-details.html">Equipment Supply</a></h5>
+                                                <h5 class="rs-services-title"><a href="services-details.html" data-i18n="services.equipmentSupply">Equipment Supply</a></h5>
                                                 <div class="rs-services-descrip">
-                                                    <p>European-standard production lines through Kaya Steel partnership for optimal efficiency.</p>
+                                                    <p data-i18n="services.equipmentSupplyDesc">European-standard production lines through Kaya Steel partnership for optimal efficiency.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -517,9 +483,9 @@
                                                 <img src="assets/images/services/services-thumb-26.png" alt="Operations Management">
                                             </div>
                                             <div class="rs-services-content">
-                                                <h5 class="rs-services-title"><a href="services-details.html">Operations Management</a></h5>
+                                                <h5 class="rs-services-title"><a href="services-details.html" data-i18n="services.operationsManagement">Operations Management</a></h5>
                                                 <div class="rs-services-descrip">
-                                                    <p>Expert daily oversight ensuring maximum efficiency, quality control, and profitability.</p>
+                                                    <p data-i18n="services.operationsManagementDesc">Expert daily oversight ensuring maximum efficiency, quality control, and profitability.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -530,9 +496,9 @@
                                                 <img src="assets/images/services/services-thumb-24.png" alt="Training Programs">
                                             </div>
                                             <div class="rs-services-content">
-                                                <h5 class="rs-services-title"><a href="services-details.html">Training Programs</a></h5>
+                                                <h5 class="rs-services-title"><a href="services-details.html" data-i18n="services.trainingPrograms">Training Programs</a></h5>
                                                 <div class="rs-services-descrip">
-                                                    <p>Comprehensive workforce development on modern equipment and best quality practices.</p>
+                                                    <p data-i18n="services.trainingProgramsDesc">Comprehensive workforce development on modern equipment and best quality practices.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -543,9 +509,9 @@
                                                 <img src="assets/images/services/services-thumb-25.png" alt="Product Development">
                                             </div>
                                             <div class="rs-services-content">
-                                                <h5 class="rs-services-title"><a href="services-details.html">Product Development</a></h5>
+                                                <h5 class="rs-services-title"><a href="services-details.html" data-i18n="services.productDevelopment">Product Development</a></h5>
                                                 <div class="rs-services-descrip">
-                                                    <p>Recipe development and formulation services for optimal balance of quality and cost.</p>
+                                                    <p data-i18n="services.productDevelopmentDesc">Recipe development and formulation services for optimal balance of quality and cost.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -556,9 +522,9 @@
                                                 <img src="assets/images/services/services-thumb-26.png" alt="Raw Materials Supply">
                                             </div>
                                             <div class="rs-services-content">
-                                                <h5 class="rs-services-title"><a href="services-details.html">Raw Materials Supply</a></h5>
+                                                <h5 class="rs-services-title"><a href="services-details.html" data-i18n="services.rawMaterials">Raw Materials Supply</a></h5>
                                                 <div class="rs-services-descrip">
-                                                    <p>Premium Frozo and quality raw materials at competitive prices.</p>
+                                                    <p data-i18n="services.rawMaterialsDesc">Premium Frozo and quality raw materials at competitive prices.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -569,9 +535,9 @@
                                                 <img src="assets/images/services/services-thumb-24.png" alt="Restructuring">
                                             </div>
                                             <div class="rs-services-content">
-                                                <h5 class="rs-services-title"><a href="services-details.html">Factory Restructuring</a></h5>
+                                                <h5 class="rs-services-title"><a href="services-details.html" data-i18n="services.factoryRestructuring">Factory Restructuring</a></h5>
                                                 <div class="rs-services-descrip">
-                                                    <p>Transform struggling operations into profitable facilities with comprehensive assessments.</p>
+                                                    <p data-i18n="services.restructuringDesc">Transform struggling operations into profitable facilities with comprehensive assessments.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -582,9 +548,9 @@
                                                 <img src="assets/images/services/services-thumb-25.png" alt="Restaurant Support">
                                             </div>
                                             <div class="rs-services-content">
-                                                <h5 class="rs-services-title"><a href="services-details.html">Restaurant Support</a></h5>
+                                                <h5 class="rs-services-title"><a href="services-details.html" data-i18n="services.restaurantSupport">Restaurant Support</a></h5>
                                                 <div class="rs-services-descrip">
-                                                    <p>Specialized solutions for restaurants and food chains to improve operations and consistency.</p>
+                                                    <p data-i18n="services.restaurantSupportDesc">Specialized solutions for restaurants and food chains to improve operations and consistency.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -611,79 +577,79 @@
                             <div class="gsap-marquee right speed-12 move-to-1200">
                                 <div class="rs-text-slide-inner">
                                     <div class="rs-text-slide-item">
-                                        <h2 class="rs-text-slide-title">Establishment</h2>
+                                        <h2 class="rs-text-slide-title" data-i18n="slider.establishment">Establishment</h2>
                                     </div>
                                     <div class="rs-text-slide-thumb">
                                         <img src="public/photos/LayeredScrollGallery/Kaya.png" alt="Kaya Steel">
                                     </div>
                                     <div class="rs-text-slide-item">
-                                        <h2 class="rs-text-slide-title">Equipments</h2>
+                                        <h2 class="rs-text-slide-title" data-i18n="slider.equipments">Equipments</h2>
                                     </div>
                                     <div class="rs-text-slide-thumb">
                                         <img src="public/photos/LayeredScrollGallery/Ricatto.png" alt="Frozo">
                                     </div>
                                     <div class="rs-text-slide-item">
-                                        <h2 class="rs-text-slide-title">Operations</h2>
+                                        <h2 class="rs-text-slide-title" data-i18n="slider.operations">Operations</h2>
                                     </div>
                                     <div class="rs-text-slide-thumb">
                                         <img src="public/Growth Roots.png" alt="Growth Roots">
                                     </div>
                                     <div class="rs-text-slide-item">
-                                        <h2 class="rs-text-slide-title">Training</h2>
+                                        <h2 class="rs-text-slide-title" data-i18n="slider.training">Training</h2>
                                     </div>
                                     <div class="rs-text-slide-item">
-                                        <h2 class="rs-text-slide-title">Ingredients</h2>
+                                        <h2 class="rs-text-slide-title" data-i18n="slider.ingredients">Ingredients</h2>
                                     </div>
                                     <div class="rs-text-slide-thumb">
                                         <img src="public/photos/LayeredScrollGallery/Kaya.png" alt="Kaya Steel">
                                     </div>
                                     <div class="rs-text-slide-item">
-                                        <h2 class="rs-text-slide-title">Restructuring</h2>
+                                        <h2 class="rs-text-slide-title" data-i18n="slider.restructuring">Restructuring</h2>
                                     </div>
                                     <div class="rs-text-slide-thumb">
                                         <img src="public/photos/LayeredScrollGallery/Ricatto.png" alt="Frozo">
                                     </div>
                                     <div class="rs-text-slide-item">
-                                        <h2 class="rs-text-slide-title">Support Solutions</h2>
+                                        <h2 class="rs-text-slide-title" data-i18n="slider.support">Support Solutions</h2>
                                     </div>
                                     <div class="rs-text-slide-thumb">
                                         <img src="public/photos/LayeredScrollGallery/Kaya.png" alt="Kaya Steel">
                                     </div>
                                     <div class="rs-text-slide-item">
-                                        <h2 class="rs-text-slide-title">Establishment</h2>
+                                        <h2 class="rs-text-slide-title" data-i18n="slider.establishment">Establishment</h2>
                                     </div>
                                     <div class="rs-text-slide-thumb">
                                         <img src="public/photos/LayeredScrollGallery/Kaya.png" alt="Kaya Steel">
                                     </div>
                                     <div class="rs-text-slide-item">
-                                        <h2 class="rs-text-slide-title">Equipments</h2>
+                                        <h2 class="rs-text-slide-title" data-i18n="slider.equipments">Equipments</h2>
                                     </div>
                                     <div class="rs-text-slide-thumb">
                                         <img src="public/photos/LayeredScrollGallery/Ricatto.png" alt="Frozo">
                                     </div>
                                     <div class="rs-text-slide-item">
-                                        <h2 class="rs-text-slide-title">Operations</h2>
+                                        <h2 class="rs-text-slide-title" data-i18n="slider.operations">Operations</h2>
                                     </div>
                                     <div class="rs-text-slide-thumb">
                                         <img src="public/Growth Roots.png" alt="Growth Roots">
                                     </div>
                                     <div class="rs-text-slide-item">
-                                        <h2 class="rs-text-slide-title">Training</h2>
+                                        <h2 class="rs-text-slide-title" data-i18n="slider.training">Training</h2>
                                     </div>
                                     <div class="rs-text-slide-item">
-                                        <h2 class="rs-text-slide-title">Ingredients</h2>
+                                        <h2 class="rs-text-slide-title" data-i18n="slider.ingredients">Ingredients</h2>
                                     </div>
                                     <div class="rs-text-slide-thumb">
                                         <img src="public/photos/LayeredScrollGallery/Kaya.png" alt="Kaya Steel">
                                     </div>
                                     <div class="rs-text-slide-item">
-                                        <h2 class="rs-text-slide-title">Restructuring</h2>
+                                        <h2 class="rs-text-slide-title" data-i18n="slider.restructuring">Restructuring</h2>
                                     </div>
                                     <div class="rs-text-slide-thumb">
                                         <img src="public/photos/LayeredScrollGallery/Ricatto.png" alt="Frozo">
                                     </div>
                                     <div class="rs-text-slide-item">
-                                        <h2 class="rs-text-slide-title">Support Solutions</h2>
+                                        <h2 class="rs-text-slide-title" data-i18n="slider.support">Support Solutions</h2>
                                     </div>
                                     <div class="rs-text-slide-thumb">
                                         <img src="public/photos/LayeredScrollGallery/Kaya.png" alt="Kaya Steel">
@@ -703,10 +669,10 @@
                 <div class="row  g-5 justify-content-center section-title-space align-items-center">
                     <div class="col-xxl-8 col-xl-9 col-lg-9">
                         <div class="rs-section-title-wrapper text-center">
-                            <span class="rs-section-subtitle has-theme-orange">
+                            <span class="rs-section-subtitle has-theme-orange" data-i18n="subbrands.subtitle">
                                 Sub-Brands
                             </span>
-                            <h2 class="rs-section-title rs-split-text-enable split-in-fade">Our Growth Roots Family</h2>
+                            <h2 class="rs-section-title rs-split-text-enable split-in-fade" data-i18n="subbrands.title">Our Growth Roots Family</h2>
                         </div>
                     </div>
                 </div>
@@ -721,7 +687,7 @@
                                         </div>
                                     </div>
                                     <button class="nav-link active" id="pills-item-eight-tab" data-bs-toggle="pill" data-bs-target="#pills-item-eight" type="button" role="tab" aria-controls="pills-item-eight" aria-selected="true">
-                                        Growth Roots <span class="rs-services-icon"><svg xmlns="http://www.w3.org/2000/svg" width="51" height="12" viewBox="0 0 51 12" fill="none">
+                                        <span data-i18n="subbrands.growthRoots">Growth Roots</span> <span class="rs-services-icon"><svg xmlns="http://www.w3.org/2000/svg" width="51" height="12" viewBox="0 0 51 12" fill="none">
                                                     <path d="M50.5303 6.53033C50.8232 6.23744 50.8232 5.76256 50.5303 5.46967L45.7574 0.696699C45.4645 0.403806 44.9896 0.403806 44.6967 0.696699C44.4038 0.989593 44.4038 1.46447 44.6967 1.75736L48.9393 6L44.6967 10.2426C44.4038 10.5355 44.4038 11.0104 44.6967 11.3033C44.9896 11.5962 45.4645 11.5962 45.7574 11.3033L50.5303 6.53033ZM0 6.75H50V5.25H0V6.75Z" fill="#296c3f"></path>
                                                 </svg></span>
                                     </button>
@@ -732,7 +698,7 @@
                                             <img src="public/photos/LayeredScrollGallery/Logos/kaya-logo.png" alt="Kaya Steel logo">
                                         </div>
                                     </div>
-                                    <button class="nav-link" id="pills-item-nine-tab" data-bs-toggle="pill" data-bs-target="#pills-item-nine" type="button" role="tab" aria-controls="pills-item-nine" aria-selected="false"> Kaya Steel <span class="rs-services-icon"><svg xmlns="http://www.w3.org/2000/svg" width="51" height="12" viewBox="0 0 51 12" fill="none">
+                                    <button class="nav-link" id="pills-item-nine-tab" data-bs-toggle="pill" data-bs-target="#pills-item-nine" type="button" role="tab" aria-controls="pills-item-nine" aria-selected="false"><span data-i18n="subbrands.kayaSteel"> Kaya Steel</span> <span class="rs-services-icon"><svg xmlns="http://www.w3.org/2000/svg" width="51" height="12" viewBox="0 0 51 12" fill="none">
                                                     <path d="M50.5303 6.53033C50.8232 6.23744 50.8232 5.76256 50.5303 5.46967L45.7574 0.696699C45.4645 0.403806 44.9896 0.403806 44.6967 0.696699C44.4038 0.989593 44.4038 1.46447 44.6967 1.75736L48.9393 6L44.6967 10.2426C44.4038 10.5355 44.4038 11.0104 44.6967 11.3033C44.9896 11.5962 45.4645 11.5962 45.7574 11.3033L50.5303 6.53033ZM0 6.75H50V5.25H0V6.75Z" fill="#296c3f"></path>
                                                 </svg></span>
                                     </button>
@@ -744,7 +710,7 @@
                                         </div>
                                     </div>
                                     <button class="nav-link" id="pills-item-ten-tab" data-bs-toggle="pill" data-bs-target="#pills-item-ten" type="button" role="tab" aria-controls="pills-item-ten" aria-selected="false">
-                                        Ricetto<span class="rs-services-icon"><svg xmlns="http://www.w3.org/2000/svg" width="51" height="12" viewBox="0 0 51 12" fill="none">
+                                        <span data-i18n="subbrands.ricetto">Ricetto</span><span class="rs-services-icon"><svg xmlns="http://www.w3.org/2000/svg" width="51" height="12" viewBox="0 0 51 12" fill="none">
                                                     <path d="M50.5303 6.53033C50.8232 6.23744 50.8232 5.76256 50.5303 5.46967L45.7574 0.696699C45.4645 0.403806 44.9896 0.403806 44.6967 0.696699C44.4038 0.989593 44.4038 1.46447 44.6967 1.75736L48.9393 6L44.6967 10.2426C44.4038 10.5355 44.4038 11.0104 44.6967 11.3033C44.9896 11.5962 45.4645 11.5962 45.7574 11.3033L50.5303 6.53033ZM0 6.75H50V5.25H0V6.75Z" fill="#296c3f"></path>
                                                 </svg></span>
                                     </button>
@@ -759,10 +725,10 @@
                                     <div class="rs-services-bg-thumb" data-background="public/photos/LayeredScrollGallery/Whisk_088d208e7a7d36791174fdb8bb70eddbdr.jpeg"></div>
                                     <div class="rs-services-tab-content">
                                         <div class="rs-services-descrip">
-                                            <p>From site scouting to full-scale commissioning, we launch food factories that align with Growth Roots standards.</p>
+                                            <p data-i18n="subbrands.growthRootsDesc">From site scouting to full-scale commissioning, we launch food factories that align with Growth Roots standards.</p>
                                         </div>
                                         <div class="rs-services-tab-btn">
-                                            <a class="rs-btn has-theme-orange has-icon has-bg" href="services.html">Discover Launch Support
+                                            <a class="rs-btn has-theme-orange has-icon has-bg" href="services.html"><span data-i18n="subbrands.growthRootsCta">Discover Launch Support</span>
                                                 <span class="icon-box">
                                                     <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                                                         <path d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z"></path>
@@ -781,10 +747,10 @@
                                     <div class="rs-services-bg-thumb" data-background="public/photos/LayeredScrollGallery/Whisk_5ff84aad3741e4b8a3c44fba9e7def41dr.jpeg"></div>
                                     <div class="rs-services-tab-content">
                                         <div class="rs-services-descrip">
-                                            <p>We build production lines, implement HACCP processes, and structure teams for sustained efficiency.</p>
+                                            <p data-i18n="subbrands.kayaSteelDesc">We build production lines, implement HACCP processes, and structure teams for sustained efficiency.</p>
                                         </div>
                                         <div class="rs-services-tab-btn">
-                                            <a class="rs-btn has-theme-orange has-icon has-bg" href="services.html">Streamline Operations
+                                            <a class="rs-btn has-theme-orange has-icon has-bg" href="services.html"><span data-i18n="subbrands.kayaSteelCta">Streamline Operations</span>
                                                 <span class="icon-box">
                                                     <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                                                         <path d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z"></path>
@@ -803,10 +769,10 @@
                                     <div class="rs-services-bg-thumb" data-background="public/photos/LayeredScrollGallery/Whisk_c74bf4c93b3a409a75c411b6fa97ca31dr.jpeg"></div>
                                     <div class="rs-services-tab-content">
                                         <div class="rs-services-descrip">
-                                            <p>We coach culinary teams, standardize recipes, and transfer Growth Roots best practices on-site.</p>
+                                            <p data-i18n="subbrands.ricettoDesc">We coach culinary teams, standardize recipes, and transfer Growth Roots best practices on-site.</p>
                                         </div>
                                         <div class="rs-services-tab-btn">
-                                            <a class="rs-btn has-theme-orange has-icon has-bg" href="services.html">Upskill Your Team
+                                            <a class="rs-btn has-theme-orange has-icon has-bg" href="services.html"><span data-i18n="subbrands.ricettoCta">Upskill Your Team</span>
                                                 <span class="icon-box">
                                                     <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                                                         <path d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z"></path>
@@ -835,10 +801,10 @@
                     <div class="col-xl-7 col-lg-6 col-md-10">
                         <div class="rs-why-choose-content-wrapper section-space">
                             <div class="rs-section-title-wrapper section-title-space">
-                                <span class="justify-content-start rs-section-subtitle has-stroke">
+                                <span class="justify-content-start rs-section-subtitle has-stroke" data-i18n="why.subtitle">
                            Why Choose Us
                         </span>
-                                <h2 class="rs-section-title rs-split-text-enable split-in-fade">Your Trusted Partner in Food Manufacturing
+                                <h2 class="rs-section-title rs-split-text-enable split-in-fade" data-i18n="why.title">Your Trusted Partner in Food Manufacturing
                                     Excellence For Over 20 Years</h2>
                             </div>
                             <div class="rs-why-choose-content-inner">
@@ -854,8 +820,8 @@
                                         </svg>
                                     </div>
                                     <div class="rs-why-choose-content">
-                                        <h6 class="rs-why-choose-title">Complete A-to-Z Solutions</h6>
-                                        <p class="descrip">From feasibility studies to full operations, we handle every aspect of your factory journey.</p>
+                                        <h6 class="rs-why-choose-title" data-i18n="why.item1Title">Complete A-to-Z Solutions</h6>
+                                        <p class="descrip" data-i18n="why.item1Desc">From feasibility studies to full operations, we handle every aspect of your factory journey.</p>
                                     </div>
                                 </div>
                                 <div class="rs-why-choose-content-item wow fadeInUp" data-wow-delay=".5s" data-wow-duration="1s">
@@ -865,8 +831,8 @@
                                         </svg>
                                     </div>
                                     <div class="rs-why-choose-content">
-                                        <h6 class="rs-why-choose-title">European-Standard Equipment</h6>
-                                        <p class="descrip">Kaya Steel partnership ensures top-quality machinery manufactured to strict European standards.</p>
+                                        <h6 class="rs-why-choose-title" data-i18n="why.item2Title">European-Standard Equipment</h6>
+                                        <p class="descrip" data-i18n="why.item2Desc">Kaya Steel partnership ensures top-quality machinery manufactured to strict European standards.</p>
                                     </div>
                                 </div>
                                 <div class="rs-why-choose-content-item wow fadeInUp" data-wow-delay=".7s" data-wow-duration="1s">
@@ -880,8 +846,8 @@
                                         </svg>
                                     </div>
                                     <div class="rs-why-choose-content">
-                                        <h6 class="rs-why-choose-title">Proven Track Record</h6>
-                                        <p class="descrip">20+ years of successful projects across Egypt, transforming visions into profitable realities.</p>
+                                        <h6 class="rs-why-choose-title" data-i18n="why.item3Title">Proven Track Record</h6>
+                                        <p class="descrip" data-i18n="why.item3Desc">20+ years of successful projects across Egypt, transforming visions into profitable realities.</p>
                                     </div>
                                 </div>
                             </div>

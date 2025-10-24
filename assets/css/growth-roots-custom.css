@@ -1,3 +1,6 @@
+/* Import Cairo font for Arabic */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap');
+
 /* Growth Roots Custom Brand Colors */
 /* 
    Primary Green: #296c3f (Dark Spring Green)
@@ -13,6 +16,216 @@
     --gr-accent: #5a994d;
     --gr-dark: #0e1f2d;
     --gr-light: #f5f5f0;
+}
+
+/* Arabic Language Styles */
+html[lang="ar"],
+html[lang="ar"] body {
+    font-family: 'Cairo', sans-serif !important;
+    direction: rtl;
+}
+
+html[lang="ar"] * {
+    font-family: 'Cairo', sans-serif !important;
+}
+
+/* RTL adjustments */
+html[lang="ar"] .rs-header-logo,
+html[lang="ar"] .rs-banner-wrapper,
+html[lang="ar"] .rs-section-title-wrapper,
+html[lang="ar"] .rs-about-content,
+html[lang="ar"] .rs-services-content,
+html[lang="ar"] .rs-footer-widget-content {
+    text-align: right;
+}
+
+html[lang="ar"] .rs-header-menu {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+html[lang="ar"] .rs-header-right {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+html[lang="ar"] .main-menu ul li {
+    float: right;
+}
+
+html[lang="ar"] .rs-banner-btn {
+    justify-content: center;
+}
+
+html[lang="ar"] .rs-about-btn,
+html[lang="ar"] .rs-services-btn {
+    justify-content: flex-start;
+}
+
+html[lang="ar"] .rs-services-tab-content {
+    right: auto;
+    left: auto;
+}
+
+html[lang="ar"] .rs-services-nine .rs-services-content {
+    margin-inline-start: 0;
+    margin-inline-end: 150px;
+}
+
+html[lang="ar"] .rs-elements-portfolio-area .rs-section-title-wrapper {
+    text-align: center;
+    align-items: center;
+}
+
+html[lang="ar"] .rs-elements-portfolio-area .rs-section-title {
+    text-align: center;
+}
+
+html[lang="ar"] .rs-elements-portfolio-area .rs-section-subtitle {
+    text-align: center;
+}
+
+html[lang="ar"] .rs-services-ten .rs-services-tab .nav-link {
+    gap: 65px;
+    padding-inline-end: 70px;
+}
+
+html[lang="ar"] .rs-services-ten .rs-services-tab .nav-link svg {
+    left: auto;
+    right: 0;
+    transform: translate(0, -50%);
+}
+
+html[lang="ar"] .rs-services-ten .rs-services-tab .nav-link:hover svg,
+html[lang="ar"] .rs-services-ten .rs-services-tab .nav-link.active svg {
+    transform: translate(0, -50%);
+}
+
+html[lang="ar"] .rs-services-ten .rs-services-tab .nav-link::before {
+    left: auto;
+    right: 0;
+    bottom: -8px;
+}
+
+html[lang="ar"] .rs-footer-widget.footer-2-col-2 {
+    padding-right: 32px;
+    padding-left: 0;
+}
+
+html[lang="ar"] .submenu {
+    right: auto;
+    left: 0;
+}
+
+html[lang="ar"] .rs-about-thumb-wrapper {
+    transform: translateX(70px);
+}
+
+@media (max-width: 1199px) {
+    html[lang="ar"] .rs-about-thumb-wrapper {
+        transform: none;
+    }
+}
+
+/* Additional RTL fixes */
+html[lang="ar"] .rs-section-subtitle,
+html[lang="ar"] .rs-section-title,
+html[lang="ar"] .descrip,
+html[lang="ar"] p {
+    text-align: right;
+}
+
+html[lang="ar"] .rs-banner-content {
+    text-align: center;
+}
+
+html[lang="ar"] .rs-banner-title-wrpper {
+    text-align: center;
+}
+
+html[lang="ar"] .rs-about-tab .nav-pills {
+    justify-content: flex-start;
+}
+
+html[lang="ar"] .rs-about-tab-content {
+    text-align: right;
+}
+
+html[lang="ar"] .rs-list-item ul {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+html[lang="ar"] .rs-list-item ul li {
+    text-align: right;
+}
+
+html[lang="ar"] .rs-list-item ul li i {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+html[lang="ar"] .rs-services-tab .nav-link {
+    text-align: right;
+}
+
+html[lang="ar"] .rs-services-title,
+html[lang="ar"] .rs-services-descrip {
+    text-align: right;
+}
+
+html[lang="ar"] .rs-footer-widget-title {
+    text-align: right;
+}
+
+html[lang="ar"] .rs-footer-widget-description,
+html[lang="ar"] .rs-footer-widget-links,
+html[lang="ar"] .rs-footer-widget-meta {
+    text-align: right;
+}
+
+html[lang="ar"] .rs-footer-copyright {
+    text-align: center;
+}
+
+html[lang="ar"] .rs-btn {
+    text-align: center;
+}
+
+html[lang="ar"] .rs-about-content-wrapper {
+    text-align: right;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+html[lang="ar"] .justify-content-start {
+    justify-content: flex-end !important;
+}
+
+html[lang="ar"] .text-start,
+html[lang="ar"] .text-lg-start {
+    text-align: right !important;
+}
+
+html[lang="ar"] .rs-services-ten .rs-services-tab-content {
+    text-align: right;
+}
+
+html[lang="ar"] .rs-text-slide-one .rs-text-slide-track {
+    animation-direction: reverse;
+}
+
+html[lang="ar"] .rs-about-content-wrapper .rs-section-title-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+/* Language toggle active state */
+.rs-language-toggle .language-menu a.active {
+    background-color: var(--gr-primary);
+    color: var(--gr-light);
 }
 
 /* Override orange theme with green */
@@ -268,6 +481,53 @@ a:hover {
     align-items: center;
    
 }
+
+/* Image grid styles for Ricatto features replacement */
+.rs-image-grid-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+    box-shadow: 0 6px 24px rgba(14, 31, 45, 0.12);
+}
+.rs-image-grid-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
+    transition: transform 0.5s ease;
+}
+.rs-image-grid-item:hover img {
+    transform: scale(1.04);
+}
+
+main > section.rs-about-ten:first-of-type .rs-about-wrapper {
+    grid-template-columns: 680px auto;
+    gap: 30px 60px;
+}
+
+main > section.rs-about-ten:first-of-type .rs-about-thumb-wrapper {
+    transform: translateX(-70px);
+}
+
+@media (max-width: 1600px) {
+    main > section.rs-about-ten:first-of-type .rs-about-wrapper {
+        grid-template-columns: 520px auto;
+        gap: 30px 30px;
+    }
+}
+
+@media (max-width: 1199px) {
+    main > section.rs-about-ten:first-of-type .rs-about-wrapper {
+        grid-template-columns: auto;
+    }
+    main > section.rs-about-ten:first-of-type .rs-about-thumb-wrapper {
+        margin-inline-start: 0;
+        transform: none;
+    }
+}
+
+
 
 
 .rs-services-ten .rs-services-tab-logo {

@@ -17647,9 +17647,8 @@ body.rtl .rs-theme-dir-slide {
   transform: translate(0);
   position: relative;
 }
-[dir=rtl] .rs-services-nine .rs-services-content {
-  margin-inline-start: 0;
-}
+
+
 @media only screen and (max-width: 1600px) {
   .rs-services-nine .rs-services-content {
     padding: 20px;
