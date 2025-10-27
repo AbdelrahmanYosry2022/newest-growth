@@ -134,6 +134,63 @@ html[lang="ar"] .rs-breadcrumb-area .rs-breadcrumb-bg {
     margin-inline: auto;
 }
 
+.rs-category-area .process-counts > [class*="col-"] {
+    display: flex;
+}
+
+.rs-category-area .rs-category-item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.rs-category-area .rs-category-item.rs-category-no-number {
+    counter-reset: none;
+}
+
+.rs-category-area .rs-category-item.rs-category-no-number::before {
+    display: none;
+}
+
+.rs-category-one .rs-category-item.rs-category-no-number::before {
+    display: none !important;
+}
+
+.rs-category-one .rs-category-item::before {
+    display: none !important;
+    content: none !important;
+}
+
+html[lang="ar"] .rs-work-step-five .rs-work-step-wrapper {
+    direction: rtl;
+}
+
+html[lang="ar"] .rs-work-step-five .rs-work-step-number-wrapper {
+    flex-direction: row-reverse;
+}
+
+html[lang="ar"] .rs-work-step-five .rs-work-step-text {
+    padding-inline-start: 0;
+    padding-inline-end: 40px;
+}
+
+html[lang="ar"] .rs-work-step-five .rs-work-step-item {
+    border-right: 0;
+    border-left: 1px solid rgba(31, 31, 31, 0.12);
+}
+
+html[lang="ar"] .rs-work-step-five .rs-work-step-item:nth-child(2),
+html[lang="ar"] .rs-work-step-five .rs-work-step-item:nth-child(4) {
+    border-left: 0;
+}
+
+@media only screen and (max-width: 575px) {
+    html[lang="ar"] .rs-work-step-five .rs-work-step-item {
+        border: 0;
+        padding: 0;
+    }
+}
+
 .rs-services-three .rs-services-thumb {
     width: 100%;
     height: clamp(220px, 24vw, 280px);
