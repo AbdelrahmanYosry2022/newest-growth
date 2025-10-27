@@ -14,6 +14,7 @@
     --gr-primary: #296c3f;
     --gr-secondary: #3f7d46;
     --gr-accent: #5a994d;
+    --gr-accent-light: #7bcf73;
     --gr-dark: #0e1f2d;
     --gr-light: #f5f5f0;
 }
@@ -100,6 +101,81 @@ html[lang="ar"] .rs-hero-intro .rs-banner-navigation .swiper-button-prev i::befo
 
 html[lang="ar"] .rs-hero-intro .rs-banner-navigation .swiper-button-next i::before {
     content: "\f060";
+}
+
+html[lang="ar"] .rs-breadcrumb-area .rs-breadcrumb-bg {
+    transform: scaleX(-1);
+    transform-origin: center;
+}
+
+.rs-category-area .rs-section-title-wrapper {
+    text-align: center;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 12px;
+}
+
+.rs-category-area .rs-section-title-wrapper .rs-section-subtitle {
+    justify-content: center !important;
+    width: 100%;
+}
+
+.rs-category-area .rs-section-title-wrapper .rs-section-title {
+    text-align: center;
+}
+
+.rs-category-area .rs-section-title span.rs-black {
+    color: var(--gr-accent-light);
+}
+
+.rs-category-area .col-xxl-7.col-xl-7.col-lg-7.col-md-8.col-sm-10 {
+    margin-inline: auto;
+}
+
+.rs-services-three .rs-services-thumb {
+    width: 100%;
+    height: clamp(220px, 24vw, 280px);
+}
+
+.rs-services-three .rs-services-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+html[lang="ar"] .rs-services-three .rs-services-thumb img {
+    transform: scaleX(-1);
+    transform-origin: center;
+}
+
+.rs-services-three .rs-services-wrapper {
+    height: 100%;
+    display: flex;
+}
+
+.rs-services-three .rs-services-item {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    width: 100%;
+}
+
+.rs-services-three .rs-services-item .rs-services-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.rs-services-three .rs-services-number {
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.rs-services-three .rs-services-btn-wrapper {
+    margin-top: 0;
 }
 
 .rs-hero-intro .swiper-slide .rs-banner-title,
