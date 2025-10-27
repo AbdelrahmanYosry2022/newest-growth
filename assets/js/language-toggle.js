@@ -375,7 +375,7 @@
             'services.process.steps.design.title': 'التصميم والتخطيط',
             'services.process.steps.design.desc': 'نحلل احتياجاتك ونصمم مخطط المصنع بما يتوافق مع معايير السلامة والإنتاج.',
             'services.process.steps.sourcing.title': 'توريد المكونات والمعدات',
-            'services.process.steps.sourcing.desc': 'نزودك بخطوط الإنتاج ومعداتها من شركاء جروث رووتس، ونضبط المواصفات بدقة.',
+            'services.process.steps.sourcing.desc': 'نزودك بخطوط الإنتاج ومعداتها من شركاء جروث رووتس.',
             'services.process.steps.testing.title': 'التشغيل التجريبي وضبط الجودة',
             'services.process.steps.testing.desc': 'نختبر المعدات، نطبق أنظمة HACCP، ونضمن توافق المنتج مع معاييرك.',
             'services.process.steps.launch.title': 'الإطلاق والتسليم',

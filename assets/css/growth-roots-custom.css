@@ -184,6 +184,28 @@ html[lang="ar"] .rs-work-step-five .rs-work-step-item:nth-child(4) {
     border-left: 0;
 }
 
+html[lang="ar"] .rs-work-step-five .rs-work-step-title {
+    text-align: right;
+}
+
+html[lang="ar"] .rs-work-step-five .rs-stroke-text,
+[dir="rtl"] .rs-work-step-five .rs-stroke-text {
+    left: auto !important;
+    right: 170px !important;
+    transform: translate(50%, -50%) rotate(-90deg) !important;
+}
+
+/* Align the small subtitle ("عملية العمل") to the right in Arabic */
+html[lang="ar"] .rs-work-step-area .rs-section-title-wrapper .rs-section-subtitle {
+    justify-content: flex-end;
+    text-align: right;
+}
+
+/* Override utility that forces start alignment */
+html[lang="ar"] .rs-section-title-wrapper .rs-section-subtitle.justify-content-start {
+    justify-content: flex-end !important;
+}
+
 @media only screen and (max-width: 575px) {
     html[lang="ar"] .rs-work-step-five .rs-work-step-item {
         border: 0;
