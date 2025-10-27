@@ -284,39 +284,37 @@ Sidebar Toggle
             });
         }
 
-        // Swiper Dynamic Slider Active
         $('.rs-swiper .swiper').each(function (index) {
             var $swiper = $(this);
             var hoverAutoplay = $swiper.data('hover-pause') === undefined ? true : $swiper.data('hover-pause');
-            var loop = $(this).data('loop') === undefined ? true : $(this).data('loop');
-            var centeredSlides = $(this).data('center-mode') === undefined ? false : $(this).data('center-mode');
-            var autoplay = $(this).data('autoplay') === undefined ? true : $(this).data('autoplay');
-            var dynamicBullets = $(this).data('dots-dynamic') === undefined ? true : $(this).data('dots-dynamic');
-            var direction = $(this).data('direction') === 'vertical' ? 'vertical' : 'horizontal';
-            var fridgeMovement = $(this).data('play-slide') === undefined ? true : $(this).data('play-slide');
-            var effect = $(this).data('effect') || 'slide'; //'slide' | 'fade' | 'cube' | 'coverflow' | 'flip' | 'creative' | 'cards';
-            var grabCursor = $(this).data('grab-cursor') === undefined ? false : $(this).data('grab-cursor');
-            var oneWayMovement = $(this).data('one-way') === undefined ? false : $(this).data('one-way');
-            var startAt = $(this).data('start-at');
-            var slidesPerView = $(this).data('item');
-            var speed = $(this).data('speed');
-            var gap = (($(this).data('no-gap') === true) ? 0 : 30);
-            var margin = ($(this).data('margin') ? $(this).data('margin') : gap);
-
+            var loop = $swiper.data('loop') === undefined ? true : $swiper.data('loop');
+            var centeredSlides = $swiper.data('center-mode') === undefined ? false : $swiper.data('center-mode');
+            var autoplay = $swiper.data('autoplay') === undefined ? true : $swiper.data('autoplay');
+            var dynamicBullets = $swiper.data('dots-dynamic') === undefined ? true : $swiper.data('dots-dynamic');
+            var direction = $swiper.data('direction') === 'vertical' ? 'vertical' : 'horizontal';
+            var fridgeMovement = $swiper.data('play-slide') === undefined ? true : $swiper.data('play-slide');
+            var effect = $swiper.data('effect') || 'slide'; //'slide' | 'fade' | 'cube' | 'coverflow' | 'flip' | 'creative' | 'cards';
+            var grabCursor = $swiper.data('grab-cursor') === undefined ? false : $swiper.data('grab-cursor');
+            var oneWayMovement = $swiper.data('one-way') === undefined ? false : $swiper.data('one-way');
+            var startAt = $swiper.data('start-at');
+            var slidesPerView = $swiper.data('item');
+            var speed = $swiper.data('speed');
+            var gap = (($swiper.data('no-gap') === true) ? 0 : 30);
+            var margin = ($swiper.data('margin') ? $swiper.data('margin') : gap);
 
             // Breakpoints
-            var slidesPerViewXl = $(this).data('item-xl');
-            var slidesPerViewLg = $(this).data('item-lg');
-            var slidesPerViewMd = $(this).data('item-md');
-            var slidesPerViewSm = $(this).data('item-sm');
-            var slidesPerViewXs = $(this).data('item-xs');
-            var slidesPerViewMobile = $(this).data('item-mobile');
-            var marginXl = ($(this).data('margin-xl') ? $(this).data('margin-xl') : margin);
-            var marginLg = ($(this).data('margin-lg') ? $(this).data('margin-lg') : marginXl);
-            var marginMd = ($(this).data('margin-md') ? $(this).data('margin-md') : marginLg);
-            var marginSm = ($(this).data('margin-sm') ? $(this).data('margin-sm') : marginMd);
-            var marginXs = ($(this).data('margin-xs') ? $(this).data('margin-xs') : marginSm);
-            var marginMobile = ($(this).data('margin-mobile') ? $(this).data('margin-mobile') : marginXs);
+            var slidesPerViewXl = $swiper.data('item-xl');
+            var slidesPerViewLg = $swiper.data('item-lg');
+            var slidesPerViewMd = $swiper.data('item-md');
+            var slidesPerViewSm = $swiper.data('item-sm');
+            var slidesPerViewXs = $swiper.data('item-xs');
+            var slidesPerViewMobile = $swiper.data('item-mobile');
+            var marginXl = ($swiper.data('margin-xl') ? $swiper.data('margin-xl') : margin);
+            var marginLg = ($swiper.data('margin-lg') ? $swiper.data('margin-lg') : marginXl);
+            var marginMd = ($swiper.data('margin-md') ? $swiper.data('margin-md') : marginLg);
+            var marginSm = ($swiper.data('margin-sm') ? $swiper.data('margin-sm') : marginMd);
+            var marginXs = ($swiper.data('margin-xs') ? $swiper.data('margin-xs') : marginSm);
+            var marginMobile = ($swiper.data('margin-mobile') ? $swiper.data('margin-mobile') : marginXs);
 
             // Controls unique classes based on the index
             var rsNavPrev = `rs-nav-prev-${index}`;
@@ -329,7 +327,7 @@ Sidebar Toggle
 
             var swiper = new Swiper(this, {
                 loop: loop,
-                autoplay: autoplay,  // data-autoplay="true" => Delay | .swiper-slide | data-swiper-autoplay="2000">
+                autoplay: autoplay,
                 direction: direction,
                 effect: effect,
                 enabled: fridgeMovement,
@@ -391,6 +389,56 @@ Sidebar Toggle
                 });
             }
         });
+
+        // Hero Slider Initialization
+        if ($('.hero-slider-wrapper').length) {
+            var heroSlider = new Swiper('.hero-slider-wrapper', {
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
+                speed: 1000,
+                slidesPerView: 1,
+                spaceBetween: 0,
+                grabCursor: true,
+
+                pagination: {
+                    el: '.hero-slider-pagination .swiper-pagination',
+                    clickable: true,
+                    dynamicBullets: true,
+                },
+
+                navigation: {
+                    nextEl: '.hero-next-btn',
+                    prevEl: '.hero-prev-btn',
+                },
+
+                on: {
+                    init: function() {
+                        var swiper = this;
+                        $(swiper.slides).removeClass('slide-active');
+                        $(swiper.slides[swiper.activeIndex]).addClass('slide-active');
+                    },
+                    slideChangeTransitionEnd: function() {
+                        var swiper = this;
+                        $(swiper.slides).removeClass('slide-active');
+                        $(swiper.slides[swiper.activeIndex]).addClass('slide-active');
+                    }
+                }
+            });
+
+            // Pause autoplay on hover
+            $('.hero-slider-section').on('mouseenter', function() {
+                heroSlider.autoplay.stop();
+            }).on('mouseleave', function() {
+                heroSlider.autoplay.start();
+            });
+        }
 
             /* product active */
             var productDetails = new Swiper(".product-details-nav", {

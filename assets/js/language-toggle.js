@@ -35,12 +35,18 @@
             'nav.getInTouch': 'Get in Touch',
             
             // Hero Section
-            'hero.subtitle': 'Egypt\'s Leading Food Manufacturing Partner',
-            'hero.brandName': 'Growth Roots',
+            'hero.subtitle': '',
+            'hero.brandName': '',
             'hero.title': 'From Concept to Full Production',
             'hero.description': 'Growth Roots provides comprehensive solutions for establishing, operating, and developing meat and poultry production factories across Egypt and the region.',
             'hero.exploreServices': 'Explore Our Services',
             'hero.contactUs': 'Contact Us',
+            'hero.slide1Title': 'Driving growth for food manufacturers across the region',
+            'hero.slide1Desc': 'End-to-end project execution from concept through commissioning for poultry and meat production facilities.',
+            'hero.slide1Cta': 'Explore Services',
+            'hero.slide2Title': 'Architecture-led layouts for efficient production lines',
+            'hero.slide2Desc': 'Optimized plant architecture balancing hygiene zones, process flow, and regulatory compliance.',
+            'hero.slide2Cta': 'View Case Studies',
             
             // About Section
             'about.subtitle': 'Who We Are',
@@ -218,12 +224,18 @@
             'nav.getInTouch': 'تواصل معنا',
             
             // Hero Section
-            'hero.subtitle': 'شريكك المتكامل لتأسيس مصانع الغذاء',
-            'hero.brandName': 'جروث رووتس',
+            'hero.subtitle': '',
+            'hero.brandName': '',
             'hero.title': 'من الفكرة إلى الإنتاج الكامل',
             'hero.description': 'جروث رووتس تقدم حلولاً شاملة لتأسيس وتشغيل وتطوير مصانع اللحوم والدواجن في مصر والمنطقة.',
             'hero.exploreServices': 'استكشف خدماتنا',
             'hero.contactUs': 'تواصل معنا',
+            'hero.slide1Title': 'نقود نمو مصنّعي الغذاء في المنطقة',
+            'hero.slide1Desc': 'تنفيذ كامل للمشروعات من الفكرة حتى التشغيل لمصانع إنتاج اللحوم والدواجن.',
+            'hero.slide1Cta': 'استكشف خدماتنا',
+            'hero.slide2Title': 'تصاميم معمارية تعزز كفاءة خطوط الإنتاج',
+            'hero.slide2Desc': 'تنظيم تدفق العمليات ومناطق النظافة والامتثال التشريعي بأعلى المعايير.',
+            'hero.slide2Cta': 'شاهد قصص نجاحنا',
             
             // About Section
             'about.subtitle': 'عن جروث روتس',
@@ -397,11 +409,12 @@
         // Update all translatable elements
         document.querySelectorAll('[data-i18n]').forEach(element => {
             const key = element.getAttribute('data-i18n');
-            if (translations[lang] && translations[lang][key]) {
+            if (translations[lang] && Object.prototype.hasOwnProperty.call(translations[lang], key)) {
+                const translation = translations[lang][key];
                 if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                    element.placeholder = translations[lang][key];
+                    element.placeholder = translation;
                 } else {
-                    element.innerHTML = translations[lang][key];
+                    element.innerHTML = translation;
                 }
             }
         });
