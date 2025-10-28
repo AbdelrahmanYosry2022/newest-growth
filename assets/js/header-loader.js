@@ -65,14 +65,14 @@
                                 <a href="services.html" data-i18n="nav.services">Services</a>
                                 <ul class="submenu last-children">
                                     <li><a href="services.html" data-i18n="nav.allServices">All Services</a></li>
-                                    <li><a href="services-details.html" data-i18n="nav.factoryEstablishment">Factory Establishment</a></li>
-                                    <li><a href="services-details.html" data-i18n="nav.equipmentSupply">Equipment Supply</a></li>
-                                    <li><a href="services-details.html" data-i18n="nav.operationsManagement">Operations Management</a></li>
-                                    <li><a href="services-details.html" data-i18n="nav.trainingPrograms">Training Programs</a></li>
-                                    <li><a href="services-details.html" data-i18n="nav.productDevelopment">Product Development</a></li>
-                                    <li><a href="services-details.html" data-i18n="nav.rawMaterialsSupply">Raw Materials Supply</a></li>
-                                    <li><a href="services-details.html" data-i18n="nav.restructuring">Restructuring</a></li>
-                                    <li><a href="services-details.html" data-i18n="nav.restaurantSupport">Restaurant Support</a></li>
+                                    <li><a href="factory-establishment.html" data-i18n="nav.factoryEstablishment">Factory Establishment</a></li>
+                                    <li><a href="supply-equipment.html" data-i18n="nav.equipmentSupply">Equipment Supply</a></li>
+                                    <li><a href="operations-management.html" data-i18n="nav.operationsManagement">Operations Management</a></li>
+                                    <li><a href="training-programs.html" data-i18n="nav.trainingPrograms">Training Programs</a></li>
+                                    <li><a href="product-development.html" data-i18n="nav.productDevelopment">Product Development</a></li>
+                                    <li><a href="raw-materials-supply.html" data-i18n="nav.rawMaterialsSupply">Raw Materials Supply</a></li>
+                                    <li><a href="factory-restructuring.html" data-i18n="nav.restructuring">Restructuring</a></li>
+                                    <li><a href="restaurant-support.html" data-i18n="nav.restaurantSupport">Restaurant Support</a></li>
                                 </ul>
                             </li>
                             <li class="menu-item-has-children">
