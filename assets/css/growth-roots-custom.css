@@ -224,10 +224,26 @@ html[lang="ar"] .rs-section-title-wrapper .rs-section-subtitle.justify-content-s
 }
 
 .rs-list-check {
-    font-size: 20px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
     line-height: 1;
     margin-top: 4px;
     color: var(--rs-theme-orange, #ef7d12);
+    background-color: var(--rs-theme-orange, #ef7d12);
+    font-size: 0; /* hide any font glyph from icon fonts */
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill="currentColor"><path d="M320 576C178.6 576 64 461.4 64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576zM438 209.7C427.3 201.9 412.3 204.3 404.5 215L285.1 379.2L233 327.1C223.6 317.7 208.4 317.7 199.1 327.1C189.8 336.5 189.7 351.7 199.1 361L271.1 433C276.1 438 282.9 440.5 289.9 440C296.9 439.5 303.3 435.9 307.4 430.2L443.3 243.2C451.1 232.5 448.7 217.5 438 209.7z"/></svg>');
+    mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill="currentColor"><path d="M320 576C178.6 576 64 461.4 64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576zM438 209.7C427.3 201.9 412.3 204.3 404.5 215L285.1 379.2L233 327.1C223.6 317.7 208.4 317.7 199.1 327.1C189.8 336.5 189.7 351.7 199.1 361L271.1 433C276.1 438 282.9 440.5 289.9 440C296.9 439.5 303.3 435.9 307.4 430.2L443.3 243.2C451.1 232.5 448.7 217.5 438 209.7z"/></svg>');
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+.rs-list-check::before {
+    content: none !important;
 }
 
 @media only screen and (max-width: 575px) {
@@ -252,6 +268,22 @@ html[lang="ar"] .rs-section-title-wrapper .rs-section-subtitle.justify-content-s
 html[lang="ar"] .rs-services-three .rs-services-thumb img {
     transform: scaleX(-1);
     transform-origin: center;
+}
+
+html[lang="ar"] .rs-services-three .rs-services-content .descrip {
+    display: block;
+    overflow: hidden;
+    line-height: 1.7;
+    min-height: calc(1.7em * 5);
+    max-height: calc(1.7em * 5);
+}
+
+html[lang="ar"] .rs-services-nine .rs-services-descrip p {
+    display: block;
+    overflow: hidden;
+    line-height: 1.7;
+    min-height: calc(1.7em * 5);
+    max-height: calc(1.7em * 5);
 }
 
 .rs-services-three .rs-services-wrapper {
@@ -437,6 +469,11 @@ html[lang="ar"] .rs-list-item ul li {
 }
 
 html[lang="ar"] .rs-list-item ul li i {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+html[lang="ar"] .rs-list-item ul li .rs-list-check {
     margin-right: 0;
     margin-left: 10px;
 }
