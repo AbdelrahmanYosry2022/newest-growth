@@ -26,6 +26,15 @@ html[lang="ar"] body {
     direction: rtl;
 }
 
+/* Intro Section without tabs - adjust spacing */
+.rs-about-area.no-tabs .rs-about-content-wrapper {
+    padding-top: 0;
+}
+
+.rs-about-area.no-tabs .rs-section-title-wrapper {
+    margin-bottom: 0;
+}
+
 html[lang="ar"] *:not(i):not([class*="ri-"]):not([class*="fa-"]):not([class*="icon"]) {
     font-family: 'Cairo', sans-serif;
 }

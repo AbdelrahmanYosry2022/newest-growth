@@ -441,6 +441,18 @@
             'slider.restructuring': 'Restructuring',
             'slider.support': 'Support Solutions',
 
+            // Ricatto Intro Section
+            'ricatto.subtitle': 'About Ricatto',
+            'ricatto.title': 'Tailored ingredient systems that power consistent <span class="rs-theme-orange">food manufacturing success</span>',
+            'ricatto.description': '<strong>Ricatto</strong> is our specialized brand for producing and supplying high-quality flavor enhancers and food additives. This brand was developed to meet the needs of food factories for specialized raw materials that ensure quality and distinctive taste in final products.',
+            'ricatto.counter.title': '<span class="large-text">Custom</span> Formulations <br> Delivered',
+
+            // Kaya Intro Section
+            'kaya.subtitle': 'About Kaya Steel',
+            'kaya.title': 'Locally engineered production lines for <span class="rs-theme-orange">world-class manufacturing</span>',
+            'kaya.description': '<strong>Kaya Steel Engineering</strong> is our strategic partner for designing and manufacturing food production equipment. Through this partnership, we offer our clients a wide range of production lines and industrial machines tailored to their specific needs.',
+            'kaya.counter.title': '<span class="large-text">Equipment</span> Installations <br> Delivered',
+
             // CTA Section
             'cta.title': 'Ready to Start Your Food Manufacturing Project?',
             'cta.description': 'Let\'s transform your vision into a thriving production facility. Contact our team today for a consultation.',
@@ -890,6 +902,18 @@
             'slider.ingredients': 'مواد خام',
             'slider.restructuring': 'إعادة هيكلة',
             'slider.support': 'حلول دعم',
+
+            // Ricatto Intro Section
+            'ricatto.subtitle': 'عن ريكاتو',
+            'ricatto.title': 'مكسبات طعم وإضافات غذائية <span class="rs-theme-orange">عالية الجودة</span> لنجاح مصنعك',
+            'ricatto.description': '<strong>Ricatto</strong> هي علامتنا التجارية المتخصصة في إنتاج وتوريد مكسبات الطعم والإضافات الغذائية عالية الجودة. تم تطوير هذه العلامة لتلبية احتياجات مصانع الأغذية من المواد الخام المتخصصة التي تضمن جودة وطعم مميز للمنتجات النهائية.',
+            'ricatto.counter.title': '<span class="large-text">تركيبات</span> مخصصة <br> تم توريدها',
+
+            // Kaya Intro Section
+            'kaya.subtitle': 'عن كايا ستيل',
+            'kaya.title': 'خطوط إنتاج مصنعة محلياً ل<span class="rs-theme-orange">تصنيع عالمي المستوى</span>',
+            'kaya.description': 'شركة <strong>Kaya Steel للصناعات الهندسية</strong> هي شريكنا الاستراتيجي في تصميم وتصنيع معدات مصانع الأغذية. من خلال هذه الشراكة، نوفر لعملائنا مجموعة واسعة من خطوط الإنتاج والمعدات الصناعية المصممة حسب احتياجاتهم الخاصة.',
+            'kaya.counter.title': '<span class="large-text">تركيبات</span> معدات <br> تم تسليمها',
 
             // CTA Section
             'cta.title': 'مستعد لبدء مشروع التصنيع الغذائي؟',
