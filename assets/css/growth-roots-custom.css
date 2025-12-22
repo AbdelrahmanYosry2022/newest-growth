@@ -117,6 +117,41 @@ html[lang="ar"] .rs-breadcrumb-area .rs-breadcrumb-bg {
     transform-origin: center;
 }
 
+ html[lang="ar"] .rs-contact-eight .rs-section-title-wrapper {
+     text-align: center !important;
+ }
+
+ [dir="rtl"] .rs-contact-eight .rs-section-title-wrapper {
+     text-align: center !important;
+ }
+
+ [dir="rtl"] .rs-contact-eight .rs-section-subtitle {
+     justify-content: center !important;
+ }
+
+/* About page welcome text centering for RTL */
+[dir="rtl"] .rs-about-twelve .rs-section-title-wrapper.text-center {
+    text-align: center !important;
+}
+
+[dir="rtl"] .rs-about-twelve .rs-section-subtitle {
+    justify-content: center !important;
+}
+
+/* Reviews section RTL alignment */
+[dir="rtl"] .rs-testimonial-three .rs-testimonial-content {
+    text-align: right;
+}
+
+[dir="rtl"] .rs-testimonial-three .rs-section-subtitle {
+    justify-content: flex-start !important;
+}
+
+ .rs-contact-eight .rs-ripple-item.ripple-1 {
+     left: 53% !important;
+     top: 40% !important;
+ }
+
 .rs-category-area .rs-section-title-wrapper {
     text-align: center;
     margin-inline: auto;
@@ -145,6 +180,7 @@ html[lang="ar"] .rs-breadcrumb-area .rs-breadcrumb-bg {
 
 .rs-category-area .process-counts > [class*="col-"] {
     display: flex;
+    justify-content: center;
 }
 
 .rs-category-area .rs-category-item {
@@ -1072,4 +1108,284 @@ main > section.rs-about-ten:first-of-type .rs-about-thumb-wrapper {
 .rs-history-bg-thumb {
     background-color: var(--gr-light) !important;
     background-image: none !important;
+}
+
+/* History Timeline Layout Adjustment - Image 35%, Text 65% */
+.rs-history-one .rs-history-tab-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rs-history-one .rs-history-tab-thumb {
+    flex: 0 0 45%;
+    max-width: 45%;
+}
+
+.rs-history-one .rs-history-tab-content {
+    flex: 1 1 calc(65% - 40px);
+    max-width: calc(65% - 40px);
+}
+
+.rs-history-one .rs-history-tab-content p {
+    max-width: none;
+}
+
+.rs-history-one .rs-history-tab-thumb img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    max-height: 350px;
+}
+
+@media only screen and (max-width: 991px) {
+    .rs-history-one .rs-history-tab-item {
+        flex-direction: column;
+    }
+    
+    .rs-history-one .rs-history-tab-thumb,
+    .rs-history-one .rs-history-tab-content {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* RTL adjustment for History section */
+[dir="rtl"] .rs-history-one .rs-history-tab-item {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .rs-history-one .rs-history-tab-content {
+    text-align: right;
+}
+
+@media only screen and (max-width: 991px) {
+    [dir="rtl"] .rs-history-one .rs-history-tab-item {
+        flex-direction: column;
+    }
+    
+    [dir="rtl"] .rs-history-one .rs-history-tab-content {
+        text-align: center;
+    }
+}
+
+/* Section Title Alignment Fix for Reviews */
+.rs-testimonial-three .rs-section-title-wrapper {
+    text-align: start;
+}
+
+[dir="rtl"] .rs-testimonial-three .rs-section-title-wrapper {
+    text-align: right;
+}
+
+[dir="rtl"] .rs-testimonial-three .rs-section-subtitle {
+    justify-content: flex-end !important;
+}
+
+/* Partners Section - Center Title and Description */
+.rs-brand-two.has-theme-orange .rs-section-title-wrapper {
+    text-align: center;
+}
+
+.rs-brand-two.has-theme-orange .rs-section-subtitle {
+    justify-content: center !important;
+}
+
+.rs-brand-two.has-theme-orange .descrip {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* News/Blog Section - Center Title */
+.rs-blog-two .rs-section-title-wrapper.text-center .rs-section-subtitle {
+    justify-content: center !important;
+}
+
+/* ============================================
+   Product & Application Cards - Professional Styling
+   ============================================ */
+
+/* Product Cards (rs-service-wrapper style-four) - Enhanced */
+.rs-service-wrapper.style-four {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 30px 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.rs-service-wrapper.style-four:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(41, 108, 63, 0.15);
+    border-color: var(--gr-primary);
+}
+
+.rs-service-wrapper.style-four .rs-service-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--gr-primary) 0%, var(--gr-secondary) 100%);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.rs-service-wrapper.style-four:hover .rs-service-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.rs-service-wrapper.style-four .rs-service-icon i {
+    font-size: 32px;
+    color: #ffffff;
+}
+
+.rs-service-wrapper.style-four .rs-service-content {
+    flex: 1;
+}
+
+.rs-service-wrapper.style-four .rs-service-title {
+    margin-bottom: 12px;
+}
+
+.rs-service-wrapper.style-four .rs-service-title a {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--gr-dark);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.rs-service-wrapper.style-four .rs-service-title a:hover {
+    color: var(--gr-primary);
+}
+
+.rs-service-wrapper.style-four .rs-service-content p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Application Cards (rs-process-wrapper) - Enhanced */
+.rs-process-wrapper {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 30px 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.rs-process-wrapper:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(41, 108, 63, 0.15);
+    border-color: var(--gr-primary);
+}
+
+.rs-process-wrapper .rs-process-number {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--gr-primary) 0%, var(--gr-secondary) 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.rs-process-wrapper:hover .rs-process-number {
+    transform: scale(1.1);
+}
+
+.rs-process-wrapper .rs-process-number span {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.rs-process-wrapper .rs-process-content {
+    flex: 1;
+}
+
+.rs-process-wrapper .rs-process-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--gr-dark);
+    margin-bottom: 10px;
+}
+
+.rs-process-wrapper .rs-process-content p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* RTL Support for Cards */
+[dir="rtl"] .rs-process-wrapper {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .rs-process-wrapper .rs-process-content {
+    text-align: right;
+}
+
+[dir="rtl"] .rs-service-wrapper.style-four {
+    text-align: right;
+}
+
+/* Intro Section Subtitle Alignment */
+.rs-about-twelve .rs-section-title-wrapper .rs-section-subtitle.justify-content-end {
+    justify-content: flex-start !important;
+    display: flex;
+}
+
+[dir="rtl"] .rs-about-twelve .rs-section-title-wrapper .rs-section-subtitle.justify-content-end {
+    justify-content: flex-end !important;
+}
+
+/* ============================================
+   Header Navbar Order - RTL vs LTR
+   ============================================ */
+
+/* English (LTR): Social/Lang icons first, then Menu */
+.rs-header-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.rs-header-menu .rs-header-utility {
+    order: 1;
+}
+
+.rs-header-menu .main-menu {
+    order: 2;
+}
+
+/* Arabic (RTL): Menu first, then Social/Lang icons */
+[dir="rtl"] .rs-header-menu .rs-header-utility {
+    order: 2;
+}
+
+[dir="rtl"] .rs-header-menu .main-menu {
+    order: 1;
 }

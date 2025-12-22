@@ -91,7 +91,6 @@
                             <li class="menu-item-has-children">
                                 <a href="#" data-i18n="nav.more">More</a>
                                 <ul class="submenu last-children">
-                                    <li><a href="success-stories.html" data-i18n="nav.successStories">Success Stories</a></li>
                                     <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
                                 </ul>
                             </li>

@@ -34,7 +34,6 @@
                                         <ul>
                                             <li><a href="about.html" data-i18n="footer.linkAbout">About Us</a></li>
                                             <li><a href="services.html" data-i18n="footer.linkServices">Our Services</a></li>
-                                            <li><a href="portfolio.html" data-i18n="footer.linkPortfolio">Success Stories</a></li>
                                             <li><a href="faq.html" data-i18n="footer.linkFaq">FAQ</a></li>
                                             <li><a href="contact.html" data-i18n="footer.linkContact">Contact Us</a></li>
                                         </ul>
