@@ -1400,6 +1400,26 @@ main > section.rs-about-ten:first-of-type .rs-about-thumb-wrapper {
     justify-content: flex-start;
 }
 
+/* Remove extra right spacing for menu container in RTL */
+[dir="rtl"] .rs-header-four .rs-header-menu {
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Remove vertical divider before the menu in RTL (if present) */
+[dir="rtl"] .rs-header-menu .rs-header-utility {
+    border-right: 0 !important;
+    border-left: 0 !important;
+}
+
+[dir="rtl"] .rs-header-menu .rs-header-utility::before,
+[dir="rtl"] .rs-header-menu .rs-header-utility::after,
+[dir="rtl"] .rs-header-menu .main-menu::before,
+[dir="rtl"] .rs-header-menu .main-menu::after {
+    content: none !important;
+    display: none !important;
+}
+
 [dir="rtl"] .rs-header-menu .main-menu > ul {
     justify-content: flex-end;
 }
