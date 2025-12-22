@@ -1389,3 +1389,22 @@ main > section.rs-about-ten:first-of-type .rs-about-thumb-wrapper {
 [dir="rtl"] .rs-header-menu .main-menu {
     order: 1;
 }
+
+/* Fix empty space in RTL header */
+[dir="rtl"] .rs-header-inner {
+    justify-content: space-between;
+}
+
+[dir="rtl"] .rs-header-menu {
+    flex: 1;
+    justify-content: flex-start;
+}
+
+[dir="rtl"] .rs-header-menu .main-menu > ul {
+    justify-content: flex-end;
+}
+
+/* Hide the 4-squares hamburger icon */
+.rs-header-hamburger {
+    display: none !important;
+}
