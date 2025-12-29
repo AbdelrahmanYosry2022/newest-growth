@@ -42,7 +42,7 @@ Sidebar Toggle
         $(".offcanvas-area").removeClass("info-open");
         $(".offcanvas-overlay").removeClass("overlay-open");
     });
-    $(".sidebar-toggle").on("click", function () {
+    $(document).on("click", ".sidebar-toggle", function () {
         $(".offcanvas-area").addClass("info-open");
         $(".offcanvas-overlay").addClass("overlay-open");
     });
