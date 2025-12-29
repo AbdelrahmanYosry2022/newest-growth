@@ -1407,7 +1407,7 @@
 
     // Add event listeners to language toggle links
     function bindLanguageToggleHandlers() {
-        document.querySelectorAll('.language-menu a, .lang-btn').forEach(link => {
+        document.querySelectorAll('.language-menu a, .lang-btn, .lang-toggle-btn').forEach(link => {
             link.addEventListener('click', onLanguageToggleClick);
         });
     }

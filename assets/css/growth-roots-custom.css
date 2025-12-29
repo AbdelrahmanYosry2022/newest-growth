@@ -1493,51 +1493,52 @@ html[lang="ar"] .rs-header-hamburger {
     order: -1;
 }
 
-/* Offcanvas Language Toggle Buttons */
-.offcanvas-language-toggle {
-    padding: 20px 0;
-    border-bottom: 1px solid rgba(31, 31, 31, 0.1);
+/* Offcanvas Language Toggle Button in Social Media */
+.offcanvas-social ul li.language-toggle-item {
+    display: inline-block;
 }
 
-.offcanvas-language-toggle .offcanvas-title-meta {
-    font-size: 18px;
+.offcanvas-social ul li.language-toggle-item .lang-toggle-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(31, 31, 31, 0.1);
+    background: transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 16px;
     font-weight: 600;
     color: var(--rs-text-primary);
-    margin-bottom: 15px;
 }
 
-.language-switch-buttons {
-    display: flex;
-    gap: 10px;
-}
-
-.language-switch-buttons .lang-btn {
-    flex: 1;
-    padding: 12px 20px;
-    border: 2px solid var(--gr-primary);
-    background: transparent;
-    color: var(--gr-primary);
-    font-size: 15px;
-    font-weight: 600;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.language-switch-buttons .lang-btn:hover {
+.offcanvas-social ul li.language-toggle-item .lang-toggle-btn:hover {
     background: var(--gr-primary);
     color: var(--gr-light);
+    border-color: var(--gr-primary);
 }
 
-.language-switch-buttons .lang-btn.active {
-    background: var(--gr-primary);
-    color: var(--gr-light);
+.offcanvas-social ul li.language-toggle-item .lang-toggle-btn .lang-text {
+    font-family: 'Cairo', sans-serif;
 }
 
-html[lang="ar"] .language-switch-buttons .lang-btn[data-lang="ar"],
-html[lang="en"] .language-switch-buttons .lang-btn[data-lang="en"] {
-    background: var(--gr-primary);
-    color: var(--gr-light);
+/* Hide AR button when in Arabic, show EN button */
+html[lang="ar"] .offcanvas-social ul li.language-toggle-item .lang-toggle-btn[data-lang="ar"] {
+    display: none;
+}
+
+html[lang="ar"] .offcanvas-social ul li.language-toggle-item .lang-toggle-btn[data-lang="en"] {
+    display: inline-flex;
+}
+
+/* Hide EN button when in English, show AR button */
+html[lang="en"] .offcanvas-social ul li.language-toggle-item .lang-toggle-btn[data-lang="en"] {
+    display: none;
+}
+
+html[lang="en"] .offcanvas-social ul li.language-toggle-item .lang-toggle-btn[data-lang="ar"] {
+    display: inline-flex;
 }
 
 /* ============================================
