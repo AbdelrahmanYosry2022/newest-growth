@@ -162,5 +162,13 @@
                 });
             }
         }
+
+        // Re-bind sidebar toggle after header is loaded
+        if (window.jQuery) {
+            window.jQuery('.sidebar-toggle').off('click').on('click', function() {
+                window.jQuery('.offcanvas-area').addClass('info-open');
+                window.jQuery('.offcanvas-overlay').addClass('overlay-open');
+            });
+        }
     }
 })();
