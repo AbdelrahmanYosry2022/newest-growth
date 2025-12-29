@@ -1493,6 +1493,26 @@ html[lang="ar"] .rs-header-hamburger {
     order: -1;
 }
 
+/* Hero Section - Fix Pagination Dots Position */
+.rs-banner-eleven .rs-banner-pagination {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+@media only screen and (max-width: 991px) {
+    .rs-banner-eleven .rs-banner-pagination {
+        bottom: 20px;
+    }
+    
+    /* Adjust hero content padding to make room for pagination */
+    .rs-hero-intro .rs-banner-content {
+        padding-bottom: 60px;
+    }
+}
+
 /* Offcanvas Language Toggle Button in Social Media */
 .offcanvas-social ul li.language-toggle-item {
     display: inline-block;
