@@ -1428,3 +1428,532 @@ main > section.rs-about-ten:first-of-type .rs-about-thumb-wrapper {
 .rs-header-hamburger {
     display: none !important;
 }
+
+/* ============================================
+   MOBILE RESPONSIVENESS IMPROVEMENTS
+   ============================================ */
+
+/* Extra Large Devices (1400px and below) */
+@media only screen and (max-width: 1399px) {
+    .rs-services-ten .rs-services-tab-logo {
+        width: 80px;
+    }
+    
+    .rs-services-ten .rs-services-tab .nav-link {
+        gap: 40px;
+        padding-inline-end: 50px;
+    }
+}
+
+/* Large Devices (1199px and below) */
+@media only screen and (max-width: 1199px) {
+    .rs-hero-intro .rs-banner-title {
+        font-size: clamp(28px, 5vw, 48px);
+    }
+    
+    .rs-hero-intro .rs-banner-descrip {
+        font-size: 16px;
+    }
+    
+    .rs-section-title {
+        font-size: clamp(24px, 4vw, 42px) !important;
+    }
+    
+    .rs-services-ten .rs-services-tab .nav-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .rs-services-ten .rs-services-tab-logo {
+        margin-bottom: 10px;
+    }
+}
+
+/* Medium Devices - Tablets (991px and below) */
+@media only screen and (max-width: 991px) {
+    /* Hero Section */
+    .rs-hero-intro .rs-banner-item-wrapper {
+        padding-top: clamp(160px, 20vh, 240px);
+        padding-bottom: 60px;
+    }
+    
+    .rs-hero-intro .rs-banner-title {
+        font-size: clamp(24px, 6vw, 36px);
+        line-height: 1.3;
+    }
+    
+    .rs-hero-intro .rs-banner-descrip {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    
+    .rs-hero-intro .rs-banner-btn {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .rs-hero-intro .rs-banner-btn .rs-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    /* Section Titles */
+    .rs-section-title {
+        font-size: clamp(22px, 5vw, 32px) !important;
+        line-height: 1.3;
+    }
+    
+    .rs-section-subtitle {
+        font-size: 14px;
+    }
+    
+    /* About Section */
+    .rs-about-thumb-wrapper {
+        margin-bottom: 40px;
+    }
+    
+    .rs-about-content-wrapper {
+        padding: 0 15px;
+    }
+    
+    /* Services Tab Section */
+    .rs-services-ten .rs-services-tab {
+        flex-direction: column;
+    }
+    
+    .rs-services-ten .rs-services-tab .nav-item {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        padding: 15px 0;
+    }
+    
+    .rs-services-ten .rs-services-tab-brand {
+        margin-right: 15px;
+    }
+    
+    html[lang="ar"] .rs-services-ten .rs-services-tab-brand {
+        margin-right: 0;
+        margin-left: 15px;
+    }
+    
+    .rs-services-ten .rs-services-tab-logo {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .rs-services-ten .rs-services-tab .nav-link {
+        padding: 0;
+        gap: 0;
+    }
+    
+    .rs-services-ten .rs-services-tab .nav-link svg {
+        display: none;
+    }
+    
+    .rs-services-ten .rs-services-tab-content {
+        padding: 30px 20px;
+    }
+    
+    /* Work Process Section */
+    .rs-work-step-five .rs-work-step-item {
+        border: none !important;
+        padding: 20px 0;
+    }
+    
+    /* Footer */
+    .rs-footer-widget {
+        margin-bottom: 30px;
+    }
+    
+    .rs-footer-widget.footer-2-col-2 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    html[lang="ar"] .rs-footer-widget.footer-2-col-2 {
+        padding-right: 0;
+    }
+    
+    /* Contact Form */
+    .rs-contact-form {
+        padding: 30px 20px;
+    }
+    
+    /* Breadcrumb */
+    .rs-breadcrumb-one {
+        padding-top: 180px;
+        padding-bottom: 100px;
+    }
+    
+    .rs-breadcrumb-title {
+        font-size: clamp(24px, 6vw, 36px);
+    }
+}
+
+/* Small Devices - Large Phones (767px and below) */
+@media only screen and (max-width: 767px) {
+    /* Hero Section */
+    .rs-hero-intro .rs-banner-item-wrapper {
+        padding-top: 140px;
+        padding-bottom: 50px;
+    }
+    
+    .rs-hero-intro .rs-banner-title {
+        font-size: clamp(20px, 7vw, 28px);
+    }
+    
+    .rs-hero-intro .rs-banner-descrip {
+        font-size: 14px;
+    }
+    
+    /* Navigation */
+    .rs-banner-navigation {
+        display: none;
+    }
+    
+    /* Buttons */
+    .rs-btn {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+    
+    /* Section Spacing */
+    .section-space {
+        padding: 60px 0;
+    }
+    
+    .section-title-space {
+        margin-bottom: 40px;
+    }
+    
+    /* Cards and Items */
+    .rs-services-item,
+    .rs-service-wrapper,
+    .rs-process-wrapper {
+        padding: 20px 15px;
+    }
+    
+    /* Services Tab */
+    .rs-services-ten .rs-services-tab-item {
+        min-height: 300px;
+    }
+    
+    .rs-services-ten .rs-services-descrip p {
+        font-size: 14px;
+    }
+    
+    /* Counter Section */
+    .rs-counter-number {
+        font-size: clamp(32px, 8vw, 48px);
+    }
+    
+    /* History Timeline */
+    .rs-history-one .rs-history-tab-thumb {
+        margin-bottom: 20px;
+    }
+    
+    .rs-history-one .rs-history-tab-content {
+        text-align: center;
+    }
+    
+    html[lang="ar"] .rs-history-one .rs-history-tab-content {
+        text-align: center;
+    }
+    
+    /* Footer */
+    .rs-footer-widget-title {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    
+    .rs-footer-copyright {
+        font-size: 13px;
+        padding: 20px 0;
+    }
+    
+    /* Breadcrumb */
+    .rs-breadcrumb-one {
+        padding-top: 140px;
+        padding-bottom: 80px;
+    }
+    
+    /* Text Slider */
+    .rs-text-slide-one {
+        padding: 20px 0;
+    }
+    
+    .rs-text-slide-title {
+        font-size: clamp(24px, 6vw, 36px);
+    }
+}
+
+/* Extra Small Devices - Phones (575px and below) */
+@media only screen and (max-width: 575px) {
+    /* Hero Section */
+    .rs-hero-intro .rs-banner-item-wrapper {
+        padding-top: 120px;
+        padding-bottom: 40px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .rs-hero-intro .rs-banner-title {
+        font-size: clamp(18px, 6vw, 24px);
+        margin-bottom: 15px;
+    }
+    
+    .rs-hero-intro .rs-banner-descrip {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+    
+    /* Section Titles */
+    .rs-section-title {
+        font-size: clamp(18px, 5.5vw, 24px) !important;
+    }
+    
+    .rs-section-subtitle {
+        font-size: 12px;
+    }
+    
+    /* Buttons */
+    .rs-btn {
+        padding: 10px 20px;
+        font-size: 13px;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .rs-btn .icon-box {
+        display: none;
+    }
+    
+    /* Container padding */
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    /* Section Spacing */
+    .section-space {
+        padding: 50px 0;
+    }
+    
+    /* Services Cards */
+    .rs-services-three .rs-services-thumb {
+        height: 180px;
+    }
+    
+    .rs-services-title {
+        font-size: 16px;
+    }
+    
+    .rs-services-content .descrip {
+        font-size: 13px;
+    }
+    
+    /* Sub-brands Tab */
+    .rs-services-ten .rs-services-tab .nav-item {
+        padding: 12px 0;
+    }
+    
+    .rs-services-ten .rs-services-tab-logo {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .rs-services-ten .rs-services-tab .nav-link span:first-child {
+        font-size: 14px;
+    }
+    
+    .rs-services-ten .rs-services-tab-content {
+        padding: 20px 15px;
+    }
+    
+    .rs-services-ten .rs-services-descrip p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+    
+    /* Counter Section */
+    .rs-counter-area {
+        padding: 40px 0;
+    }
+    
+    .rs-counter-number {
+        font-size: clamp(28px, 7vw, 40px);
+    }
+    
+    .rs-counter-text {
+        font-size: 13px;
+    }
+    
+    /* Work Process */
+    .rs-work-step-title {
+        font-size: 16px;
+    }
+    
+    .rs-work-step-text p {
+        font-size: 13px;
+    }
+    
+    /* Contact Form */
+    .rs-contact-form {
+        padding: 25px 15px;
+    }
+    
+    .rs-contact-form input,
+    .rs-contact-form textarea {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+    
+    /* FAQ Section */
+    .rs-faq-item {
+        padding: 15px;
+    }
+    
+    .rs-faq-title {
+        font-size: 14px;
+    }
+    
+    .rs-faq-content p {
+        font-size: 13px;
+    }
+    
+    /* Footer */
+    .rs-footer-area {
+        padding-top: 60px;
+    }
+    
+    .rs-footer-widget-title {
+        font-size: 16px;
+    }
+    
+    .rs-footer-widget-description,
+    .rs-footer-widget-links a,
+    .rs-footer-widget-meta {
+        font-size: 13px;
+    }
+    
+    .rs-footer-widget-stroke-text img {
+        max-width: 100px;
+    }
+    
+    /* Breadcrumb */
+    .rs-breadcrumb-one {
+        padding-top: 110px;
+        padding-bottom: 60px;
+    }
+    
+    .rs-breadcrumb-title {
+        font-size: clamp(18px, 5vw, 24px);
+    }
+    
+    /* History Timeline */
+    .rs-history-one .rs-history-tab-thumb img {
+        max-height: 200px;
+    }
+    
+    .rs-history-tab-title {
+        font-size: 18px;
+    }
+    
+    .rs-history-tab-content p {
+        font-size: 13px;
+    }
+    
+    /* Testimonials */
+    .rs-testimonial-content {
+        font-size: 14px;
+    }
+    
+    /* Blog/News Cards */
+    .rs-blog-title {
+        font-size: 16px;
+    }
+    
+    .rs-blog-meta {
+        font-size: 12px;
+    }
+    
+    /* Image Grid */
+    .rs-image-grid-item img {
+        aspect-ratio: 16 / 10;
+    }
+}
+
+/* RTL Mobile Adjustments */
+@media only screen and (max-width: 991px) {
+    html[lang="ar"] .rs-hero-intro .rs-banner-content,
+    html[lang="ar"] .rs-hero-intro .rs-banner-item {
+        text-align: center;
+        align-items: center;
+    }
+    
+    html[lang="ar"] .rs-section-title-wrapper {
+        text-align: center;
+        align-items: center;
+    }
+    
+    html[lang="ar"] .rs-section-subtitle {
+        justify-content: center !important;
+    }
+    
+    html[lang="ar"] .rs-about-content-wrapper {
+        text-align: center;
+    }
+    
+    html[lang="ar"] .rs-list-item ul {
+        text-align: right;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    html[lang="ar"] .rs-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    html[lang="ar"] .rs-services-ten .rs-services-tab-brand {
+        margin-left: 10px;
+    }
+}
+
+/* Fix for touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .rs-services-item:hover,
+    .rs-service-wrapper:hover,
+    .rs-process-wrapper:hover {
+        transform: none;
+    }
+    
+    .rs-image-grid-item:hover img {
+        transform: none;
+    }
+    
+    /* Disable custom cursor on touch devices */
+    #rs-mouse {
+        display: none !important;
+    }
+}
+
+/* Landscape mode adjustments for phones */
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+    .rs-hero-intro .rs-banner-item-wrapper {
+        padding-top: 100px;
+        padding-bottom: 30px;
+    }
+    
+    .rs-hero-intro .rs-banner-title {
+        font-size: 20px;
+    }
+    
+    .rs-breadcrumb-one {
+        padding-top: 100px;
+        padding-bottom: 40px;
+    }
+}

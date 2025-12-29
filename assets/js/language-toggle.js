@@ -425,13 +425,13 @@
             'subbrands.title': 'Our Growth Roots Family',
             'subbrands.growthRoots': 'Growth Roots',
             'subbrands.kayaSteel': 'Kaya Steel',
-            'subbrands.ricetto': 'Ricetto',
+            'subbrands.ricatto': 'Ricatto',
             'subbrands.growthRootsDesc': 'From site scouting to full-scale commissioning, we launch food factories that align with Growth Roots standards.',
             'subbrands.growthRootsCta': 'Discover Launch Support',
             'subbrands.kayaSteelDesc': 'We build production lines, implement HACCP processes, and structure teams for sustained efficiency.',
             'subbrands.kayaSteelCta': 'Streamline Operations',
-            'subbrands.ricettoDesc': 'We coach culinary teams, standardize recipes, and transfer Growth Roots best practices on-site.',
-            'subbrands.ricettoCta': 'Upskill Your Team',
+            'subbrands.ricattoDesc': 'We coach culinary teams, standardize recipes, and transfer Growth Roots best practices on-site.',
+            'subbrands.ricattoCta': 'Upskill Your Team',
 
             // Why Choose Section
             'why.subtitle': 'Why Choose Us',
@@ -1173,13 +1173,13 @@
             'subbrands.title': 'عائلة جروث رووتس',
             'subbrands.growthRoots': 'جروث رووتس',
             'subbrands.kayaSteel': 'كايا ستيل',
-            'subbrands.ricetto': 'ريكيتو',
+            'subbrands.ricatto': 'ريكاتو',
             'subbrands.growthRootsDesc': 'من اختيار الموقع إلى التشغيل الكامل، نؤسس مصانع غذائية متوافقة مع معايير جروث رووتس.',
             'subbrands.growthRootsCta': 'اكتشف دعم الإطلاق',
             'subbrands.kayaSteelDesc': 'نبني خطوط الإنتاج ونطبق أنظمة الهاسب وننظم الفرق لضمان كفاءة مستدامة.',
             'subbrands.kayaSteelCta': 'حسّن العمليات',
-            'subbrands.ricettoDesc': 'ندرب فرق الطهي، نوحد الوصفات، وننقل أفضل ممارسات جروث رووتس في الموقع.',
-            'subbrands.ricettoCta': 'طوّر فريقك',
+            'subbrands.ricattoDesc': 'ندرب فرق الطهي، نوحد الوصفات، وننقل أفضل ممارسات جروث رووتس في الموقع.',
+            'subbrands.ricattoCta': 'طوّر فريقك',
 
             // Why Choose Section
             'why.subtitle': 'لماذا تختارنا',

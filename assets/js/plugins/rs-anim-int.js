@@ -15,7 +15,7 @@
     // Split Text
     function gsap_rs_split_text() {
         setTimeout(function () {
-            var splitTextElements = $("body:not(.rtl) .rs-split-text-enable");
+            var splitTextElements = $("html:not([dir='rtl']) .rs-split-text-enable");
             if (splitTextElements.length === 0) return;
             gsap.registerPlugin(SplitText);
             splitTextElements.each(function (index, element) {
