@@ -1493,6 +1493,53 @@ html[lang="ar"] .rs-header-hamburger {
     order: -1;
 }
 
+/* Offcanvas Language Toggle Buttons */
+.offcanvas-language-toggle {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(31, 31, 31, 0.1);
+}
+
+.offcanvas-language-toggle .offcanvas-title-meta {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--rs-text-primary);
+    margin-bottom: 15px;
+}
+
+.language-switch-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.language-switch-buttons .lang-btn {
+    flex: 1;
+    padding: 12px 20px;
+    border: 2px solid var(--gr-primary);
+    background: transparent;
+    color: var(--gr-primary);
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.language-switch-buttons .lang-btn:hover {
+    background: var(--gr-primary);
+    color: var(--gr-light);
+}
+
+.language-switch-buttons .lang-btn.active {
+    background: var(--gr-primary);
+    color: var(--gr-light);
+}
+
+html[lang="ar"] .language-switch-buttons .lang-btn[data-lang="ar"],
+html[lang="en"] .language-switch-buttons .lang-btn[data-lang="en"] {
+    background: var(--gr-primary);
+    color: var(--gr-light);
+}
+
 /* ============================================
    MOBILE RESPONSIVENESS IMPROVEMENTS
    ============================================ */

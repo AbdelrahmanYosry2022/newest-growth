@@ -566,11 +566,7 @@ Sidebar Toggle
 
 
         /* Mobile Menu Js */
-        $("#mobile-menu").meanmenu({
-            meanMenuContainer: ".mobile-menu",
-            meanScreenWidth: "1199",
-            meanExpand: ['<i class="fa-regular fa-plus"></i>'],
-        });
+        // Removed from here - now handled in header-loader.js to prevent duplication
 
         /*======================================
           One Page overlay close

@@ -627,7 +627,8 @@
             // Offcanvas
             'offcanvas.about': 'Growth Roots is Egypt\'s premier partner for food manufacturing excellence. We provide comprehensive solutions from factory establishment to operations, serving meat and poultry producers with over 20 years of experience.',
             'offcanvas.contactTitle': 'Contact Info',
-            'offcanvas.socialTitle': 'Subscribe & Follow'
+            'offcanvas.socialTitle': 'Subscribe & Follow',
+            'offcanvas.languageTitle': 'Language'
         },
         ar: {
             // Navigation
@@ -1326,7 +1327,8 @@
             // Offcanvas
             'offcanvas.about': 'جروث رووتس هي الشريك الأول في مصر للتميز في التصنيع الغذائي. نقدم حلولاً شاملة من تأسيس المصانع إلى العمليات، نخدم منتجي اللحوم والدواجن بخبرة تتجاوز 20 عاماً.',
             'offcanvas.contactTitle': 'معلومات الاتصال',
-            'offcanvas.socialTitle': 'تابعنا'
+            'offcanvas.socialTitle': 'تابعنا',
+            'offcanvas.languageTitle': 'اللغة'
         }
     };
 
@@ -1405,7 +1407,7 @@
 
     // Add event listeners to language toggle links
     function bindLanguageToggleHandlers() {
-        document.querySelectorAll('.language-menu a').forEach(link => {
+        document.querySelectorAll('.language-menu a, .lang-btn').forEach(link => {
             link.addEventListener('click', onLanguageToggleClick);
         });
     }
