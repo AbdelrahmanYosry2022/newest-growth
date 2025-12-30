@@ -428,10 +428,10 @@ Sidebar Toggle
             }
 
             // Sticky Header
-            if ($(this).scrollTop() > 250) {
-                $("#header-sticky").addClass("rs-sticky");
+            if ($(this).scrollTop() > 100) {
+                $(".gr-navbar-wrapper").addClass("sticky");
             } else {
-                $("#header-sticky").removeClass("rs-sticky");
+                $(".gr-navbar-wrapper").removeClass("sticky");
             }
         });
         $(".backtotop-wrap").on("click", function (event) {

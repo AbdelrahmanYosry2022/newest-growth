@@ -1370,6 +1370,12 @@
 
         toggleSplitText(lang);
         updateLanguageButtons();
+
+        // Update opposite lang text in header if exists
+        const oppositeLangSpan = document.querySelector('.gr-language-select .opposite-lang');
+        if (oppositeLangSpan) {
+            oppositeLangSpan.textContent = lang === 'en' ? 'AR' : 'EN';
+        }
     }
 
     // Update active state on language buttons
@@ -1407,9 +1413,25 @@
 
     // Add event listeners to language toggle links
     function bindLanguageToggleHandlers() {
-        document.querySelectorAll('.language-menu a, .lang-btn, .lang-toggle-btn').forEach(link => {
+        // Handle new simplified toggle button
+        const toggleBtn = document.querySelector('.language-toggle-btn');
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', onSimpleLanguageToggle);
+        }
+        
+        // Keep support for old menu-based toggles
+        document.querySelectorAll('.language-menu a, .lang-btn').forEach(link => {
             link.addEventListener('click', onLanguageToggleClick);
         });
+    }
+
+    function onSimpleLanguageToggle(event) {
+        event.preventDefault();
+        // Toggle to opposite language
+        const newLang = currentLang === 'en' ? 'ar' : 'en';
+        localStorage.setItem('siteLanguage', newLang);
+        currentLang = newLang;
+        window.location.reload();
     }
 
     function onLanguageToggleClick(event) {
