@@ -75,9 +75,7 @@
 
     document.addEventListener('DOMContentLoaded', () => {
         const placeholder = document.querySelector('[data-include="header"]');
-        if (!placeholder) {
-            return;
-        }
+        if (!placeholder) return;
 
         renderHeader(placeholder, FALLBACK_HEADER_HTML);
 
@@ -85,14 +83,10 @@
 
         fetch(partialUrl, { cache: 'no-cache' })
             .then(response => {
-                if (!response.ok) {
-                    throw new Error(`Failed to load header: ${response.status}`);
-                }
+                if (!response.ok) throw new Error(`Failed to load header: ${response.status}`);
                 return response.text();
             })
-            .then(html => {
-                renderHeader(placeholder, html);
-            })
+            .then(html => renderHeader(placeholder, html))
             .catch(error => {
                 console.warn('[header-loader] Using fallback header due to error:', error);
             });
@@ -120,9 +114,8 @@
             }
         }
 
-        // Re-bind sidebar toggle after header is loaded
         if (window.jQuery) {
-            window.jQuery('.sidebar-toggle').off('click').on('click', function() {
+            window.jQuery('.sidebar-toggle').off('click').on('click', function () {
                 window.jQuery('.offcanvas-area').addClass('info-open');
                 window.jQuery('.offcanvas-overlay').addClass('overlay-open');
             });
