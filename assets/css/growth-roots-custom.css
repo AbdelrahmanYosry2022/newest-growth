@@ -3168,13 +3168,29 @@ html[lang="ar"] .gr-btn {
 }
 
 .courses-cta-wrapper .rs-btn {
-    background: #fff;
+    background: #fff !important;
     color: var(--gr-primary) !important;
+    border-color: #fff !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.courses-cta-wrapper .rs-btn.has-bg::before {
+    display: none;
 }
 
 .courses-cta-wrapper .rs-btn:hover {
-    background: var(--gr-dark);
+    background: var(--gr-dark) !important;
     color: #fff !important;
+    border-color: var(--gr-dark) !important;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.courses-cta-wrapper .rs-btn .icon-box svg {
+    fill: var(--gr-primary) !important;
+}
+
+.courses-cta-wrapper .rs-btn:hover .icon-box svg {
+    fill: #fff !important;
 }
 
 /* Responsive */
@@ -3254,6 +3270,17 @@ html[lang="ar"] .courses-cta-wrapper {
 html[lang="ar"] .courses-cta-wrapper::before {
     right: auto;
     left: -20%;
+}
+
+/* RTL for why-section content block */
+html[lang="ar"] .courses-why-section .rs-about-content {
+    direction: ltr;
+    text-align: right;
+}
+
+html[lang="ar"] .courses-why-section .rs-check-list li {
+    flex-direction: row-reverse;
+    text-align: right;
 }
 
 
