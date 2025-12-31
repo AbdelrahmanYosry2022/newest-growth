@@ -82,12 +82,28 @@
                 titleFallback: '<span class="large-text">تركيبات</span> معدات <br> تم تسليمها'
             },
             subtitle: 'kaya.subtitle',
-            subtitleFallback: 'عن كايا ستيل',
+            subtitleFallback: 'عن برازرز ستيل',
             title: 'kaya.title',
             titleFallback: 'خطوط إنتاج مصنعة محلياً ل<span class="rs-theme-orange">تصنيع عالمي المستوى</span>',
             description: 'kaya.description',
-            descriptionFallback: 'شركة <strong>Kaya Steel للصناعات الهندسية</strong> هي شريكنا الاستراتيجي في تصميم وتصنيع معدات مصانع الأغذية. من خلال هذه الشراكة، نوفر لعملائنا مجموعة واسعة من خطوط الإنتاج والمعدات الصناعية المصممة حسب احتياجاتهم الخاصة.',
-            tabs: null // No tabs for Kaya page
+            descriptionFallback: 'شركة <strong>Brothers Steel للصناعات الهندسية</strong> هي شريكنا الاستراتيجي في تصميم وتصنيع معدات مصانع الأغذية. من خلال هذه الشراكة، نوفر لعملائنا مجموعة واسعة من خطوط الإنتاج والمعدات الصناعية المصممة حسب احتياجاتهم الخاصة.',
+            tabs: null // No tabs for Brothers Steel page
+        },
+        'brothers-products.html': {
+            sectionStyle: 'margin-top: 80px;',
+            counter: {
+                count: '120',
+                icon: 'equipment',
+                title: 'kaya.counter.title',
+                titleFallback: '<span class="large-text">تركيبات</span> معدات <br> تم تسليمها'
+            },
+            subtitle: 'kaya.subtitle',
+            subtitleFallback: 'عن برازرز ستيل',
+            title: 'kaya.title',
+            titleFallback: 'خطوط إنتاج مصنعة محلياً ل<span class="rs-theme-orange">تصنيع عالمي المستوى</span>',
+            description: 'kaya.description',
+            descriptionFallback: 'شركة <strong>Brothers Steel للصناعات الهندسية</strong> هي شريكنا الاستراتيجي في تصميم وتصنيع معدات مصانع الأغذية. من خلال هذه الشراكة، نوفر لعملائنا مجموعة واسعة من خطوط الإنتاج والمعدات الصناعية المصممة حسب احتياجاتهم الخاصة.',
+            tabs: null // No tabs for Brothers Steel page
         }
     };
 
