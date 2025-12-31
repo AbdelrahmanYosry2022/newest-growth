@@ -1552,6 +1552,16 @@ html[lang="en"] .offcanvas-social ul li.language-toggle-item .lang-toggle-btn[da
         font-size: 16px;
     }
 
+    .rs-hero-intro .rs-banner-bg-thumb {
+        width: 100%;
+        inset-inline-start: 0;
+        inset-inline-end: 0;
+    }
+
+    .rs-hero-intro .rs-banner-navigation {
+        display: none;
+    }
+
     .rs-section-title {
         font-size: clamp(24px, 4vw, 42px) !important;
     }
@@ -1797,6 +1807,10 @@ html[lang="en"] .offcanvas-social ul li.language-toggle-item .lang-toggle-btn[da
         padding-bottom: 40px;
         padding-left: 15px;
         padding-right: 15px;
+    }
+
+    .rs-hero-intro .rs-banner-pagination {
+        display: none !important;
     }
 
     .rs-hero-intro .rs-banner-title {
