@@ -85,7 +85,7 @@
                         <input type="hidden" name="_subject" value="New message from Growth Roots website">
                         <input type="hidden" name="_template" value="table">
                         <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="https://growthroots.netlify.app/thank-you.html">
+                        <input type="hidden" name="_next" value="https://growthroots.netlify.app/?sent=1">
                         <div class="row g-4">
                             <div class="col-md-12">
                                 <div class="rs-contact-input">
