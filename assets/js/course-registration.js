@@ -1,12 +1,13 @@
 /**
  * Course Registration Form Handler
- * Sends registration emails via PHP mailer to growthroots2020.eg@gmail.com
+ * Sends registration emails via FormSubmit to a.yosry20142015@gmail.com
  */
 
 (function () {
     'use strict';
 
-    const RECIPIENT_EMAIL = 'growthroots2020.eg@gmail.com';
+    // FormSubmit API - free, no signup required
+    const FORMSUBMIT_ENDPOINT = 'https://formsubmit.co/ajax/a.yosry20142015@gmail.com';
 
     // Course names mapping
     const courseNames = {
@@ -83,8 +84,8 @@
         const emailContent = formatEmailContent(formData, courseInfo, currentLang);
 
         try {
-            // Send via Netlify Forms
-            await sendViaNetlify(formData, courseInfo, currentLang);
+            // Send via Web3Forms
+            await sendEmail(formData, courseInfo, currentLang);
             showMessage(messagesDiv, 'success', currentLang);
             form.reset();
             setDefaultCourse();
@@ -155,39 +156,41 @@ ${formData.message}
         }
     }
 
-    async function sendViaNetlify(formData, courseInfo, lang) {
+    async function sendEmail(formData, courseInfo, lang) {
         const isArabic = lang === 'ar';
         
-        // Build message with course info
-        const fullMessage = isArabic 
-            ? `الدورة: ${courseInfo.ar}\nالشركة: ${formData.company}\nملاحظات: ${formData.message}`
-            : `Course: ${courseInfo.en}\nCompany: ${formData.company}\nNotes: ${formData.message}`;
-
         const subject = isArabic 
             ? `طلب تسجيل جديد - ${courseInfo.ar}` 
             : `New Course Registration - ${courseInfo.en}`;
 
-        // Prepare form data for Netlify Forms
-        const netlifyFormData = new FormData();
-        netlifyFormData.append('form-name', 'course-registration');
-        netlifyFormData.append('name', formData.name);
-        netlifyFormData.append('email', formData.email);
-        netlifyFormData.append('phone', formData.phone);
-        netlifyFormData.append('course', courseInfo.ar);
-        netlifyFormData.append('company', formData.company);
-        netlifyFormData.append('message', formData.message);
-        netlifyFormData.append('subject', subject);
+        // Build the email body for FormSubmit
+        const emailBody = {
+            _subject: subject,
+            _template: 'table',
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            course: courseInfo.ar,
+            company: formData.company,
+            message: formData.message
+        };
 
-        const response = await fetch('/', {
+        const response = await fetch(FORMSUBMIT_ENDPOINT, {
             method: 'POST',
-            body: netlifyFormData
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(emailBody)
         });
 
-        if (!response.ok) {
-            throw new Error('Failed to send registration');
+        const result = await response.json();
+        
+        if (!result.success) {
+            throw new Error(result.message || 'Failed to send registration');
         }
 
-        return response.text();
+        return result;
     }
 
     function showMessage(container, type, lang) {

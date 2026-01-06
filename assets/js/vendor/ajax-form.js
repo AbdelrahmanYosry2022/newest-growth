@@ -1,5 +1,8 @@
 $(function() {
 
+	// FormSubmit endpoint - free, no signup required
+	var FORMSUBMIT_ENDPOINT = 'https://formsubmit.co/ajax/a.yosry20142015@gmail.com';
+
 	// Get the form.
 	var form = $('#contact-form');
 
@@ -15,16 +18,23 @@ $(function() {
 		var currentLang = localStorage.getItem('siteLanguage') || 'en';
 		var isArabic = currentLang === 'ar';
 
-		// Create FormData for Netlify
-		var formData = new FormData(form[0]);
-		formData.append('form-name', 'contact');
+		// Collect form data
+		var formDataObj = {
+			_subject: isArabic ? 'رسالة جديدة من موقع Growth Roots' : 'New message from Growth Roots website',
+			_template: 'table',
+			name: $('#name').val() || $('#contact-form input[name="name"]').val(),
+			email: $('#email').val() || $('#contact-form input[name="email"]').val(),
+			info: $('#info').val() || $('#contact-form input[name="info"]').val(),
+			message: $('#message').val() || $('#contact-form textarea[name="message"]').val()
+		};
 
-		// Submit the form using AJAX to Netlify Forms.
+		// Submit the form using AJAX to FormSubmit
 		$.ajax({
 			type: 'POST',
-			url: '/',
-			data: new URLSearchParams(formData).toString(),
-			contentType: 'application/x-www-form-urlencoded'
+			url: FORMSUBMIT_ENDPOINT,
+			data: JSON.stringify(formDataObj),
+			contentType: 'application/json',
+			dataType: 'json'
 		})
 		.done(function(response) {
 			// Make sure that the formMessages div has the 'success' class.
