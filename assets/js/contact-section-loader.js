@@ -163,7 +163,9 @@
                 setNextRedirectUrl();
 
                 // Re-apply translations for dynamically loaded content
-                if (typeof window.initLanguageToggle === 'function') {
+                if (typeof window.applyCurrentLanguage === 'function') {
+                    window.applyCurrentLanguage();
+                } else if (typeof window.initLanguageToggle === 'function') {
                     window.initLanguageToggle();
                 }
             })
@@ -173,7 +175,9 @@
                 setNextRedirectUrl();
 
                 // Re-apply translations for fallback content
-                if (typeof window.initLanguageToggle === 'function') {
+                if (typeof window.applyCurrentLanguage === 'function') {
+                    window.applyCurrentLanguage();
+                } else if (typeof window.initLanguageToggle === 'function') {
                     window.initLanguageToggle();
                 }
             });

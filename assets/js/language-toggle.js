@@ -1982,5 +1982,9 @@
     // expose helpers for dynamically injected header
     window.attachLanguageToggle = bindLanguageToggleHandlers;
     window.initLanguageToggle = initLanguage;
+    // Expose setLanguage for dynamic content that needs translation applied
+    window.applyCurrentLanguage = function() {
+        setLanguage(currentLang);
+    };
 
 })();

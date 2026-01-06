@@ -31,8 +31,10 @@
 
                 setNextRedirectUrl();
                 
-                // Re-initialize language translations for the new content
-                if (typeof window.initLanguageToggle === 'function') {
+                // Re-apply translations for dynamically loaded content
+                if (typeof window.applyCurrentLanguage === 'function') {
+                    window.applyCurrentLanguage();
+                } else if (typeof window.initLanguageToggle === 'function') {
                     window.initLanguageToggle();
                 }
 
