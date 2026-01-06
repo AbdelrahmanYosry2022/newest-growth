@@ -99,7 +99,7 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="rs-contact-input">
-                                    <input id="phone" name="phone" type="tel" data-i18n="services.contact.fields.phone">
+                                    <input id="phone" name="phone" type="tel" data-i18n="services.contact.fields.phone" placeholder="Phone Number">
                                 </div>
                             </div>
                             <div class="col-md-12">
