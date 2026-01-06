@@ -89,27 +89,22 @@
                         <div class="row g-4">
                             <div class="col-md-12">
                                 <div class="rs-contact-input">
-                                    <input id="name" name="name" type="text" data-i18n="services.contact.fields.name">
+                                    <input id="name" name="name" type="text" placeholder="Full Name" data-i18n="services.contact.fields.name">
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="rs-contact-input">
-                                    <input id="email" name="email" type="email" data-i18n="services.contact.fields.email">
+                                    <input id="email" name="email" type="email" placeholder="Email Address" data-i18n="services.contact.fields.email">
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="rs-contact-input">
-                                    <input id="phone" name="phone" type="tel" placeholder="Phone Number">
+                                    <input id="info" name="info" type="text" placeholder="Your Inquiry" data-i18n="services.contact.fields.topic">
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="rs-contact-input">
-                                    <input id="info" name="info" type="text" data-i18n="services.contact.fields.topic">
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="rs-contact-input">
-                                    <textarea id="message" name="message" data-i18n="services.contact.fields.message"></textarea>
+                                    <textarea id="message" name="message" placeholder="Write Your Message" data-i18n="services.contact.fields.message"></textarea>
                                 </div>
                             </div>
                             <div class="col-md-12">
@@ -166,12 +161,21 @@
             .then(html => {
                 placeholder.innerHTML = html;
                 setNextRedirectUrl();
+
+                // Re-apply translations for dynamically loaded content
+                if (typeof window.initLanguageToggle === 'function') {
+                    window.initLanguageToggle();
+                }
             })
             .catch(error => {
                 console.warn('[contact-section-loader] Error loading section, using fallback:', error);
                 placeholder.innerHTML = FALLBACK_CONTACT_SECTION_HTML;
-
                 setNextRedirectUrl();
+
+                // Re-apply translations for fallback content
+                if (typeof window.initLanguageToggle === 'function') {
+                    window.initLanguageToggle();
+                }
             });
     });
 
