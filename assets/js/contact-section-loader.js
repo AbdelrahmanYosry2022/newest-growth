@@ -95,7 +95,7 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="rs-contact-input">
-                                    <input id="info" name="name" type="text" placeholder="Your Inquiry" data-i18n="services.contact.fields.topic">
+                                    <input id="info" name="info" type="text" placeholder="Your Inquiry" data-i18n="services.contact.fields.topic">
                                 </div>
                             </div>
                             <div class="col-md-12">

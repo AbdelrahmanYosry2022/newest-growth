@@ -866,7 +866,29 @@
             'course2.whyBook3': 'You will leave with operation plans, schedules, and standards ready for immediate application',
             'course2.ctaTitle': 'Ready to Master Flavor Engineering?',
             'course2.ctaDesc': 'Book now and our team will contact you to send: Next batch dates – Training location – Payment steps',
-            'course2.ctaBtn': 'Contact Us'
+            'course2.ctaBtn': 'Contact Us',
+
+            // Course Registration Section
+            'courseReg.title': 'Register for <span class="rs-theme-orange">Your Course</span>',
+            'courseReg.step1Title': 'Fill the Form',
+            'courseReg.step1Desc': 'Complete the registration form with your details and select your preferred course.',
+            'courseReg.step2Title': 'We Contact You',
+            'courseReg.step2Desc': 'Our team will reach out within 24 hours with course details and payment options.',
+            'courseReg.step3Title': 'Confirm & Pay',
+            'courseReg.step3Desc': 'Secure your seat by completing the payment process.',
+            'courseReg.step4Title': 'Start Learning',
+            'courseReg.step4Desc': 'Join us at the training facility and begin your professional journey.',
+            'courseReg.formTitle': 'Register Now',
+            'courseReg.formDesc': 'Fill out the form below and we\'ll contact you with all the details.',
+            'courseReg.fields.name': 'Full Name',
+            'courseReg.fields.email': 'Email Address',
+            'courseReg.fields.phone': 'Phone Number',
+            'courseReg.fields.selectCourse': 'Select Course',
+            'courseReg.fields.course1': 'Meat & Poultry Manufacturing Course',
+            'courseReg.fields.course2': 'Flavor Engineering & Blends Course',
+            'courseReg.fields.company': 'Company/Factory Name (Optional)',
+            'courseReg.fields.message': 'Additional Notes (Optional)',
+            'courseReg.submitBtn': 'Submit Registration'
         },
         ar: {
             // Navigation
@@ -1804,7 +1826,29 @@
             'course2.whyBook3': 'ستخرج بخطط تشغيل وجداول ومعايير جاهزة للتطبيق فورًا',
             'course2.ctaTitle': 'جاهز لإتقان هندسة النكهات؟',
             'course2.ctaDesc': 'احجز الآن وسيتواصل معك فريقنا لإرسال: مواعيد الدفعة القادمة – مكان التدريب – خطوات الدفع',
-            'course2.ctaBtn': 'تواصل معنا'
+            'course2.ctaBtn': 'تواصل معنا',
+
+            // Course Registration Section
+            'courseReg.title': 'سجّل في <span class="rs-theme-orange">دورتك التدريبية</span>',
+            'courseReg.step1Title': 'املأ النموذج',
+            'courseReg.step1Desc': 'أكمل نموذج التسجيل ببياناتك واختر الدورة المناسبة لك.',
+            'courseReg.step2Title': 'نتواصل معك',
+            'courseReg.step2Desc': 'سيتواصل معك فريقنا خلال 24 ساعة بتفاصيل الدورة وخيارات الدفع.',
+            'courseReg.step3Title': 'أكّد واحجز',
+            'courseReg.step3Desc': 'احجز مقعدك بإتمام عملية الدفع.',
+            'courseReg.step4Title': 'ابدأ التعلم',
+            'courseReg.step4Desc': 'انضم إلينا في مركز التدريب وابدأ رحلتك المهنية.',
+            'courseReg.formTitle': 'سجّل الآن',
+            'courseReg.formDesc': 'املأ النموذج أدناه وسنتواصل معك بكل التفاصيل.',
+            'courseReg.fields.name': 'الاسم الكامل',
+            'courseReg.fields.email': 'البريد الإلكتروني',
+            'courseReg.fields.phone': 'رقم الهاتف',
+            'courseReg.fields.selectCourse': 'اختر الدورة',
+            'courseReg.fields.course1': 'دورة صناعة منتجات اللحوم والدجاج',
+            'courseReg.fields.course2': 'دورة مكسبات الطعم والخلطات الصناعية',
+            'courseReg.fields.company': 'اسم الشركة/المصنع (اختياري)',
+            'courseReg.fields.message': 'ملاحظات إضافية (اختياري)',
+            'courseReg.submitBtn': 'إرسال طلب التسجيل'
         }
     };
 

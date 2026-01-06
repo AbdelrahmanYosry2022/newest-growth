@@ -1,12 +1,12 @@
-<!-- Contact Section Include -->
-<!-- This section is reused across multiple pages: home, services, products, about, contact -->
-<section class="rs-work-process-area section-space rs-work-step-two has-theme-orange">
+<!-- Course Registration Section Include -->
+<!-- This section is used on courses.html, course-01.html, course-02.html -->
+<section class="rs-work-process-area section-space rs-work-step-two has-theme-orange course-registration-section">
     <div class="container">
         <div class="row align-items-center g-5">
             <div class="col-xl-7 col-lg-7">
                 <div class="rs-work-process-content-wrapper">
                     <div class="rs-section-title-wrapper section-title-space">
-                        <h2 class="rs-section-title rs-split-text-enable split-in-fade" data-i18n="work.title">How we <span class="rs-theme-orange">complete</span> work</h2>
+                        <h2 class="rs-section-title rs-split-text-enable split-in-fade" data-i18n="courseReg.title">Register for <span class="rs-theme-orange">Your Course</span></h2>
                     </div>
                     <div class="rs-work-step-wrapper">
                         <div class="rs-work-step-item wow fadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
@@ -19,9 +19,9 @@
                                     <img src="assets/images/shape/work-process-shape-orange.svg" alt="">
                                 </div>
                             </div>
-                            <h5 class="rs-work-step-title" data-i18n="work.step1Title">Planning and Analysis</h5>
+                            <h5 class="rs-work-step-title" data-i18n="courseReg.step1Title">Fill the Form</h5>
                             <div class="rs-work-step-descrip">
-                                <p data-i18n="work.step1Desc">We start by understanding your unique needs and conducting a thorough analysis of your facility requirements.</p>
+                                <p data-i18n="courseReg.step1Desc">Complete the registration form with your details and select your preferred course.</p>
                             </div>
                         </div>
                         <div class="rs-work-step-item wow fadeInUp" data-wow-delay=".4s" data-wow-duration="1s">
@@ -34,9 +34,9 @@
                                     <img src="assets/images/shape/work-process-shape-orange.svg" alt="">
                                 </div>
                             </div>
-                            <h5 class="rs-work-step-title" data-i18n="work.step2Title">Design and Engineering</h5>
+                            <h5 class="rs-work-step-title" data-i18n="courseReg.step2Title">We Contact You</h5>
                             <div class="rs-work-step-descrip">
-                                <p data-i18n="work.step2Desc">Our expert team designs customized solutions that meet international standards and your specific production goals.</p>
+                                <p data-i18n="courseReg.step2Desc">Our team will reach out within 24 hours with course details and payment options.</p>
                             </div>
                         </div>
                         <div class="rs-work-step-item wow fadeInUp" data-wow-delay=".5s" data-wow-duration="1s">
@@ -49,9 +49,9 @@
                                     <img src="assets/images/shape/work-process-shape-orange.svg" alt="">
                                 </div>
                             </div>
-                            <h5 class="rs-work-step-title" data-i18n="work.step3Title">Implementation and Setup</h5>
+                            <h5 class="rs-work-step-title" data-i18n="courseReg.step3Title">Confirm & Pay</h5>
                             <div class="rs-work-step-descrip">
-                                <p data-i18n="work.step3Desc">We handle the complete installation, configuration, and testing of all equipment and systems.</p>
+                                <p data-i18n="courseReg.step3Desc">Secure your seat by completing the payment process.</p>
                             </div>
                         </div>
                         <div class="rs-work-step-item wow fadeInUp" data-wow-delay=".6s" data-wow-duration="1s">
@@ -64,9 +64,9 @@
                                     <img src="assets/images/shape/work-process-shape-orange.svg" alt="">
                                 </div>
                             </div>
-                            <h5 class="rs-work-step-title" data-i18n="work.step4Title">Launch and Support</h5>
+                            <h5 class="rs-work-step-title" data-i18n="courseReg.step4Title">Start Learning</h5>
                             <div class="rs-work-step-descrip">
-                                <p data-i18n="work.step4Desc">We ensure a smooth launch with comprehensive training and ongoing support for your team.</p>
+                                <p data-i18n="courseReg.step4Desc">Join us at the training facility and begin your professional journey.</p>
                             </div>
                         </div>
                     </div>
@@ -74,38 +74,57 @@
             </div>
             <div class="col-xl-5 col-lg-5">
                 <div class="rs-contact-form rs-contact-one has-white">
-                    <h3 class="rs-contact-form-title mb-10" data-i18n="contact.title">Have a question?</h3>
-                    <p class="descrip" data-i18n="contact.description">Our specialists are ready to support every stage of your manufacturing project.</p>
-                    <form id="contact-form" action="assets/mailer.php" method="POST">
+                    <h3 class="rs-contact-form-title mb-10" data-i18n="courseReg.formTitle">Register Now</h3>
+                    <p class="descrip" data-i18n="courseReg.formDesc">Fill out the form below and we'll contact you with all the details.</p>
+                    <form id="course-registration-form">
                         <div class="row g-4">
                             <div class="col-md-12">
                                 <div class="rs-contact-input">
-                                    <input id="name" name="name" type="text" placeholder="Full Name" data-i18n="services.contact.fields.name">
+                                    <input id="reg-name" name="name" type="text" required data-i18n="courseReg.fields.name" placeholder="Full Name">
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="rs-contact-input">
-                                    <input id="email" name="email" type="email" placeholder="Email Address" data-i18n="services.contact.fields.email">
+                                    <input id="reg-email" name="email" type="email" required data-i18n="courseReg.fields.email" placeholder="Email Address">
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="rs-contact-input">
-                                    <input id="info" name="info" type="text" placeholder="Your Inquiry" data-i18n="services.contact.fields.topic">
+                                    <input id="reg-phone" name="phone" type="tel" required data-i18n="courseReg.fields.phone" placeholder="Phone Number">
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="rs-contact-input">
-                                    <textarea id="message" name="message" placeholder="Write Your Message" data-i18n="services.contact.fields.message"></textarea>
+                                    <select id="reg-course" name="course" required class="course-select">
+                                        <option value="" data-i18n="courseReg.fields.selectCourse">Select Course</option>
+                                        <option value="course-01" data-i18n="courseReg.fields.course1">Meat & Poultry Manufacturing Course</option>
+                                        <option value="course-02" data-i18n="courseReg.fields.course2">Flavor Engineering & Blends Course</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="rs-contact-input">
+                                    <input id="reg-company" name="company" type="text" data-i18n="courseReg.fields.company" placeholder="Company/Factory Name (Optional)">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="rs-contact-input">
+                                    <textarea id="reg-message" name="message" rows="3" data-i18n="courseReg.fields.message" placeholder="Additional Notes (Optional)"></textarea>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="rs-contact-btn">
-                                    <button type="submit" class="rs-btn has-theme-orange" data-i18n="contact.button">Send Message</button>
+                                    <button type="submit" class="rs-btn has-theme-orange" id="course-reg-submit-btn">
+                                        <span data-i18n="courseReg.submitBtn">Submit Registration</span>
+                                        <span class="btn-loading" style="display: none;">
+                                            <i class="ri-loader-4-line ri-spin"></i>
+                                        </span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </form>
-                    <div id="form-messages"></div>
+                    <div id="course-reg-messages" class="form-messages mt-3"></div>
                 </div>
             </div>
         </div>

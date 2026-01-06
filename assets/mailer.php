@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     } 
 
-    $recipient = "demo@gmail.com";
+    $recipient = "info@growth-roots.com";
 
     $subject = "New contact from $name";
 
@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email_content .= "Time: $time\n";
     }
     if (!empty($info)) {
-        $info_content .= "Info: $info\n";
+        $email_content .= "Info: $info\n";
     }
     $email_content .= "Message:\n$message\n";
 
