@@ -1,15 +1,11 @@
 /**
  * Course Registration Form Handler
- * Sends registration emails via EmailJS to growthroots2020.eg@gmail.com
+ * Sends registration emails via PHP mailer to growthroots2020.eg@gmail.com
  */
 
 (function () {
     'use strict';
 
-    // EmailJS Configuration
-    const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY'; // User needs to replace this
-    const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID'; // User needs to replace this
-    const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'; // User needs to replace this
     const RECIPIENT_EMAIL = 'growthroots2020.eg@gmail.com';
 
     // Course names mapping
@@ -87,20 +83,11 @@
         const emailContent = formatEmailContent(formData, courseInfo, currentLang);
 
         try {
-            // Check if EmailJS is configured
-            if (EMAILJS_PUBLIC_KEY === 'YOUR_PUBLIC_KEY') {
-                // Fallback: Use mailto link if EmailJS not configured
-                sendViaMailto(formData, courseInfo, currentLang);
-                showMessage(messagesDiv, 'success', currentLang);
-                form.reset();
-                setDefaultCourse();
-            } else {
-                // Send via EmailJS
-                await sendViaEmailJS(formData, courseInfo, emailContent);
-                showMessage(messagesDiv, 'success', currentLang);
-                form.reset();
-                setDefaultCourse();
-            }
+            // Send via Netlify Forms
+            await sendViaNetlify(formData, courseInfo, currentLang);
+            showMessage(messagesDiv, 'success', currentLang);
+            form.reset();
+            setDefaultCourse();
         } catch (error) {
             console.error('Form submission error:', error);
             showMessage(messagesDiv, 'error', currentLang);
@@ -168,42 +155,39 @@ ${formData.message}
         }
     }
 
-    async function sendViaEmailJS(formData, courseInfo, emailContent) {
-        // Initialize EmailJS if not already done
-        if (typeof emailjs !== 'undefined' && !window.emailjsInitialized) {
-            emailjs.init(EMAILJS_PUBLIC_KEY);
-            window.emailjsInitialized = true;
-        }
-
-        const templateParams = {
-            to_email: RECIPIENT_EMAIL,
-            from_name: formData.name,
-            from_email: formData.email,
-            phone: formData.phone,
-            course_name_en: courseInfo.en,
-            course_name_ar: courseInfo.ar,
-            company: formData.company,
-            message: formData.message,
-            full_content: emailContent
-        };
-
-        return emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams);
-    }
-
-    function sendViaMailto(formData, courseInfo, lang) {
+    async function sendViaNetlify(formData, courseInfo, lang) {
         const isArabic = lang === 'ar';
+        
+        // Build message with course info
+        const fullMessage = isArabic 
+            ? `الدورة: ${courseInfo.ar}\nالشركة: ${formData.company}\nملاحظات: ${formData.message}`
+            : `Course: ${courseInfo.en}\nCompany: ${formData.company}\nNotes: ${formData.message}`;
+
         const subject = isArabic 
             ? `طلب تسجيل جديد - ${courseInfo.ar}` 
             : `New Course Registration - ${courseInfo.en}`;
-        
-        const body = isArabic 
-            ? `الاسم: ${formData.name}%0D%0Aالبريد الإلكتروني: ${formData.email}%0D%0Aالهاتف: ${formData.phone}%0D%0Aالدورة: ${courseInfo.ar}%0D%0Aالشركة: ${formData.company}%0D%0Aملاحظات: ${formData.message}`
-            : `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone}%0D%0ACourse: ${courseInfo.en}%0D%0ACompany: ${formData.company}%0D%0ANotes: ${formData.message}`;
 
-        const mailtoLink = `mailto:${RECIPIENT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${body}`;
-        
-        // Open mailto link in new window
-        window.open(mailtoLink, '_blank');
+        // Prepare form data for Netlify Forms
+        const netlifyFormData = new FormData();
+        netlifyFormData.append('form-name', 'course-registration');
+        netlifyFormData.append('name', formData.name);
+        netlifyFormData.append('email', formData.email);
+        netlifyFormData.append('phone', formData.phone);
+        netlifyFormData.append('course', courseInfo.ar);
+        netlifyFormData.append('company', formData.company);
+        netlifyFormData.append('message', formData.message);
+        netlifyFormData.append('subject', subject);
+
+        const response = await fetch('/', {
+            method: 'POST',
+            body: netlifyFormData
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to send registration');
+        }
+
+        return response.text();
     }
 
     function showMessage(container, type, lang) {

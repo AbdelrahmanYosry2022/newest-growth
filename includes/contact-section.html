@@ -76,7 +76,9 @@
                 <div class="rs-contact-form rs-contact-one has-white">
                     <h3 class="rs-contact-form-title mb-10" data-i18n="contact.title">Have a question?</h3>
                     <p class="descrip" data-i18n="contact.description">Our specialists are ready to support every stage of your manufacturing project.</p>
-                    <form id="contact-form" action="assets/mailer.php" method="POST">
+                    <form id="contact-form" name="contact" data-netlify="true" netlify-honeypot="bot-field">
+                        <input type="hidden" name="form-name" value="contact">
+                        <input type="hidden" name="bot-field">
                         <div class="row g-4">
                             <div class="col-md-12">
                                 <div class="rs-contact-input">
