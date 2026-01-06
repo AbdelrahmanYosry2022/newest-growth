@@ -47,6 +47,11 @@ html[lang="ar"] body {
     margin-bottom: 0;
 }
 
+/* History section background */
+.rs-history-area {
+    background-color: #f0f7f2 !important;
+}
+
 html[lang="ar"] *:not(i):not([class*="ri-"]):not([class*="fa-"]):not([class*="icon"]) {
     font-family: 'Cairo', sans-serif;
 }

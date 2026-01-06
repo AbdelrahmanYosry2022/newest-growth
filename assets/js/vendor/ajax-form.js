@@ -5,6 +5,13 @@ $(function() {
 
 	// Get the form.
 	var form = $('#contact-form');
+	if (form.length) {
+		var action = (form.attr('action') || '').trim();
+		// If the form has an external action (e.g., FormSubmit), do not intercept.
+		if (action.indexOf('http') === 0) {
+			return;
+		}
+	}
 
 	// Get the messages div.
 	var formMessages = $('#form-messages');
