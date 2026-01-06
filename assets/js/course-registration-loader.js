@@ -10,6 +10,17 @@
             return;
         }
 
+        function setNextRedirectUrl() {
+            const form = placeholder.querySelector('#course-registration-form');
+            if (!form) return;
+            const nextInput = form.querySelector('input[name="_next"]');
+            if (!nextInput) return;
+
+            const url = new URL(window.location.href);
+            url.searchParams.set('sent', '1');
+            nextInput.value = url.toString();
+        }
+
         fetch(PARTIAL_URL, { cache: 'no-cache' })
             .then(response => {
                 if (!response.ok) throw new Error(`Failed to load course registration section: ${response.status}`);
@@ -17,6 +28,8 @@
             })
             .then(html => {
                 placeholder.innerHTML = html;
+
+                setNextRedirectUrl();
                 
                 // Re-initialize language translations for the new content
                 if (typeof window.initLanguageToggle === 'function') {

@@ -1,10 +1,22 @@
 $(function() {
 
 	// FormSubmit endpoint - free, no signup required
-	var FORMSUBMIT_ENDPOINT = 'https://formsubmit.co/ajax/a.yosry20142015@gmail.com';
+	var FORMSUBMIT_ENDPOINT = 'https://formsubmit.co/ajax/growthroots2020.eg@gmail.com';
 
 	// Get the form.
 	var form = $('#contact-form');
+
+	// Get the messages div.
+	var formMessages = $('#form-messages');
+	if (formMessages.length && window.location.search.indexOf('sent=1') !== -1) {
+		var currentLang = localStorage.getItem('siteLanguage') || 'en';
+		var isArabic = currentLang === 'ar';
+		var successMsg = isArabic
+			? '✅ شكراً لك! تم إرسال رسالتك بنجاح.'
+			: '✅ Thank you! Your message has been sent successfully.';
+		formMessages.removeClass('error alert-danger').addClass('success alert-success').text(successMsg);
+	}
+
 	if (form.length) {
 		var action = (form.attr('action') || '').trim();
 		// If the form has an external action (e.g., FormSubmit), do not intercept.
@@ -12,9 +24,6 @@ $(function() {
 			return;
 		}
 	}
-
-	// Get the messages div.
-	var formMessages = $('#form-messages');
 
 	// Set up an event listener for the contact form.
 	$(form).submit(function(e) {

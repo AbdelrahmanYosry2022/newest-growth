@@ -1,13 +1,13 @@
 /**
  * Course Registration Form Handler
- * Sends registration emails via FormSubmit to a.yosry20142015@gmail.com
+ * Sends registration emails via FormSubmit to growthroots2020.eg@gmail.com
  */
 
 (function () {
     'use strict';
 
     // FormSubmit API - free, no signup required
-    const FORMSUBMIT_ENDPOINT = 'https://formsubmit.co/ajax/a.yosry20142015@gmail.com';
+    const FORMSUBMIT_ENDPOINT = 'https://formsubmit.co/ajax/growthroots2020.eg@gmail.com';
 
     // Course names mapping
     const courseNames = {
@@ -23,6 +23,18 @@
 
     // Initialize when DOM is ready
     document.addEventListener('DOMContentLoaded', function () {
+        // If redirected back after successful FormSubmit POST, show a success message
+        // even when we don't intercept submission.
+        try {
+            const messagesDiv = document.getElementById('course-reg-messages');
+            if (messagesDiv && window.location.search.indexOf('sent=1') !== -1) {
+                const currentLang = localStorage.getItem('siteLanguage') || 'en';
+                showMessage(messagesDiv, 'success', currentLang);
+            }
+        } catch (e) {
+            // no-op
+        }
+
         initCourseRegistration();
     });
 

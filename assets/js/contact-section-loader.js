@@ -81,11 +81,11 @@
                 <div class="rs-contact-form rs-contact-one has-white">
                     <h3 class="rs-contact-form-title mb-10" data-i18n="contact.title">Have a question?</h3>
                     <p class="descrip" data-i18n="contact.description">Our specialists are ready to support every stage of your manufacturing project.</p>
-                    <form id="contact-form" action="https://formsubmit.co/a.yosry20142015@gmail.com" method="POST">
+                    <form id="contact-form" action="https://formsubmit.co/growthroots2020.eg@gmail.com" method="POST">
                         <input type="hidden" name="_subject" value="New message from Growth Roots website">
                         <input type="hidden" name="_template" value="table">
                         <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="https://growthroots.netlify.app/?sent=1">
+                        <input type="hidden" name="_next" value="">
                         <div class="row g-4">
                             <div class="col-md-12">
                                 <div class="rs-contact-input">
@@ -121,17 +121,26 @@
     </div>
 </section>`;
 
-    document.addEventListener('DOMContentLoaded', () => {
-        const placeholders = document.querySelectorAll('[data-include="contact-section"]');
-
-        if (placeholders.length === 0) {
+    document.addEventListener('DOMContentLoaded', function loadContactSection() {
+        const placeholder = document.querySelector('[data-include="contact-section"]');
+        if (!placeholder) {
             return;
         }
 
+        function setNextRedirectUrl() {
+            const form = placeholder.querySelector('#contact-form');
+            if (!form) return;
+            const nextInput = form.querySelector('input[name="_next"]');
+            if (!nextInput) return;
+
+            const url = new URL(window.location.href);
+            url.searchParams.set('sent', '1');
+            nextInput.value = url.toString();
+        }
+
         const renderFallback = () => {
-            placeholders.forEach(placeholder => {
-                renderContactSection(placeholder, FALLBACK_CONTACT_SECTION_HTML);
-            });
+            placeholder.innerHTML = FALLBACK_CONTACT_SECTION_HTML;
+            setNextRedirectUrl();
         };
 
         // If running from the file system, fetch will fail because of CORS. Use fallback immediately.
@@ -150,13 +159,14 @@
                 return response.text();
             })
             .then(html => {
-                placeholders.forEach(placeholder => {
-                    renderContactSection(placeholder, html);
-                });
+                placeholder.innerHTML = html;
+                setNextRedirectUrl();
             })
             .catch(error => {
-                console.warn('[contact-section-loader] Failed to load contact section:', error);
-                renderFallback();
+                console.warn('[contact-section-loader] Error loading section, using fallback:', error);
+                placeholder.innerHTML = FALLBACK_CONTACT_SECTION_HTML;
+
+                setNextRedirectUrl();
             });
     });
 
