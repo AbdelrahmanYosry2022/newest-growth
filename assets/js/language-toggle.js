@@ -50,8 +50,8 @@
 
             // About Section
             'about.subtitle': 'Who We Are',
-            'about.title': 'Your trusted partner for <span class="rs-theme-orange">over 20 years</span> in food manufacturing',
-            'about.description': 'Growth Roots is Egypt\'s leading provider of comprehensive food manufacturing solutions, specializing in meat and poultry production facilities.',
+            'about.title': 'Your partner for <span class="rs-theme-orange">meat & poultry</span> manufacturing',
+            'about.description': 'We offer comprehensive solutions for meat & poultry manufacturing — from establishment to operation — in Egypt and the Arab world.',
             'about.ourMission': 'Our Mission',
             'about.missionText': 'We plant the seeds of quality to reap a healthy, prosperous future for Egypt\'s food industry.',
             'about.whyChoose': 'Why Choose Growth Roots?',
@@ -930,8 +930,8 @@
 
             // About Section
             'about.subtitle': 'عن جروث روتس',
-            'about.title': 'شريكك الموثوق لأكثر من <span class="rs-theme-orange">20 عامًا</span> في صناعة الغذاء',
-            'about.description': 'جروث رووتس هي المزود الرائد في مصر للحلول الشاملة للتصنيع الغذائي والمتخصص في منشآت إنتاج اللحوم والدواجن.',
+            'about.title': 'شريكك لصناعة <span class="rs-theme-orange">اللحوم والدواجن</span>',
+            'about.description': 'نقدّم حلولًا متكاملة لصناعة اللحوم والدواجن — من التأسيس إلى التشغيل — في مصر والعالم العربي.',
             'about.ourMission': 'رسالتنا',
             'about.missionText': 'نزرع بذور الجودة لنحصد مستقبلاً صحيًا ومزدهرًا لصناعة الغذاء في مصر.',
             'about.whyChoose': 'لماذا تختار جروث روتس؟',
