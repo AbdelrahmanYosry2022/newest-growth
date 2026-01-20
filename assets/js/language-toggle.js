@@ -44,9 +44,11 @@
             'hero.slide1Title': 'Your partner for meat & poultry manufacturing',
             'hero.slide1Desc': 'We offer comprehensive solutions for meat & poultry manufacturing — from establishment to operation — in Egypt and the Arab world.',
             'hero.slide1Cta': 'Explore Services',
-            'hero.slide2Title': 'Architecture-led layouts for efficient production lines',
-            'hero.slide2Desc': 'Optimized plant architecture balancing hygiene zones, process flow, and regulatory compliance.',
+            'hero.slide2Title': 'Food-grade production line engineering',
+            'hero.slide2Desc': 'Flow planning, zone separation, and elevated safety and compliance to best-practice standards.',
             'hero.slide2Cta': 'View Case Studies',
+
+            'brand.trustedTitle': 'Factories & brands that trust us',
 
             // About Section
             'about.subtitle': 'Who We Are',
@@ -924,9 +926,11 @@
             'hero.slide1Title': 'شريكك لصناعة اللحوم والدواجن',
             'hero.slide1Desc': 'نقدّم حلولًا متكاملة لصناعة اللحوم والدواجن — من التأسيس إلى التشغيل — في مصر والعالم العربي.',
             'hero.slide1Cta': 'استكشف خدماتنا',
-            'hero.slide2Title': 'تصاميم معمارية تعزز كفاءة خطوط الإنتاج',
-            'hero.slide2Desc': 'تنظيم تدفق العمليات ومناطق النظافة والامتثال التشريعي بأعلى المعايير.',
+            'hero.slide2Title': 'هندسة خطوط الإنتاج بمعايير غذائية',
+            'hero.slide2Desc': 'تخطيط التدفق، فصل المناطق، ورفع مستوى السلامة والامتثال وفق أفضل الممارسات.',
             'hero.slide2Cta': 'شاهد قصص نجاحنا',
+
+            'brand.trustedTitle': 'مصانع وعلامات وثقت بنا',
 
             // About Section
             'about.subtitle': 'عن جروث روتس',
