@@ -33,7 +33,6 @@
                         <li class="menu-item-has-children">
                             <a href="#" data-i18n="nav.products">Products</a>
                             <ul class="submenu">
-                                <li><a href="ricatto-products.html" data-i18n="nav.ricattoProducts">Ricatto Products</a></li>
                                 <li><a href="brothers-products.html" data-i18n="nav.kayaEquipment">Brothers Steel Equipment</a></li>
                             </ul>
                         </li>

@@ -323,70 +323,36 @@
                         <div class="rs-contact-form">
                             <h3 class="rs-contact-form-title" data-i18n="contact.formTitle">Get in Touch</h3>
                             <p class="descrip" data-i18n="contact.formDesc">Have a project in mind? Fill out the form below and our team will get back to you shortly.</p>
-                            <form id="contact-form" action="assets/mailer.php" method="POST">
+                            <form id="contact-form" action="https://formsubmit.co/growthroots2020.eg@gmail.com" method="POST">
+                                <input type="hidden" name="_subject" value="New message from Growth Roots website">
+                                <input type="hidden" name="_template" value="table">
+                                <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="_next" value="contact.html?sent=1">
                                 <div class="row g-5">
                                     <div class="col-md-4">
                                         <div class="rs-contact-input">
-                                            <input id="name" name="name" type="text" placeholder="الاسم الكامل" data-i18n="services.contact.fields.name">
+                                            <input id="name" name="name" type="text" placeholder="Full Name" data-i18n="services.contact.fields.name">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="rs-contact-input">
-                                            <input id="email" name="email" type="email" placeholder="البريد الإلكتروني" data-i18n="services.contact.fields.email">
+                                            <input id="email" name="email" type="email" placeholder="Email Address" data-i18n="services.contact.fields.email">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="rs-contact-input">
-                                            <input id="phone" name="phone" type="tel" placeholder="رقم التليفون" data-i18n="services.contact.fields.phone" style="text-align: right; direction: rtl;">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="rs-contact-input">
-                                            <select id="country" name="country" class="form-control no-nice-select" data-i18n="services.contact.fields.country">
-                                                <option value="" disabled selected>البلد</option>
-                                                <option value="EG">مصر</option>
-                                                <option value="SA">المملكة العربية السعودية</option>
-                                                <option value="AE">الإمارات العربية المتحدة</option>
-                                                <option value="KW">الكويت</option>
-                                                <option value="QA">قطر</option>
-                                                <option value="BH">البحرين</option>
-                                                <option value="OM">عمان</option>
-                                                <option value="JO">الأردن</option>
-                                                <option value="LB">لبنان</option>
-                                                <option value="SY">سوريا</option>
-                                                <option value="IQ">العراق</option>
-                                                <option value="DZ">الجزائر</option>
-                                                <option value="MA">المغرب</option>
-                                                <option value="TN">تونس</option>
-                                                <option value="LY">ليبيا</option>
-                                                <option value="SD">السودان</option>
-                                                <option value="YE">اليمن</option>
-                                                <option value="PS">فلسطين</option>
-                                                <option value="US">الولايات المتحدة</option>
-                                                <option value="GB">المملكة المتحدة</option>
-                                                <option value="TR">تركيا</option>
-                                                <option value="DE">ألمانيا</option>
-                                                <option value="FR">فرنسا</option>
-                                                <option value="IT">إيطاليا</option>
-                                                <option value="ES">إسبانيا</option>
-                                                <option value="CA">كندا</option>
-                                                <option value="AU">أستراليا</option>
-                                                <option value="CN">الصين</option>
-                                                <option value="JP">اليابان</option>
-                                                <option value="RU">روسيا</option>
-                                                <option value="BR">البرازيل</option>
-                                            </select>
+                                            <input id="phone" name="phone" type="tel" placeholder="Phone Number" data-i18n="services.contact.fields.phone" style="text-align: right; direction: rtl;">
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="rs-contact-input">
                                             <textarea id="message" name="message"
-                                                placeholder="اكتب رسالتك" data-i18n="services.contact.fields.message"></textarea>
+                                                placeholder="Write Your Message" data-i18n="services.contact.fields.message"></textarea>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="rs-contact-btn">
-                                            <button type="submit" class="rs-btn has-theme-orange" data-i18n="services.contact.cta">أرسل الرسالة</button>
+                                            <button type="submit" class="rs-btn has-theme-orange" data-i18n="services.contact.cta">Send Message</button>
                                         </div>
                                     </div>
                                 </div>

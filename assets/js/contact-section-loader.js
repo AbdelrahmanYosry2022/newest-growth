@@ -81,7 +81,11 @@
                 <div class="rs-contact-form rs-contact-one has-white">
                     <h3 class="rs-contact-form-title mb-10" data-i18n="contact.title">Have a question?</h3>
                     <p class="descrip" data-i18n="contact.description">Our specialists are ready to support every stage of your manufacturing project.</p>
-                    <form id="contact-form" action="assets/mailer.php" method="POST">
+                    <form id="contact-form" action="https://formsubmit.co/growthroots2020.eg@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="New message from Growth Roots website">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="">
                         <div class="row g-4">
                             <div class="col-md-12">
                                 <div class="rs-contact-input">
@@ -96,44 +100,6 @@
                             <div class="col-md-12">
                                 <div class="rs-contact-input">
                                     <input id="phone" name="phone" type="tel" placeholder="Phone Number" data-i18n="services.contact.fields.phone" style="text-align: right; direction: rtl;">
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="rs-contact-input">
-                                    <select id="country" name="country" class="form-control no-nice-select" data-i18n="services.contact.fields.country">
-                                        <option value="" disabled selected>البلد</option>
-                                        <option value="EG">مصر</option>
-                                        <option value="SA">المملكة العربية السعودية</option>
-                                        <option value="AE">الإمارات العربية المتحدة</option>
-                                        <option value="KW">الكويت</option>
-                                        <option value="QA">قطر</option>
-                                        <option value="BH">البحرين</option>
-                                        <option value="OM">عمان</option>
-                                        <option value="JO">الأردن</option>
-                                        <option value="LB">لبنان</option>
-                                        <option value="SY">سوريا</option>
-                                        <option value="IQ">العراق</option>
-                                        <option value="DZ">الجزائر</option>
-                                        <option value="MA">المغرب</option>
-                                        <option value="TN">تونس</option>
-                                        <option value="LY">ليبيا</option>
-                                        <option value="SD">السودان</option>
-                                        <option value="YE">اليمن</option>
-                                        <option value="PS">فلسطين</option>
-                                        <option value="US">الولايات المتحدة</option>
-                                        <option value="GB">المملكة المتحدة</option>
-                                        <option value="TR">تركيا</option>
-                                        <option value="DE">ألمانيا</option>
-                                        <option value="FR">فرنسا</option>
-                                        <option value="IT">إيطاليا</option>
-                                        <option value="ES">إسبانيا</option>
-                                        <option value="CA">كندا</option>
-                                        <option value="AU">أستراليا</option>
-                                        <option value="CN">الصين</option>
-                                        <option value="JP">اليابان</option>
-                                        <option value="RU">روسيا</option>
-                                        <option value="BR">البرازيل</option>
-                                    </select>
                                 </div>
                             </div>
                             <div class="col-md-12">
@@ -155,17 +121,26 @@
     </div>
 </section>`;
 
-    document.addEventListener('DOMContentLoaded', () => {
-        const placeholders = document.querySelectorAll('[data-include="contact-section"]');
-
-        if (placeholders.length === 0) {
+    document.addEventListener('DOMContentLoaded', function loadContactSection() {
+        const placeholder = document.querySelector('[data-include="contact-section"]');
+        if (!placeholder) {
             return;
         }
 
+        function setNextRedirectUrl() {
+            const form = placeholder.querySelector('#contact-form');
+            if (!form) return;
+            const nextInput = form.querySelector('input[name="_next"]');
+            if (!nextInput) return;
+
+            const url = new URL(window.location.href);
+            url.searchParams.set('sent', '1');
+            nextInput.value = url.toString();
+        }
+
         const renderFallback = () => {
-            placeholders.forEach(placeholder => {
-                renderContactSection(placeholder, FALLBACK_CONTACT_SECTION_HTML);
-            });
+            placeholder.innerHTML = FALLBACK_CONTACT_SECTION_HTML;
+            setNextRedirectUrl();
         };
 
         // If running from the file system, fetch will fail because of CORS. Use fallback immediately.
@@ -184,28 +159,32 @@
                 return response.text();
             })
             .then(html => {
-                placeholders.forEach(placeholder => {
-                    renderContactSection(placeholder, html);
-                });
+                placeholder.innerHTML = html;
+                setNextRedirectUrl();
+
+                // Re-apply translations for dynamically loaded content
+                if (typeof window.applyCurrentLanguage === 'function') {
+                    window.applyCurrentLanguage();
+                } else if (typeof window.initLanguageToggle === 'function') {
+                    window.initLanguageToggle();
+                }
             })
             .catch(error => {
-                console.warn('[contact-section-loader] Failed to load contact section:', error);
-                renderFallback();
+                console.warn('[contact-section-loader] Error loading section, using fallback:', error);
+                placeholder.innerHTML = FALLBACK_CONTACT_SECTION_HTML;
+                setNextRedirectUrl();
+
+                // Re-apply translations for fallback content
+                if (typeof window.applyCurrentLanguage === 'function') {
+                    window.applyCurrentLanguage();
+                } else if (typeof window.initLanguageToggle === 'function') {
+                    window.initLanguageToggle();
+                }
             });
     });
 
     function renderContactSection(target, html) {
         target.innerHTML = html;
-
-        // Ensure native country dropdown (remove any Nice Select wrappers)
-        const countrySelects = target.querySelectorAll('select#country, select.no-nice-select');
-        countrySelects.forEach(select => {
-            const niceWrapper = select.nextElementSibling;
-            if (niceWrapper && niceWrapper.classList.contains('nice-select')) {
-                niceWrapper.remove();
-            }
-            select.style.display = 'block';
-        });
 
         // Re-initialize language toggle if needed
         if (typeof window.initLanguageToggle === 'function') {

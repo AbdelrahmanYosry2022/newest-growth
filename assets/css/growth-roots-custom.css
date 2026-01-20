@@ -134,6 +134,11 @@ html[lang="ar"] body {
     margin-bottom: 0;
 }
 
+/* History section background */
+.rs-history-area {
+    background-color: #f0f7f2 !important;
+}
+
 html[lang="ar"] *:not(i):not([class*="ri-"]):not([class*="fa-"]):not([class*="icon"]) {
     font-family: 'Cairo', sans-serif;
 }
@@ -4015,5 +4020,177 @@ html[lang="ar"] .sidebar-card {
     
     .rs-counter-one .rs-counter-number-wrapper {
         justify-content: center;
+    }
+}
+
+/* ========================================
+   Why Choose Section (شريكك الموثوق) Fixes
+   ======================================== */
+
+.rs-why-choose-three {
+    padding: 80px 0;
+}
+
+.rs-why-choose-three .rs-section-title-wrapper {
+    margin-bottom: 40px;
+}
+
+.rs-why-choose-three .rs-why-choose-content-inner {
+    padding: 30px 0;
+}
+
+.rs-why-choose-three .rs-why-choose-content-item {
+    padding: 15px 0;
+}
+
+.rs-why-choose-three .rs-why-choose-content {
+    padding-right: 20px;
+}
+
+html[lang="ar"] .rs-why-choose-three .rs-why-choose-content {
+    padding-right: 0;
+    padding-left: 20px;
+}
+
+@media (max-width: 991px) {
+    .rs-why-choose-three {
+        padding: 60px 0;
+    }
+    
+    .rs-why-choose-three .rs-section-title-wrapper {
+        margin-bottom: 30px;
+    }
+}
+
+/* ========================================
+   Course Registration Section Styles
+   ======================================== */
+
+.course-registration-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.course-registration-section .rs-contact-form {
+    background: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.course-registration-section .rs-contact-form-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--gr-dark);
+    margin-bottom: 10px;
+}
+
+.course-registration-section .rs-contact-form .descrip {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.course-registration-section .rs-contact-input input,
+.course-registration-section .rs-contact-input textarea,
+.course-registration-section .rs-contact-input select {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+.course-registration-section .rs-contact-input input:focus,
+.course-registration-section .rs-contact-input textarea:focus,
+.course-registration-section .rs-contact-input select:focus {
+    border-color: var(--gr-primary);
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(41, 108, 63, 0.1);
+}
+
+.course-registration-section .course-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    padding-right: 40px;
+    cursor: pointer;
+}
+
+html[lang="ar"] .course-registration-section .course-select {
+    background-position: left 15px center;
+    padding-right: 20px;
+    padding-left: 40px;
+}
+
+.course-registration-section .rs-contact-btn button {
+    width: 100%;
+    padding: 16px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.course-registration-section .rs-contact-btn button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.course-registration-section .btn-loading {
+    display: inline-flex;
+    align-items: center;
+}
+
+.course-registration-section .btn-loading i {
+    font-size: 20px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.course-registration-section .form-messages .alert {
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.course-registration-section .form-messages .alert-success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.course-registration-section .form-messages .alert-danger {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* RTL adjustments for course registration */
+html[lang="ar"] .course-registration-section .rs-contact-form {
+    text-align: right;
+}
+
+html[lang="ar"] .course-registration-section .rs-contact-input input,
+html[lang="ar"] .course-registration-section .rs-contact-input textarea {
+    text-align: right;
+}
+
+@media (max-width: 991px) {
+    .course-registration-section .rs-contact-form {
+        padding: 30px 25px;
+        margin-top: 40px;
+    }
+    
+    .course-registration-section .rs-contact-form-title {
+        font-size: 24px;
     }
 }

@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sub = trim($_POST["subject"] ?? '');
     $date = trim($_POST["date"] ?? '');
     $time = trim($_POST["time"] ?? '');
-    $time = trim($_POST["info"] ?? '');
+    $info = trim($_POST["info"] ?? '');
     $message = trim($_POST["message"] ?? '');
 
     if (empty($name) || empty($message) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -18,9 +18,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     } 
 
-    $recipient = "demo@gmail.com";
+    $recipient = "growthroots2020.eg@gmail.com";
 
-    $subject = "New contact from $name";
+    // Use provided subject or default
+    $subject = !empty($sub) ? $sub : "New contact from $name";
 
     $email_content = "Name: $name\n";
     $email_content .= "Email: $email\n";
@@ -41,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email_content .= "Time: $time\n";
     }
     if (!empty($info)) {
-        $info_content .= "Info: $info\n";
+        $email_content .= "Info: $info\n";
     }
     $email_content .= "Message:\n$message\n";
 
