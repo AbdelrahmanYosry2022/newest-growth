@@ -88,7 +88,7 @@ Sidebar Toggle
     });
 
     /* Nice Select Js */
-    $("select").niceSelect();
+    $("select").not("#country").not(".no-nice-select").niceSelect();
 
     /* PureCounter Js */
     new PureCounter();

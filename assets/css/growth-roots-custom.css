@@ -31,6 +31,93 @@
     }
 }
 
+/* Country Dropdown Styling */
+.rs-contact-input select.form-control {
+    width: 100%;
+    height: 50px;
+    padding: 15px 20px;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 20px;
+    padding-right: 45px;
+}
+
+.rs-contact-input select.form-control:focus {
+    border-color: var(--gr-primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(41, 108, 63, 0.1);
+}
+
+/* Force hide Nice Select for country and show standard select */
+.rs-contact-input .nice-select {
+    display: none !important;
+}
+
+/* Country Dropdown - Native Select Styling */
+.rs-contact-input select#country,
+.rs-contact-input select.no-nice-select {
+    display: block !important;
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-appearance: auto !important;
+    -moz-appearance: auto !important;
+    appearance: auto !important;
+    background-image: none !important;
+}
+
+.rs-contact-input select#country:focus,
+.rs-contact-input select.no-nice-select:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.rs-contact-input select#country option,
+.rs-contact-input select.no-nice-select option {
+    background-color: #fff !important;
+    color: #000 !important;
+}
+
+/* White background form (rs-contact-ten) */
+.rs-contact-ten .rs-contact-input select#country,
+.rs-contact-ten .rs-contact-input select.no-nice-select {
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    color: #333;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.rs-contact-ten .rs-contact-input select#country option,
+.rs-contact-ten .rs-contact-input select.no-nice-select option {
+    background-color: #fff;
+    color: #333;
+}
+
+/* RTL Support for Arabic */
+html[lang="ar"] .rs-contact-input select#country,
+html[lang="ar"] .rs-contact-input select.no-nice-select {
+    text-align: right;
+    direction: rtl;
+}
+
 /* Arabic Language Styles */
 html[lang="ar"],
 html[lang="ar"] body {

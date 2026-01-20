@@ -209,7 +209,8 @@
             'services.contact.desc': 'Our specialists are ready to support every stage of your manufacturing project.',
             'services.contact.fields.name': 'Full Name',
             'services.contact.fields.email': 'Email Address',
-            'services.contact.fields.topic': 'Your Inquiry',
+            'services.contact.fields.phone': 'Phone Number',
+            'services.contact.fields.country': 'Country',
             'services.contact.fields.message': 'Write Your Message',
             'services.contact.cta': 'Send Message',
 
@@ -1068,7 +1069,8 @@
             'services.contact.desc': 'فريقنا جاهز لدعمك في كل مرحلة من مشروعك التصنيعي.',
             'services.contact.fields.name': 'الاسم الكامل',
             'services.contact.fields.email': 'البريد الإلكتروني',
-            'services.contact.fields.topic': 'مجال الاستفسار',
+            'services.contact.fields.phone': 'رقم التليفون',
+            'services.contact.fields.country': 'البلد',
             'services.contact.fields.message': 'اكتب رسالتك',
             'services.contact.cta': 'أرسل رسالتك',
 
