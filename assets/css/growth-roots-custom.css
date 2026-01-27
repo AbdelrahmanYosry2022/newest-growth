@@ -4288,3 +4288,93 @@ html[lang="ar"] .rs-about-modern-card::before {
         font-size: 16px;
     }
 }
+
+/* Modern Services Grid */
+.rs-services-modern-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.rs-service-modern-card {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(41, 108, 63, 0.08);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+
+.rs-service-modern-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    background: linear-gradient(145deg, var(--gr-primary) 0%, var(--gr-secondary) 100%);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.4s ease;
+}
+
+.rs-service-modern-card:hover {
+    transform: translateY(-10px);
+    border-color: transparent;
+}
+
+.rs-service-modern-card:hover::after {
+    opacity: 1;
+}
+
+.rs-service-icon-box {
+    width: 70px;
+    height: 70px;
+    background: #f0f7f2;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: var(--gr-primary);
+    margin-bottom: 25px;
+    transition: all 0.4s ease;
+}
+
+.rs-service-modern-card:hover .rs-service-icon-box {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.rs-service-modern-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--gr-dark);
+    margin-bottom: 15px;
+    transition: color 0.4s ease;
+}
+
+.rs-service-modern-card:hover .rs-service-modern-title {
+    color: #fff;
+}
+
+.rs-service-modern-desc {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #666;
+    margin: 0;
+    transition: color 0.4s ease;
+}
+
+.rs-service-modern-card:hover .rs-service-modern-desc {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 767px) {
+    .rs-services-modern-grid {
+        grid-template-columns: 1fr;
+    }
+}
