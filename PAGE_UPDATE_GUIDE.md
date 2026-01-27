@@ -136,7 +136,7 @@ Emails:  info@growthroots.sa
 - About Growth Roots description
 - Useful Links (About, Services, Portfolio, FAQ, Contact)
 - Office Address: Cairo, Egypt
-- Email: info@growthroots.com
+- Email: info@growth-roots-eg.com
 - Phone numbers (placeholder)
 - Social media links
 - Copyright: "© 2025 Growth Roots. All Rights Reserved."

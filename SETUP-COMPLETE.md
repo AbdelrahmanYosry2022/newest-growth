@@ -62,7 +62,7 @@
 - ✅ Quick links customized for Growth Roots services
 - ✅ Contact information updated:
   - Location: Cairo, Egypt - Industrial Zone
-  - Email: info@growthroots.com
+  - Email: info@growth-roots-eg.com
   - Phone: Placeholder numbers (update with real numbers)
 - ✅ Copyright: "© 2025 Growth Roots. All Rights Reserved."
 

@@ -1179,6 +1179,49 @@ main>section.rs-about-ten:first-of-type .rs-about-thumb-wrapper {
     padding-left: 32px;
 }
 
+/* Company Profile Section Styling */
+.rs-profile-area {
+    padding-bottom: 120px;
+}
+
+.rs-profile-thumb img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.rs-profile-thumb img:hover {
+    transform: translateY(-10px);
+}
+
+.rs-profile-description {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+}
+
+html[lang="ar"] .rs-profile-description {
+    text-align: right;
+}
+
+html[lang="ar"] .rs-profile-area .rs-section-title-wrapper {
+    text-align: right;
+}
+
+html[lang="ar"] .rs-profile-area .rs-section-subtitle {
+    justify-content: flex-start;
+}
+
+@media (max-width: 991px) {
+    .rs-profile-area {
+        padding-bottom: 80px;
+    }
+    .rs-profile-thumb {
+        margin-bottom: 30px;
+    }
+}
+
 .rs-category-area.rs-category-one.has-theme-orange {
     background-color: var(--gr-primary) !important;
 }

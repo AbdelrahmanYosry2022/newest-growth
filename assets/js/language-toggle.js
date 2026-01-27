@@ -460,6 +460,12 @@
             'why.item3Title': 'Proven Track Record',
             'why.item3Desc': '20+ years of successful projects across Egypt, transforming visions into profitable realities.',
 
+            // Company Profile Section
+            'profile.subtitle': 'Get to know us in 60 seconds',
+            'profile.title': 'Download our <span class="rs-theme-orange">Company Profile</span>',
+            'profile.description': 'Download the profile to learn about our range of services: production line establishment, equipment supply, technical operation, training, and raw material & additive supply.',
+            'profile.cta': 'Download Profile',
+
             // Success Stories Section
             'success.subtitle': 'Success Stories',
             'success.title': 'Discover our <span class="rs-theme-orange">successful projects</span> across Egypt',
@@ -519,7 +525,7 @@
             'footer.address': 'Cairo, Egypt<br>Industrial Zone',
             'footer.emailTitle': 'Email Address',
             'footer.emailPrompt': 'Ready to start your project?',
-            'footer.email': 'info@growthroots.com',
+            'footer.email': 'info@growth-roots-eg.com',
             'footer.phoneTitle': 'Phone Number',
             'footer.phonePrimary': '+20 xxx xxx xxxx',
             'footer.phoneSecondary': '+20 xxx xxx xxxx',
@@ -1484,6 +1490,12 @@
             'why.item3Title': 'سجل نجاح مثبت',
             'why.item3Desc': 'أكثر من 20 عامًا من المشاريع الناجحة في مصر نحول الرؤى إلى واقع مربح.',
 
+            // Company Profile Section
+            'profile.subtitle': 'تعرف علينا في 60 ثانية',
+            'profile.title': 'حمّل <span class="rs-theme-orange">البروفايل الخاص بنا</span>',
+            'profile.description': 'حمّل البروفايل لتطّلع على نطاق خدماتنا: تأسيس خطوط الإنتاج، توريد المعدات، التشغيل الفني، التدريب، وتوريد المواد الخام والإضافات.',
+            'profile.cta': 'تحميل البروفايل',
+
             // Success Stories Section
             'success.subtitle': 'قصص النجاح',
             'success.title': 'اكتشف <span class="rs-theme-orange">قصص نجاحنا</span> في مختلف أنحاء مصر',
@@ -1544,7 +1556,7 @@
             'footer.address': 'القاهرة، مصر<br>المنطقة الصناعية',
             'footer.emailTitle': 'البريد الإلكتروني',
             'footer.emailPrompt': 'مستعد لبدء مشروعك؟',
-            'footer.email': 'info@growthroots.com',
+            'footer.email': 'info@growth-roots-eg.com',
             'footer.phoneTitle': 'رقم الهاتف',
             'footer.phonePrimary': '+20 xxx xxx xxxx',
             'footer.phoneSecondary': '+20 xxx xxx xxxx',
