@@ -65,10 +65,10 @@
                                     <div class="rs-footer-widget-contact-info">
                                         <div class="rs-footer-widget-number">
                                             <span>
-                                                <a href="tel:+20xxxxxxxxxx" data-i18n="footer.phonePrimary">+20 xxx xxx xxxx</a>
+                                                <a href="tel:201117110767" data-i18n="footer.phonePrimary">011 17110767</a>
                                             </span>
                                             <span>
-                                                <a href="tel:+20xxxxxxxxxx" data-i18n="footer.phoneSecondary">+20 xxx xxx xxxx</a>
+                                                <a href="tel:201117110767" data-i18n="footer.phoneSecondary">011 17110767</a>
                                             </span>
                                         </div>
                                     </div>
