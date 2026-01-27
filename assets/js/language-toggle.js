@@ -52,10 +52,13 @@
 
             // About Section
             'about.subtitle': 'Who We Are',
-            'about.title': 'Your trusted partner for <span class="rs-theme-orange">over 20 years</span> in food manufacturing',
-            'about.description': 'Growth Roots is Egypt\'s leading provider of comprehensive food manufacturing solutions, specializing in meat and poultry production facilities.',
-            'about.ourMission': 'Our Goals and Vision',
-            'about.missionText': 'Growth Roots strives to lead the field of providing integrated services for the meat and poultry industry in Egypt and the Arab world. Our vision is based on values of innovation, quality, and continuous technical support for our clients. We believe that food quality and safety are the foundation of this industry, and we work to achieve this by committing to the highest international standards in everything we provide.',
+            'about.title': 'Your specialized partner in developing the meat and poultry industry',
+            'about.description': 'With extensive experience in establishing and operating meat and poultry production factories (such as production lines for burgers, hot dogs, pane, etc.). The company provides integrated solutions covering all food factory needs, from equipment and raw material supply to technical support and training.',
+            'about.ourGoalsVision': 'Our Goals and Vision',
+            'about.goalsVisionText': 'Growth Roots aims to lead the field of providing integrated services for the meat and poultry industry in Egypt and the Arab world. Our vision is based on the values of innovation, quality, and continuous technical support for our customers. We believe that quality and food safety are the foundation of this industry, and we work to achieve this by adhering to the highest global standards in everything we offer.',
+            'about.businessTrust': 'Business Track Record and Trust',
+            'about.businessTrustText': 'We are proud of the trust of major clients in our services; we have been honored to collaborate with leading brands in the Egyptian and Arab market such as Koki, Almarai, Rosso, Al-Dahan Group, Golden Poultry, Ain Shams Specialized Hospital, the Police, Shawarma Al-Reem, and others. This trust is a testament to our commitment to quality and punctuality, and reflects Growth Roots\' position as a reliable and distinguished company in the food industry.',
+            'about.ourMission': 'Our Mission',
             'about.whyChoose': 'Why Choose Growth Roots?',
             'about.feature1Title': 'Integrated Team of Experts',
             'about.feature1Text': 'Multidisciplinary team covering food production, engineering, equipment manufacturing, and flavor technology.',
@@ -963,8 +966,12 @@
 
             // About Section
             'about.subtitle': 'عن جروث روتس',
-            'about.title': 'شريكك الموثوق لأكثر من <span class="rs-theme-orange">20 عامًا</span> في صناعة الغذاء',
-            'about.description': 'جروث رووتس هي المزود الرائد في مصر للحلول الشاملة للتصنيع الغذائي والمتخصص في منشآت إنتاج اللحوم والدواجن.',
+            'about.title': 'شريكك المتخصص في تطوير صناعة اللحوم والدواجن',
+            'about.description': 'بخبرة واسعة في تأسيس وتشغيل مصانع إنتاج اللحوم والدواجن (مثل خطوط تصنيع البرجر، الهوت دوج، البانيه وغيرها). توفر الشركة حلولاً متكاملة تغطي كافة احتياجات المصانع الغذائية، من توريد المعدات والمواد الخام إلى الدعم الفني والتدريب',
+            'about.ourGoalsVision': 'أهدافنا ورؤيتنا',
+            'about.goalsVisionText': 'تسعى جروث روتس إلى ريادة مجال تقديم الخدمات المتكاملة لصناعة اللحوم والدواجن في مصر والعالم العربي. ترتكز رؤيتنا على قيم الابتكار والجودة والدعم الفني المستمر لعملائنا. نحن نؤمن بأن الجودة والأمان الغذائي هما أساس هذه الصناعة، ونعمل على تحقيق ذلك من خلال الالتزام بأعلى المعايير العالمية في كل ما نقدم.',
+            'about.businessTrust': 'سابقة الأعمال والثقة',
+            'about.businessTrustText': 'نفخر بثقة كبار العملاء في خدماتنا؛ فقد تشرفنا بالتعاون مع علامات تجارية رائدة في السوق المصري والعربي مثل Koki وAlmarai وRosso ومجموعة الدهان وGolden Poultry ومستشفى عين شمس التخصصي والشرطة وشاورما الريم وغيرها. هذه الثقة شهادة على التزامنا بالجودة والدقة في المواعيد، وتعكس مكانة Growth Roots كشركة موثوقة ومتميزة في مجال صناعة الأغذية.',
             'about.ourMission': 'أهدافنا ورؤيتنا',
             'about.missionText': 'تسعى جروث روتس إلى ريادة مجال تقديم الخدمات المتكاملة لصناعة اللحوم والدواجن في مصر والعالم العربي. ترتكز رؤيتنا على قيم الابتكار والجودة والدعم الفني المستمر لعملائنا. نحن نؤمن بأن الجودة والأمان الغذائي هما أساس هذه الصناعة، ونعمل على تحقيق ذلك من خلال الالتزام بأعلى المعايير العالمية في كل ما نقدم.',
             'about.whyChoose': 'لماذا تختار جروث روتس؟',
