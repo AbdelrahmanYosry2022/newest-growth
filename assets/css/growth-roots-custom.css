@@ -1179,46 +1179,147 @@ main>section.rs-about-ten:first-of-type .rs-about-thumb-wrapper {
     padding-left: 32px;
 }
 
-/* Company Profile Section Styling */
+/* Company Profile Section Styling - Enhanced */
 .rs-profile-area {
-    padding-bottom: 120px;
+    padding-top: 160px;
+    padding-bottom: 160px;
+    position: relative;
+    z-index: 1;
+}
+
+.rs-profile-btn-group .rs-btn-orange {
+    background-color: var(--gr-primary) !important;
+    color: white !important;
+    border-color: var(--gr-primary) !important;
+}
+
+.rs-profile-btn-group .rs-btn-orange:hover {
+    background-color: var(--gr-secondary) !important;
+    border-color: var(--gr-secondary) !important;
+}
+
+.rs-profile-btn-group .rs-btn-orange .icon-box i {
+    color: white !important;
+    transform: none !important;
+    display: inline-block;
+}
+
+html[lang="ar"] .rs-profile-btn-group .rs-btn-orange .icon-box i {
+    transform: none !important;
+}
+
+.rs-profile-bg-shape {
+    position: absolute;
+    top: -10%;
+    right: -5%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(41, 108, 63, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.rs-profile-thumb-wrapper {
+    padding: 20px;
 }
 
 .rs-profile-thumb img {
     width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    border-radius: 30px;
+    box-shadow: 0 30px 60px rgba(14, 31, 45, 0.15);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    z-index: 2;
 }
 
-.rs-profile-thumb img:hover {
-    transform: translateY(-10px);
+.rs-profile-thumb-wrapper:hover .rs-profile-thumb img {
+    transform: translateY(-15px) scale(1.02);
+}
+
+.rs-profile-divider {
+    width: 80px;
+    height: 4px;
+    background: var(--gr-accent);
+    border-radius: 2px;
 }
 
 .rs-profile-description {
     font-size: 18px;
     line-height: 1.8;
-    color: #555;
+    color: #4a4a4a;
 }
 
-html[lang="ar"] .rs-profile-description {
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    background: #f9fbf9;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(41, 108, 63, 0.05);
+}
+
+.feature-item:hover {
+    background: white;
+    box-shadow: 0 10px 20px rgba(41, 108, 63, 0.08);
+    border-color: var(--gr-primary);
+    transform: translateX(5px);
+}
+
+.feature-item i {
+    color: var(--gr-primary);
+    font-size: 20px;
+}
+
+.feature-item span {
+    font-weight: 600;
+    color: var(--gr-dark);
+    font-size: 15px;
+}
+
+.rs-profile-file-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.rs-profile-file-info .file-size {
+    font-weight: 700;
+    color: var(--gr-dark);
+    font-size: 14px;
+}
+
+.rs-profile-file-info .update-date {
+    font-size: 12px;
+    color: #888;
+}
+
+/* RTL Support for Profile Section */
+html[lang="ar"] .rs-profile-bg-shape {
+    right: auto;
+    left: -5%;
+}
+
+html[lang="ar"] .feature-item:hover {
+    transform: translateX(-5px);
+}
+
+html[lang="ar"] .rs-profile-content {
     text-align: right;
 }
 
-html[lang="ar"] .rs-profile-area .rs-section-title-wrapper {
-    text-align: right;
-}
-
-html[lang="ar"] .rs-profile-area .rs-section-subtitle {
+html[lang="ar"] .rs-section-subtitle {
     justify-content: flex-start;
 }
 
 @media (max-width: 991px) {
     .rs-profile-area {
+        padding-top: 80px;
         padding-bottom: 80px;
     }
-    .rs-profile-thumb {
-        margin-bottom: 30px;
+    .rs-profile-thumb-wrapper {
+        margin-bottom: 50px;
+        padding: 0;
     }
 }
 
