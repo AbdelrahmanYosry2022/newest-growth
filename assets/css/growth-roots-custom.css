@@ -4378,3 +4378,183 @@ html[lang="ar"] .rs-about-modern-card::before {
         grid-template-columns: 1fr;
     }
 }
+
+/* Sub-brands Section Creative Design */
+.rs-subbrands-section {
+    background-color: var(--gr-primary);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.rs-subbrands-section::before {
+    content: "";
+    position: absolute;
+    top: -10%;
+    right: -5%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.rs-subbrands-section::after {
+    content: "";
+    position: absolute;
+    bottom: -10%;
+    left: -5%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.rs-subbrand-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 40px;
+    height: 100%;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.rs-subbrand-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.rs-subbrand-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.rs-subbrand-card:hover::before {
+    transform: translateX(100%);
+}
+
+.rs-subbrand-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.rs-subbrand-logo {
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease;
+}
+
+.rs-subbrand-card:hover .rs-subbrand-logo {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.rs-subbrand-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.rs-subbrand-title {
+    font-size: 24px;
+    color: #fff;
+    margin: 0;
+    font-weight: 700;
+}
+
+.rs-subbrand-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.rs-subbrand-desc {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.rs-subbrand-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.rs-subbrand-tag {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.rs-subbrand-card:hover .rs-subbrand-tag {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.rs-subbrand-tag i {
+    font-size: 14px;
+    color: var(--gr-accent-light);
+}
+
+/* RTL Adjustments for Sub-brands */
+html[lang="ar"] .rs-subbrand-header {
+    flex-direction: row;
+}
+
+html[lang="ar"] .rs-subbrand-title {
+    text-align: right;
+}
+
+html[lang="ar"] .rs-subbrand-desc {
+    text-align: right;
+}
+
+html[lang="ar"] .rs-subbrand-features {
+    justify-content: flex-start;
+}
+
+@media (max-width: 767px) {
+    .rs-subbrand-card {
+        padding: 30px;
+    }
+    .rs-subbrand-header {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    html[lang="ar"] .rs-subbrand-header {
+        align-items: flex-end;
+        text-align: right;
+    }
+}
