@@ -4194,3 +4194,97 @@ html[lang="ar"] .course-registration-section .rs-contact-input textarea {
         font-size: 24px;
     }
 }
+
+/* Modern About Cards */
+.rs-about-main-desc {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--gr-dark);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.rs-about-modern-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(41, 108, 63, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.rs-about-modern-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 0;
+    background: var(--gr-primary);
+    transition: height 0.4s ease;
+}
+
+.rs-about-modern-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(41, 108, 63, 0.1);
+}
+
+.rs-about-modern-card:hover::before {
+    height: 100%;
+}
+
+.rs-about-modern-card.highlight {
+    background: linear-gradient(145deg, #ffffff 0%, #f0f7f2 100%);
+}
+
+.rs-about-card-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(41, 108, 63, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: var(--gr-primary);
+    transition: all 0.4s ease;
+}
+
+.rs-about-modern-card:hover .rs-about-card-icon {
+    background: var(--gr-primary);
+    color: #fff;
+}
+
+.rs-about-card-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--gr-dark);
+    margin: 0;
+}
+
+.rs-about-card-content p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #666;
+    margin: 0;
+}
+
+html[lang="ar"] .rs-about-modern-card::before {
+    left: auto;
+    right: 0;
+}
+
+@media (max-width: 767px) {
+    .rs-about-modern-card {
+        padding: 30px;
+    }
+    .rs-about-main-desc {
+        font-size: 16px;
+    }
+}
