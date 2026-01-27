@@ -4660,3 +4660,26 @@ html[lang="ar"] .rs-journey-step-title {
         padding: 30px 20px;
     }
 }
+
+/* Service Card Hover Reveal Effect */
+.rs-service-hover-reveal .rs-services-descrip {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-top: 0;
+}
+
+.rs-service-hover-reveal:hover .rs-services-descrip {
+    max-height: 200px; /* Adjust based on content */
+    opacity: 1;
+    margin-top: 15px;
+}
+
+.rs-services-item.rs-service-hover-reveal {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rs-services-item.rs-service-hover-reveal:hover {
+    transform: translateY(-5px);
+}
