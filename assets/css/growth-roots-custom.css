@@ -4544,6 +4544,15 @@ html[lang="ar"] .rs-subbrand-features {
     justify-content: flex-start;
 }
 
+/* Sub-brands Centering Fix */
+.rs-subbrands-section .rs-section-title-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
 @media (max-width: 767px) {
     .rs-subbrand-card {
         padding: 30px;
@@ -4556,5 +4565,98 @@ html[lang="ar"] .rs-subbrand-features {
     html[lang="ar"] .rs-subbrand-header {
         align-items: flex-end;
         text-align: right;
+    }
+}
+
+/* Partnership Journey New Design */
+.rs-journey-new-section {
+    background-color: #ffffff;
+    position: relative;
+}
+
+.rs-journey-timeline {
+    position: relative;
+    padding-top: 20px;
+}
+
+.rs-journey-card {
+    background: #fff;
+    border: 1px solid rgba(41, 108, 63, 0.1);
+    border-radius: 20px;
+    padding: 40px 30px;
+    height: 100%;
+    transition: all 0.4s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.rs-journey-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--gr-primary);
+    box-shadow: 0 20px 50px rgba(41, 108, 63, 0.1);
+}
+
+.rs-journey-number {
+    font-size: 48px;
+    font-weight: 800;
+    color: rgba(41, 108, 63, 0.1);
+    line-height: 1;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.4s ease;
+}
+
+.rs-journey-card:hover .rs-journey-number {
+    color: var(--gr-primary);
+    opacity: 0.2;
+    transform: scale(1.1);
+}
+
+.rs-journey-step-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--gr-dark);
+    margin-bottom: 15px;
+}
+
+.rs-journey-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.rs-journey-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.rs-journey-list li i {
+    color: var(--gr-primary);
+    font-size: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* RTL Adjustments */
+html[lang="ar"] .rs-journey-list li {
+    text-align: right;
+}
+
+html[lang="ar"] .rs-journey-step-title {
+    text-align: right;
+}
+
+@media (max-width: 767px) {
+    .rs-journey-card {
+        padding: 30px 20px;
     }
 }
