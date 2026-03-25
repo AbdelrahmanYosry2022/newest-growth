@@ -104,6 +104,11 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="rs-contact-input">
+                                    <input id="country" name="country" type="text" placeholder="Country" data-i18n="services.contact.fields.country">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="rs-contact-input">
                                     <textarea id="message" name="message" placeholder="Write Your Message" data-i18n="services.contact.fields.message"></textarea>
                                 </div>
                             </div>
@@ -141,7 +146,22 @@
         const renderFallback = () => {
             placeholder.innerHTML = FALLBACK_CONTACT_SECTION_HTML;
             setNextRedirectUrl();
+            // Re-apply translations for dynamically loaded content
+            reapplyTranslations();
         };
+
+        function reapplyTranslations() {
+            if (typeof window.applyCurrentLanguage === 'function') {
+                window.applyCurrentLanguage();
+            } else {
+                // language-toggle.js may not have loaded yet; retry after a short delay
+                setTimeout(function () {
+                    if (typeof window.applyCurrentLanguage === 'function') {
+                        window.applyCurrentLanguage();
+                    }
+                }, 300);
+            }
+        }
 
         // If running from the file system, fetch will fail because of CORS. Use fallback immediately.
         if (window.location.protocol === 'file:') {
@@ -161,25 +181,13 @@
             .then(html => {
                 placeholder.innerHTML = html;
                 setNextRedirectUrl();
-
-                // Re-apply translations for dynamically loaded content
-                if (typeof window.applyCurrentLanguage === 'function') {
-                    window.applyCurrentLanguage();
-                } else if (typeof window.initLanguageToggle === 'function') {
-                    window.initLanguageToggle();
-                }
+                reapplyTranslations();
             })
             .catch(error => {
                 console.warn('[contact-section-loader] Error loading section, using fallback:', error);
                 placeholder.innerHTML = FALLBACK_CONTACT_SECTION_HTML;
                 setNextRedirectUrl();
-
-                // Re-apply translations for fallback content
-                if (typeof window.applyCurrentLanguage === 'function') {
-                    window.applyCurrentLanguage();
-                } else if (typeof window.initLanguageToggle === 'function') {
-                    window.initLanguageToggle();
-                }
+                reapplyTranslations();
             });
     });
 

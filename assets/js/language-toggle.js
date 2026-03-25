@@ -27,7 +27,9 @@
             'nav.products': 'Products',
             'nav.ricattoProducts': 'Ricatto Products',
             'nav.kayaEquipment': 'Brothers Steel Equipment',
-            'nav.courses': 'Courses & Paid Programs',
+            'nav.courses': 'Courses',
+            'nav.paidCourses': 'Paid Courses',
+            'nav.freeCourses': 'Free Courses',
             'nav.about': 'About Us',
             'nav.contact': 'Contact',
             'nav.more': 'More',
@@ -44,9 +46,9 @@
             'hero.slide1Title': 'Your partner for meat & poultry manufacturing',
             'hero.slide1Desc': 'We offer comprehensive solutions for meat & poultry manufacturing — from establishment to operation — in Egypt and the Arab world.',
             'hero.slide1Cta': 'Explore Services',
-            'hero.slide2Title': 'Food-grade production line engineering',
-            'hero.slide2Desc': 'Flow planning, zone separation, and elevated safety and compliance to best-practice standards.',
-            'hero.slide2Cta': 'View Case Studies',
+            'hero.slide2Title': 'Professional Training Courses in Food Manufacturing',
+            'hero.slide2Desc': 'Hands-on training by industry experts with 20+ years of experience in meat, poultry, and flavor engineering.',
+            'hero.slide2Cta': 'Explore Courses',
 
             'brand.trustedTitle': 'Factories & brands that trust us',
 
@@ -225,7 +227,7 @@
             'services.contact.fields.name': 'Full Name',
             'services.contact.fields.email': 'Email Address',
             'services.contact.fields.phone': 'Phone Number',
-            'services.contact.fields.topic': 'Your Inquiry',
+            'services.contact.fields.country': 'Country',
             'services.contact.fields.message': 'Write Your Message',
             'services.contact.cta': 'Send Message',
 
@@ -770,7 +772,7 @@
             'course1.includes6': 'Attendance + Completion + Excellence certificate (for top 3)',
             'course1.priceLocal': 'From Inside Egypt',
             'course1.priceIntl': 'From Outside Egypt',
-            'course1.priceNote': 'Includes training + materials + tools + certificates + meals + follow-up',
+            'course1.priceNote': 'Includes training + materials + tools + certificates + meals + fancy dinner + follow-up',
             'course1.bookNow': 'Book Your Seat Now',
             'course1.seatsWarning': 'Limited seats (10 only) — Booking by payment priority',
             'course1.audienceTitle': 'Target Audience',
@@ -876,7 +878,7 @@
             'course2.includes6': 'Attendance + Completion + Excellence certificate (for top 3)',
             'course2.priceLocal': 'From Inside Egypt',
             'course2.priceIntl': 'From Outside Egypt',
-            'course2.priceNote': 'Includes hotel accommodation + Transportation + Full training + Materials and tools',
+            'course2.priceNote': 'Includes: hotel accommodation + transportation + full training + materials and tools',
             'course2.bookNow': 'Book Your Seat Now',
             'course2.seatsWarning': 'Limited seats — Booking by payment priority',
             'course2.audienceTitle': 'Target Audience',
@@ -912,7 +914,42 @@
             'courseReg.fields.course2': 'Flavor Engineering & Blends Course',
             'courseReg.fields.company': 'Company/Factory Name (Optional)',
             'courseReg.fields.message': 'Additional Notes (Optional)',
-            'courseReg.submitBtn': 'Submit Registration'
+            'courseReg.submitBtn': 'Submit Registration',
+
+            // Course Pricing - Discounts
+            'course1.discount': 'Special 25% Discount',
+            'course2.discount': '25% Discount',
+            'course2.discountIntl': '25% Discount',
+            'courses.discountBadge': '25% OFF',
+
+            // Course Tabs
+            'courses.paidTab': 'Paid Courses',
+            'courses.freeTab': 'Free Courses',
+            'courses.freeComingSoonTitle': 'Free Courses Coming Soon',
+            'courses.freeComingSoonDesc': 'We are preparing a collection of valuable free courses. Stay tuned for the latest updates.',
+
+            // Free Courses Page
+            'freeCourses.pageTitle': 'Free Courses',
+            'freeCourses.pageDesc': 'Free educational content from Growth Roots Academy',
+            'freeCourses.breadcrumb': 'Free Courses',
+            'freeCourses.comingSoonTitle': 'Free Courses Coming Soon',
+            'freeCourses.comingSoonDesc': 'We are preparing a collection of valuable free courses in food manufacturing. Stay tuned for the latest updates.',
+            'freeCourses.viewPaidCourses': 'Browse Paid Courses',
+            'freeCourses.contactUs': 'Contact Us',
+
+            // Trainee Reviews
+            'course1.reviewsSubtitle': 'Trainee Reviews',
+            'course1.reviewsTitle': 'Trainee Reviews',
+            'course1.reviewsDesc': 'Watch previous trainees\' experiences and opinions about the course',
+            'course1.reviewVideo1': 'Trainee experience video - Coming soon',
+            'course1.reviewVideo2': 'Trainee experience video - Coming soon',
+            'course1.reviewVideo3': 'Trainee experience video - Coming soon',
+            'course2.reviewsSubtitle': 'Trainee Reviews',
+            'course2.reviewsTitle': 'Trainee Reviews',
+            'course2.reviewsDesc': 'Watch previous trainees\' experiences and opinions about the course',
+            'course2.reviewVideo1': 'Trainee experience video - Coming soon',
+            'course2.reviewVideo2': 'Trainee experience video - Coming soon',
+            'course2.reviewVideo3': 'Trainee experience video - Coming soon'
         },
         ar: {
             // Navigation
@@ -930,7 +967,9 @@
             'nav.products': 'منتجات',
             'nav.ricattoProducts': 'منتجات ريكاتو',
             'nav.kayaEquipment': 'معدات برازرز ستيل',
-            'nav.courses': 'الكورسات والدورات المدفوعة',
+            'nav.courses': 'الكورسات',
+            'nav.paidCourses': 'الكورسات المدفوعة',
+            'nav.freeCourses': 'الكورسات المجانية',
             'nav.about': 'من نحن',
             'nav.contact': 'تواصل معنا',
             'nav.more': 'المزيد',
@@ -947,9 +986,9 @@
             'hero.slide1Title': 'شريكك لصناعة اللحوم والدواجن',
             'hero.slide1Desc': 'نقدّم حلولًا متكاملة لصناعة اللحوم والدواجن — من التأسيس إلى التشغيل — في مصر والعالم العربي.',
             'hero.slide1Cta': 'استكشف خدماتنا',
-            'hero.slide2Title': 'هندسة خطوط الإنتاج بمعايير غذائية',
-            'hero.slide2Desc': 'تخطيط التدفق، فصل المناطق، ورفع مستوى السلامة والامتثال وفق أفضل الممارسات.',
-            'hero.slide2Cta': 'شاهد قصص نجاحنا',
+            'hero.slide2Title': 'دورات تدريبية احترافية في صناعة الغذاء',
+            'hero.slide2Desc': 'تدريب عملي على يد خبراء الصناعة بخبرة تتجاوز 20 عامًا في مجال اللحوم والدواجن وهندسة النكهات.',
+            'hero.slide2Cta': 'استكشف الكورسات',
 
             'brand.trustedTitle': 'مصانع وعلامات وثقت بنا',
 
@@ -1129,7 +1168,7 @@
             'services.contact.fields.name': 'الاسم الكامل',
             'services.contact.fields.email': 'البريد الإلكتروني',
             'services.contact.fields.phone': 'رقم الهاتف',
-            'services.contact.fields.topic': 'مجال الاستفسار',
+            'services.contact.fields.country': 'البلد',
             'services.contact.fields.message': 'اكتب رسالتك',
             'services.contact.cta': 'أرسل رسالتك',
 
@@ -1753,7 +1792,7 @@
             'course1.includes6': 'شهادة حضور + اجتياز + تميز (لأفضل 3)',
             'course1.priceLocal': 'من داخل مصر',
             'course1.priceIntl': 'من خارج مصر',
-            'course1.priceNote': 'يشمل التدريب + المواد + الأدوات + الشهادات + الوجبات + المتابعة',
+            'course1.priceNote': 'يشمل التدريب + المواد + الأدوات + الشهادات + الوجبات + عشاء فاخر + المتابعة',
             'course1.bookNow': 'احجز مقعدك الآن',
             'course1.seatsWarning': 'المقاعد محدودة (10 فقط) — الحجز بأولوية السداد',
             'course1.audienceTitle': 'الفئة المستهدفة',
@@ -1859,7 +1898,7 @@
             'course2.includes6': 'شهادة حضور + اجتياز + تميز (لأفضل 3)',
             'course2.priceLocal': 'من داخل مصر',
             'course2.priceIntl': 'من خارج مصر',
-            'course2.priceNote': 'يشمل الإقامة الفندقية + الانتقالات + التدريب الكامل + المواد والأدوات',
+            'course2.priceNote': 'يشمل: الإقامة الفندقية + الانتقالات + التدريب الكامل + المواد والأدوات',
             'course2.bookNow': 'احجز مقعدك الآن',
             'course2.seatsWarning': 'المقاعد محدودة — الحجز بأولوية السداد',
             'course2.audienceTitle': 'الفئة المستهدفة',
@@ -1895,7 +1934,42 @@
             'courseReg.fields.course2': 'دورة مكسبات الطعم والخلطات الصناعية',
             'courseReg.fields.company': 'اسم الشركة/المصنع (اختياري)',
             'courseReg.fields.message': 'ملاحظات إضافية (اختياري)',
-            'courseReg.submitBtn': 'إرسال طلب التسجيل'
+            'courseReg.submitBtn': 'إرسال طلب التسجيل',
+
+            // Course Pricing - Discounts
+            'course1.discount': 'خصم خاص 25%',
+            'course2.discount': 'خصم 25%',
+            'course2.discountIntl': 'خصم 25%',
+            'courses.discountBadge': 'خصم 25%',
+
+            // Course Tabs
+            'courses.paidTab': 'الدورات المدفوعة',
+            'courses.freeTab': 'الدورات المجانية',
+            'courses.freeComingSoonTitle': 'دورات مجانية قريبًا',
+            'courses.freeComingSoonDesc': 'نعمل على إعداد مجموعة من الدورات المجانية القيّمة. تابعونا للحصول على أحدث التحديثات.',
+
+            // Free Courses Page
+            'freeCourses.pageTitle': 'الدورات المجانية',
+            'freeCourses.pageDesc': 'محتوى تعليمي مجاني من أكاديمية Growth Roots',
+            'freeCourses.breadcrumb': 'الدورات المجانية',
+            'freeCourses.comingSoonTitle': 'دورات مجانية قريبًا',
+            'freeCourses.comingSoonDesc': 'نعمل على إعداد مجموعة من الدورات المجانية القيّمة في مجال صناعة الأغذية. تابعونا للحصول على أحدث التحديثات.',
+            'freeCourses.viewPaidCourses': 'تصفح الدورات المدفوعة',
+            'freeCourses.contactUs': 'تواصل معنا',
+
+            // Trainee Reviews
+            'course1.reviewsSubtitle': 'آراء المتدربين',
+            'course1.reviewsTitle': 'آراء المتدربين',
+            'course1.reviewsDesc': 'شاهد تجارب المتدربين السابقين وآرائهم حول الدورة',
+            'course1.reviewVideo1': 'فيديو تجربة متدرب - قريبًا',
+            'course1.reviewVideo2': 'فيديو تجربة متدرب - قريبًا',
+            'course1.reviewVideo3': 'فيديو تجربة متدرب - قريبًا',
+            'course2.reviewsSubtitle': 'آراء المتدربين',
+            'course2.reviewsTitle': 'آراء المتدربين',
+            'course2.reviewsDesc': 'شاهد تجارب المتدربين السابقين وآرائهم حول الدورة',
+            'course2.reviewVideo1': 'فيديو تجربة متدرب - قريبًا',
+            'course2.reviewVideo2': 'فيديو تجربة متدرب - قريبًا',
+            'course2.reviewVideo3': 'فيديو تجربة متدرب - قريبًا'
         }
     };
 
@@ -1934,6 +2008,18 @@
                 element.placeholder = translations[lang][key];
             }
         });
+
+        // Refresh nice-select dropdowns after translation update
+        if (typeof jQuery !== 'undefined' && jQuery.fn.niceSelect) {
+            jQuery('select').each(function () {
+                var $select = jQuery(this);
+                // Destroy and reinitialize nice-select to reflect translated options
+                if ($select.next('.nice-select').length) {
+                    $select.niceSelect('destroy');
+                    $select.niceSelect();
+                }
+            });
+        }
 
         toggleSplitText(lang);
         updateLanguageButtons();

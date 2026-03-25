@@ -40,7 +40,8 @@ $(function() {
 			_template: 'table',
 			name: $('#name').val() || $('#contact-form input[name="name"]').val(),
 			email: $('#email').val() || $('#contact-form input[name="email"]').val(),
-			info: $('#info').val() || $('#contact-form input[name="info"]').val(),
+			phone: $('#phone').val() || $('#contact-form input[name="phone"]').val(),
+			country: $('#country').val() || $('#contact-form input[name="country"]').val(),
 			message: $('#message').val() || $('#contact-form textarea[name="message"]').val()
 		};
 
