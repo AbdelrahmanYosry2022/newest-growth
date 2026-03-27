@@ -843,6 +843,17 @@
     z-index: 10;
 }
 
+.rs-btn .icon-box,
+.rs-services-btn-wrapper .rs-btn .icon-box,
+.courses-card-footer .rs-btn .icon-box {
+    display: none !important;
+}
+
+.rs-btn.has-icon {
+    padding-right: 35px !important;
+    padding-left: 35px !important;
+}
+
 .rs-language-toggle:hover .language-menu,
 .rs-language-toggle:focus-within .language-menu {
     display: flex;
@@ -3417,12 +3428,21 @@ html[lang="en"] .offcanvas-social ul li.language-toggle-item .lang-toggle-btn[da
     color: var(--gr-dark);
     margin-bottom: 14px;
     line-height: 1.4;
+    min-height: 62px;
+    /* Ensure 2-line consistency */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .courses-card-item .descrip {
     color: #4a5568;
     line-height: 1.7;
     margin-bottom: 20px;
+    flex-grow: 1;
+    /* Push the footer down */
 }
 
 .courses-card-highlights {
