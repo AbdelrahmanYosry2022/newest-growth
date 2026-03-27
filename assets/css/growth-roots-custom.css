@@ -124,6 +124,12 @@
     direction: rtl;
 }
 
+[dir="rtl"] .rs-contact-input input,
+[dir="rtl"] .rs-contact-input textarea,
+[dir="rtl"] .rs-contact-input select {
+    text-align: start !important;
+}
+
 /* Arabic Language Styles */
 [dir="rtl"],
 [dir="rtl"] body {
@@ -227,16 +233,45 @@
     transform-origin: center;
 }
 
+/* Contact page header section - RTL: text-align center, block centered on page */
 [dir="rtl"] .rs-contact-eight .rs-section-title-wrapper {
     text-align: center !important;
 }
 
-[dir="rtl"] .rs-contact-eight .rs-section-title-wrapper {
+[dir="rtl"] .rs-contact-eight .rs-section-title-wrapper .rs-section-title,
+[dir="rtl"] .rs-contact-eight .rs-section-title-wrapper p {
     text-align: center !important;
 }
 
 [dir="rtl"] .rs-contact-eight .rs-section-subtitle {
     justify-content: center !important;
+}
+
+/* Contact form titles - RTL: start alignment */
+[dir="rtl"] .rs-contact-form .rs-contact-form-title,
+[dir="rtl"] .rs-contact-form .descrip,
+[dir="rtl"] .rs-contact-ten .rs-contact-form .rs-contact-form-title,
+[dir="rtl"] .rs-contact-ten .rs-contact-form .descrip {
+    text-align: start !important;
+}
+
+/* Contact section include form (used on many pages) - RTL: start alignment */
+[dir="rtl"] .rs-contact-one .rs-contact-form-title,
+[dir="rtl"] .rs-contact-one .descrip {
+    text-align: start !important;
+}
+
+[dir="rtl"] .rs-contact-btn {
+    text-align: start !important;
+}
+
+/* FAQ section title - RTL: center alignment, block centered on page */
+[dir="rtl"] .rs-faq-two .rs-section-title-wrapper.text-center {
+    text-align: center !important;
+}
+
+[dir="rtl"] .rs-faq-two .rs-section-title-wrapper .rs-section-title {
+    text-align: center !important;
 }
 
 /* About page welcome text centering for RTL */
@@ -327,6 +362,36 @@
 [dir="rtl"] .rs-work-step-five .rs-work-step-text {
     padding-inline-start: 0;
     padding-inline-end: 40px;
+}
+
+[dir="rtl"] .rs-work-step-two .rs-work-step-item {
+    display: grid !important;
+    grid-template-columns: auto 1fr !important;
+    grid-template-areas:
+        "number title"
+        "number desc" !important;
+    gap: 15px 30px !important;
+    align-items: center !important;
+}
+
+[dir="rtl"] .rs-work-step-two .rs-work-step-item .rs-work-step-number {
+    grid-area: number;
+}
+
+[dir="rtl"] .rs-work-step-two .rs-work-step-item .rs-work-step-title {
+    grid-area: title;
+    margin-bottom: 0 !important;
+    text-align: start !important;
+}
+
+[dir="rtl"] .rs-work-step-two .rs-work-step-item .rs-work-step-descrip {
+    grid-area: desc;
+    text-align: start !important;
+}
+
+[dir="rtl"] .rs-work-step-two .rs-work-step-title,
+[dir="rtl"] .rs-work-step-two .rs-work-step-descrip p {
+    text-align: start !important;
 }
 
 [dir="rtl"] .rs-work-step-five .rs-work-step-item {
@@ -826,8 +891,13 @@
     position: relative;
 }
 
+.rs-hero-intro .swiper-slide {
+    height: auto;
+}
+
 .rs-hero-intro .rs-banner-item-wrapper {
     position: relative;
+    height: 100%;
 }
 
 .rs-hero-intro .rs-banner-overlay {
@@ -1223,8 +1293,15 @@ main>section.rs-about-ten:first-of-type .rs-about-thumb-wrapper {
 }
 
 @keyframes whatsapp-pulse {
-    0% { transform: scale(1); opacity: 0.6; }
-    100% { transform: scale(1.6); opacity: 0; }
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: scale(1.6);
+        opacity: 0;
+    }
 }
 
 .rs-whatsapp-float:hover {
@@ -1255,6 +1332,7 @@ main>section.rs-about-ten:first-of-type .rs-about-thumb-wrapper {
         right: 20px;
         font-size: 28px;
     }
+
     [dir="rtl"] .rs-whatsapp-float {
         right: auto;
         left: 20px;
@@ -1405,6 +1483,7 @@ main>section.rs-about-ten:first-of-type .rs-about-thumb-wrapper {
         padding-top: 80px;
         padding-bottom: 80px;
     }
+
     .rs-profile-thumb-wrapper {
         margin-bottom: 50px;
         padding: 0;
@@ -3326,6 +3405,12 @@ html[lang="en"] .offcanvas-social ul li.language-toggle-item .lang-toggle-btn[da
     margin-bottom: 20px;
 }
 
+.courses-card-item .rs-services-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
 .courses-card-item .rs-services-title {
     font-size: 22px;
     font-weight: 800;
@@ -4152,7 +4237,7 @@ html[lang="en"] .highlight-card .why-list li::before {
         max-height: 48px;
     }
 
-    .gr-main-menu > ul > li > a {
+    .gr-main-menu>ul>li>a {
         padding: 10px 18px;
     }
 }
@@ -4172,7 +4257,7 @@ html[lang="en"] .highlight-card .why-list li::before {
         gap: 2px 0;
     }
 
-    .gr-main-menu > ul > li > a {
+    .gr-main-menu>ul>li>a {
         padding: 9px 14px;
         font-size: 13px;
         letter-spacing: 0.4px;
@@ -4202,7 +4287,7 @@ html[lang="en"] .highlight-card .why-list li::before {
         padding: 10px 18px;
     }
 
-    .gr-main-menu > ul > li > a {
+    .gr-main-menu>ul>li>a {
         padding: 8px 12px;
         font-size: 12px;
     }
@@ -4214,42 +4299,45 @@ html[lang="en"] .highlight-card .why-list li::before {
 
 /* Counter section fixes for small laptops */
 @media (max-width: 1400px) {
+
     .rs-counter-one .rs-counter-number,
     .rs-counter-one .prefix {
         font-size: 60px !important;
     }
-    
+
     .rs-counter-one .rs-counter-number-wrapper {
         flex-wrap: nowrap;
         white-space: nowrap;
     }
-    
+
     .rs-counter-one .rs-counter-title {
         font-size: 14px;
     }
 }
 
 @media (max-width: 1200px) {
+
     .rs-counter-one .rs-counter-number,
     .rs-counter-one .prefix {
         font-size: 50px !important;
     }
-    
+
     .rs-counter-one .rs-counter-title {
         font-size: 13px;
     }
 }
 
 @media (max-width: 991px) {
+
     .rs-counter-one .rs-counter-number,
     .rs-counter-one .prefix {
         font-size: 45px !important;
     }
-    
+
     .rs-counter-one .rs-counter-inner {
         text-align: center;
     }
-    
+
     .rs-counter-one .rs-counter-number-wrapper {
         justify-content: center;
     }
@@ -4288,7 +4376,7 @@ html[lang="en"] .highlight-card .why-list li::before {
     .rs-why-choose-three {
         padding: 60px 0;
     }
-    
+
     .rs-why-choose-three .rs-section-title-wrapper {
         margin-bottom: 30px;
     }
@@ -4383,8 +4471,13 @@ html[lang="en"] .highlight-card .why-list li::before {
 }
 
 @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .course-registration-section .form-messages .alert {
@@ -4421,7 +4514,7 @@ html[lang="en"] .highlight-card .why-list li::before {
         padding: 30px 25px;
         margin-top: 40px;
     }
-    
+
     .course-registration-section .rs-contact-form-title {
         font-size: 24px;
     }
@@ -4516,6 +4609,7 @@ html[lang="en"] .highlight-card .why-list li::before {
     .rs-about-modern-card {
         padding: 30px;
     }
+
     .rs-about-main-desc {
         font-size: 16px;
     }
@@ -4626,7 +4720,7 @@ html[lang="en"] .highlight-card .why-list li::before {
     right: -5%;
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
     border-radius: 50%;
     z-index: -1;
 }
@@ -4638,7 +4732,7 @@ html[lang="en"] .highlight-card .why-list li::before {
     left: -5%;
     width: 300px;
     height: 300px;
-    background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
     border-radius: 50%;
     z-index: -1;
 }
@@ -4697,7 +4791,7 @@ html[lang="en"] .highlight-card .why-list li::before {
     align-items: center;
     justify-content: center;
     padding: 12px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.4s ease;
 }
 
@@ -4789,11 +4883,13 @@ html[lang="en"] .highlight-card .why-list li::before {
     .rs-subbrand-card {
         padding: 30px;
     }
+
     .rs-subbrand-header {
         flex-direction: column;
         align-items: flex-start;
         text-align: left;
     }
+
     [dir="rtl"] .rs-subbrand-header {
         align-items: flex-end;
         text-align: right;
@@ -4903,7 +4999,8 @@ html[lang="en"] .highlight-card .why-list li::before {
 }
 
 .rs-service-hover-reveal:hover .rs-services-descrip {
-    max-height: 200px; /* Adjust based on content */
+    max-height: 200px;
+    /* Adjust based on content */
     opacity: 1;
     margin-top: 15px;
 }
@@ -5047,6 +5144,7 @@ html[lang="en"] .highlight-card .why-list li::before {
     .bs-product-card {
         padding: 24px 20px;
     }
+
     .bs-product-card-header h5 {
         font-size: 16px;
     }
