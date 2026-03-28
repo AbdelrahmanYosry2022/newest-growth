@@ -6,8 +6,8 @@
 (function () {
     'use strict';
 
-    // FormSubmit API - free, no signup required
-    const FORMSUBMIT_ENDPOINT = 'https://formsubmit.co/ajax/growthroots2020.eg@gmail.com';
+    // Web3Forms API - reliable and doesn't get blocked
+    const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
 
     // Course names mapping
     const courseNames = {
@@ -183,10 +183,10 @@ ${formData.message}
             ? `طلب تسجيل جديد - ${courseInfo.ar}` 
             : `New Course Registration - ${courseInfo.en}`;
 
-        // Build the email body for FormSubmit
+        // Build the email body for Web3Forms
         const emailBody = {
-            _subject: subject,
-            _template: 'table',
+            access_key: 'bf154380-92be-4579-ac80-8932d30b694e',
+            subject: subject,
             name: formData.name,
             email: formData.email,
             phone: formData.phone,
@@ -195,7 +195,7 @@ ${formData.message}
             message: formData.message
         };
 
-        const response = await fetch(FORMSUBMIT_ENDPOINT, {
+        const response = await fetch(WEB3FORMS_ENDPOINT, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

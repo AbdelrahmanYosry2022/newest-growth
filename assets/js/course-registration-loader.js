@@ -13,7 +13,7 @@
         function setNextRedirectUrl() {
             const form = placeholder.querySelector('#course-registration-form');
             if (!form) return;
-            const nextInput = form.querySelector('input[name="_next"]');
+            const nextInput = form.querySelector('input[name="redirect"]');
             if (!nextInput) return;
 
             const url = new URL(window.location.href);

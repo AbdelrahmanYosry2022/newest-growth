@@ -1,7 +1,7 @@
 $(function() {
 
-	// FormSubmit endpoint - free, no signup required
-	var FORMSUBMIT_ENDPOINT = 'https://formsubmit.co/ajax/growthroots2020.eg@gmail.com';
+	// Web3Forms endpoint
+	var WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
 
 	// Get the form.
 	var form = $('#contact-form');
@@ -19,7 +19,7 @@ $(function() {
 
 	if (form.length) {
 		var action = (form.attr('action') || '').trim();
-		// If the form has an external action (e.g., FormSubmit), do not intercept.
+		// If the form has an external action, do not intercept.
 		if (action.indexOf('http') === 0) {
 			return;
 		}
@@ -36,8 +36,8 @@ $(function() {
 
 		// Collect form data
 		var formDataObj = {
-			_subject: isArabic ? 'رسالة جديدة من موقع Growth Roots' : 'New message from Growth Roots website',
-			_template: 'table',
+			access_key: 'bf154380-92be-4579-ac80-8932d30b694e',
+			subject: isArabic ? 'رسالة جديدة من موقع Growth Roots' : 'New message from Growth Roots website',
 			name: $('#name').val() || $('#contact-form input[name="name"]').val(),
 			email: $('#email').val() || $('#contact-form input[name="email"]').val(),
 			phone: $('#phone').val() || $('#contact-form input[name="phone"]').val(),
@@ -45,10 +45,10 @@ $(function() {
 			message: $('#message').val() || $('#contact-form textarea[name="message"]').val()
 		};
 
-		// Submit the form using AJAX to FormSubmit
+		// Submit the form using AJAX
 		$.ajax({
 			type: 'POST',
-			url: FORMSUBMIT_ENDPOINT,
+			url: WEB3FORMS_ENDPOINT,
 			data: JSON.stringify(formDataObj),
 			contentType: 'application/json',
 			dataType: 'json'
