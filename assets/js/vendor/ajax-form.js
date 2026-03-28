@@ -1,88 +1,76 @@
 $(function() {
-
-	// Web3Forms endpoint
 	var WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
 
-	// Get the form.
-	var form = $('#contact-form');
+	window.initContactForm = function() {
+		var form = $('#contact-form');
+		if (!form.length) return;
 
-	// Get the messages div.
-	var formMessages = $('#form-messages');
-	if (formMessages.length && window.location.search.indexOf('sent=1') !== -1) {
-		var currentLang = localStorage.getItem('siteLanguage') || 'en';
-		var isArabic = currentLang === 'ar';
-		var successMsg = isArabic
-			? '✅ شكراً لك! تم إرسال رسالتك بنجاح.'
-			: '✅ Thank you! Your message has been sent successfully.';
-		formMessages.removeClass('error alert-danger').addClass('success alert-success').text(successMsg);
-	}
-
-	if (form.length) {
-		var action = (form.attr('action') || '').trim();
-		// If the form has an external action, do not intercept.
-		if (action.indexOf('http') === 0) {
-			return;
-		}
-	}
-
-	// Set up an event listener for the contact form.
-	$(form).submit(function(e) {
-		// Stop the browser from submitting the form.
-		e.preventDefault();
-
-		// Get current language
-		var currentLang = localStorage.getItem('siteLanguage') || 'en';
-		var isArabic = currentLang === 'ar';
-
-		// Collect form data
-		var formDataObj = {
-			access_key: 'bf154380-92be-4579-ac80-8932d30b694e',
-			subject: isArabic ? 'رسالة جديدة من موقع Growth Roots' : 'New message from Growth Roots website',
-			name: $('#name').val() || $('#contact-form input[name="name"]').val(),
-			email: $('#email').val() || $('#contact-form input[name="email"]').val(),
-			phone: $('#phone').val() || $('#contact-form input[name="phone"]').val(),
-			country: $('#country').val() || $('#contact-form input[name="country"]').val(),
-			message: $('#message').val() || $('#contact-form textarea[name="message"]').val()
-		};
-
-		// Submit the form using AJAX
-		$.ajax({
-			type: 'POST',
-			url: WEB3FORMS_ENDPOINT,
-			data: JSON.stringify(formDataObj),
-			contentType: 'application/json',
-			dataType: 'json'
-		})
-		.done(function(response) {
-			// Make sure that the formMessages div has the 'success' class.
-			$(formMessages).removeClass('error alert-danger');
-			$(formMessages).addClass('success alert-success');
-
-			// Set the message text.
-			var successMsg = isArabic 
-				? '✅ شكراً لك! تم إرسال رسالتك بنجاح.' 
+		var formMessages = $('#form-messages');
+		if (formMessages.length && window.location.search.indexOf('sent=1') !== -1) {
+			var currentLang = localStorage.getItem('siteLanguage') || 'en';
+			var isArabic = currentLang === 'ar';
+			var successMsg = isArabic
+				? '✅ شكراً لك! تم إرسال رسالتك بنجاح.'
 				: '✅ Thank you! Your message has been sent successfully.';
-			$(formMessages).text(successMsg);
+			formMessages.removeClass('error alert-danger').addClass('success alert-success').text(successMsg);
+		}
 
-			// Clear the form.
-			$('#contact-form input:not([type="hidden"]),#contact-form textarea').val('');
+		// Prevent multiple bindings
+		form.off('submit').on('submit', function(e) {
+			e.preventDefault();
 
-			// Auto-hide after 5 seconds
-			setTimeout(function() {
-				$(formMessages).text('').removeClass('success alert-success');
-			}, 5000);
-		})
-		.fail(function(data) {
-			// Make sure that the formMessages div has the 'error' class.
-			$(formMessages).removeClass('success alert-success');
-			$(formMessages).addClass('error alert-danger');
+			var currentLang = localStorage.getItem('siteLanguage') || 'en';
+			var isArabic = currentLang === 'ar';
 
-			// Set the message text.
-			var errorMsg = isArabic 
-				? '❌ عذراً، حدث خطأ. يرجى المحاولة مرة أخرى.' 
-				: '❌ Sorry, there was an error. Please try again.';
-			$(formMessages).text(errorMsg);
+			var formDataObj = {
+				access_key: 'bf154380-92be-4579-ac80-8932d30b694e',
+				subject: isArabic ? 'رسالة جديدة من موقع Growth Roots' : 'New message from Growth Roots website',
+				name: $('#name').val() || $('#contact-form input[name="name"]').val(),
+				email: $('#email').val() || $('#contact-form input[name="email"]').val(),
+				phone: $('#phone').val() || $('#contact-form input[name="phone"]').val(),
+				country: $('#country').val() || $('#contact-form input[name="country"]').val(),
+				message: $('#message').val() || $('#contact-form textarea[name="message"]').val()
+			};
+
+			var submitBtn = $(this).find('button[type="submit"]');
+			var submitBtnText = submitBtn.text();
+			var loadingText = isArabic ? 'جاري الإرسال...' : 'Sending...';
+			
+			submitBtn.prop('disabled', true).text(loadingText);
+			$(formMessages).removeClass('success alert-success error alert-danger').text('');
+
+			$.ajax({
+				type: 'POST',
+				url: WEB3FORMS_ENDPOINT,
+				data: JSON.stringify(formDataObj),
+				contentType: 'application/json',
+				dataType: 'json'
+			})
+			.done(function(response) {
+				$(formMessages).removeClass('error alert-danger').addClass('success alert-success');
+				var successMsg = isArabic 
+					? '✅ شكراً لك! تم إرسال رسالتك بنجاح.' 
+					: '✅ Thank you! Your message has been sent successfully.';
+				$(formMessages).text(successMsg);
+
+				$('#contact-form input:not([type="hidden"]),#contact-form textarea').val('');
+				submitBtn.prop('disabled', false).text(submitBtnText);
+
+				setTimeout(function() {
+					$(formMessages).text('').removeClass('success alert-success');
+				}, 5000);
+			})
+			.fail(function(data) {
+				$(formMessages).removeClass('success alert-success').addClass('error alert-danger');
+				var errorMsg = isArabic 
+					? '❌ عذراً، حدث خطأ. يرجى المحاولة مرة أخرى.' 
+					: '❌ Sorry, there was an error. Please try again.';
+				$(formMessages).text(errorMsg);
+				submitBtn.prop('disabled', false).text(submitBtnText);
+			});
 		});
-	});
+	};
 
+	// Initialize on page load
+	window.initContactForm();
 });

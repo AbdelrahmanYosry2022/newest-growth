@@ -45,6 +45,11 @@
 
                 // Set default course based on current page
                 setDefaultCourse();
+
+                // Re-initialize form handlers if available
+                if (typeof window.initCourseRegistration === 'function') {
+                    window.initCourseRegistration();
+                }
             })
             .catch(error => {
                 console.warn('[course-registration-loader] Error loading section:', error);

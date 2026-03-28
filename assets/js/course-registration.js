@@ -35,27 +35,20 @@
             // no-op
         }
 
-        initCourseRegistration();
+        window.initCourseRegistration();
     });
 
-    function initCourseRegistration() {
+    window.initCourseRegistration = function() {
         const form = document.getElementById('course-registration-form');
         if (!form) return;
-
-        // If the form is configured with an external action (e.g., FormSubmit),
-        // do not intercept submission. Let the browser submit normally.
-        const action = (form.getAttribute('action') || '').trim();
-        if (action.startsWith('http')) {
-            setDefaultCourse();
-            return;
-        }
 
         // Set default course based on current page
         setDefaultCourse();
 
         // Handle form submission
+        form.removeEventListener('submit', handleFormSubmit);
         form.addEventListener('submit', handleFormSubmit);
-    }
+    };
 
     function setDefaultCourse() {
         const courseSelect = document.getElementById('reg-course');
