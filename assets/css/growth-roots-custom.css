@@ -5169,3 +5169,7 @@ html[lang="en"] .highlight-card .why-list li::before {
         font-size: 16px;
     }
 }
+
+/* Dynamic Language Visibility Toggling */
+html[lang="en"] [data-lang-show="ar"] { display: none !important; }
+html[lang="ar"] [data-lang-show="en"] { display: none !important; }
