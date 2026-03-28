@@ -137,6 +137,46 @@
     direction: rtl;
 }
 
+/* Style for Select Dropdowns in Course Forms */
+.rs-contact-input .nice-select.course-select {
+    width: 100% !important;
+    height: 60px !important;
+    line-height: 58px !important;
+    padding: 0 20px !important;
+    background-color: #fff !important;
+    border: 1px solid #e5e5e5 !important;
+    border-radius: 5px !important;
+    color: #333 !important;
+    font-size: 16px !important;
+    margin-bottom: 0 !important;
+}
+
+.rs-contact-input .nice-select.course-select:after {
+    right: 20px !important;
+}
+
+.rs-contact-input .nice-select.course-select .list {
+    width: 100% !important;
+    border-radius: 5px !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
+}
+
+/* RTL Support for Dropdown */
+[dir="rtl"] .rs-contact-input .nice-select.course-select {
+    text-align: right !important;
+    padding-left: 45px !important;
+    padding-right: 20px !important;
+}
+
+[dir="rtl"] .rs-contact-input .nice-select.course-select:after {
+    left: 20px !important;
+    right: auto !important;
+}
+
+[dir="rtl"] .rs-contact-input .nice-select.course-select .option {
+    text-align: right !important;
+}
+
 /* Intro Section without tabs - adjust spacing */
 .rs-about-area.no-tabs .rs-about-content-wrapper {
     padding-top: 0;

@@ -1073,7 +1073,30 @@
             'course2.reviewsDesc': 'Watch previous trainees\' experiences and opinions about the course',
             'course2.reviewVideo1': 'Trainee experience video - Coming soon',
             'course2.reviewVideo2': 'Trainee experience video - Coming soon',
-            'course2.reviewVideo3': 'Trainee experience video - Coming soon'
+            'course2.reviewVideo3': 'Trainee experience video - Coming soon',
+
+            // Meetup Form
+            'meetup.form.name': 'Full Name',
+            'meetup.form.phone': 'WhatsApp Number',
+            'meetup.form.email': 'Email Address (Optional)',
+            'meetup.form.city': 'City / Governorate',
+            'meetup.form.role': 'Role / Job Title',
+            'meetup.form.role.owner': 'Factory Owner',
+            'meetup.form.role.investor': 'Investor',
+            'meetup.form.role.operation': 'Operation Engineer',
+            'meetup.form.role.quality': 'Quality',
+            'meetup.form.role.rd': 'R&D',
+            'meetup.form.role.brand': 'Brand Owner',
+            'meetup.form.role.other': 'Other',
+            'meetup.form.stage': 'Project Stage',
+            'meetup.form.stage.idea': 'Idea',
+            'meetup.form.stage.prep': 'Preparation',
+            'meetup.form.stage.prod': 'In Production',
+            'meetup.form.stage.expand': 'Expansion',
+            'meetup.form.products': 'Main Products',
+            'meetup.form.challenge': 'Biggest Challenge (Optional)',
+            'meetup.form.submit': 'Join Interest List',
+            'meetup.form.privacy': 'Your data is kept private & used only for meetup updates.'
         },
         ar: {
             // Navigation
@@ -2217,7 +2240,30 @@
             'course2.reviewsDesc': 'شاهد تجارب المتدربين السابقين وآرائهم حول الدورة',
             'course2.reviewVideo1': 'فيديو تجربة متدرب - قريبًا',
             'course2.reviewVideo2': 'فيديو تجربة متدرب - قريبًا',
-            'course2.reviewVideo3': 'فيديو تجربة متدرب - قريبًا'
+            'course2.reviewVideo3': 'فيديو تجربة متدرب - قريبًا',
+
+            // Meetup Form
+            'meetup.form.name': 'الاسم بالكامل',
+            'meetup.form.phone': 'رقم الواتساب',
+            'meetup.form.email': 'البريد الإلكتروني (اختياري)',
+            'meetup.form.city': 'المدينة / المحافظة',
+            'meetup.form.role': 'الصفة / المسمى الوظيفي',
+            'meetup.form.role.owner': 'صاحب مصنع',
+            'meetup.form.role.investor': 'مستثمر',
+            'meetup.form.role.operation': 'مهندس تشغيل',
+            'meetup.form.role.quality': 'جودة',
+            'meetup.form.role.rd': 'بحث وتطوير R&D',
+            'meetup.form.role.brand': 'صاحب علامة تجارية',
+            'meetup.form.role.other': 'أخرى',
+            'meetup.form.stage': 'مرحلة المشروع',
+            'meetup.form.stage.idea': 'فكرة',
+            'meetup.form.stage.prep': 'تجهيز',
+            'meetup.form.stage.prod': 'شغال / إنتاج',
+            'meetup.form.stage.expand': 'تطوير وتوسع',
+            'meetup.form.products': 'المنتجات الأساسية',
+            'meetup.form.challenge': 'أكبر تحدي أو سؤال (اختياري)',
+            'meetup.form.submit': 'انضم لقائمة الاهتمام',
+            'meetup.form.privacy': 'بياناتك ستبقى خاصة وتستخدم فقط لتحديثات اللقاء.'
         }
     };
 

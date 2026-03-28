@@ -29,6 +29,30 @@
         .meetup-feature-list li { margin-bottom: 16px; display: flex; align-items: flex-start; gap: 12px; font-size: 18px; color: var(--gr-dark); font-weight: 500; }
         .meetup-feature-list li i { color: var(--gr-primary); font-size: 24px; margin-top: 2px; }
         p.descrip { font-size: 18px; line-height: 1.8; color: #444; }
+        /* Dropdown Styling */
+        .rs-contact-form.has-white .rs-contact-input select.course-select {
+            height: 60px;
+            padding: 0 20px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 18px;
+        }
+        .rs-contact-form.has-white .rs-contact-input select.course-select option {
+            background-color: var(--gr-primary);
+            color: #fff;
+        }
     </style>
 </head>
 
@@ -100,7 +124,7 @@
                     </div>
                     
                     <div class="col-lg-5">
-                        <div class="rs-contact-form sticky-top" style="top: 120px;">
+                        <div class="rs-contact-form rs-contact-one has-white sticky-top" style="top: 120px;">
                             <h3 class="rs-contact-form-title text-center mb-3" data-lang-show="ar" style="font-size: 28px;">سجّل اهتمامك الآن</h3>
                             <h3 class="rs-contact-form-title text-center mb-3" data-lang-show="en" style="font-size: 28px;">Register Your Interest</h3>
                             
@@ -111,81 +135,79 @@
                                 <div class="row g-4">
                                     <div class="col-12">
                                         <div class="rs-contact-input">
-                                            <input type="text" name="name" required placeholder="الاسم بالكامل / Full Name">
+                                            <input type="text" name="name" required data-i18n="meetup.form.name" placeholder="Full Name">
                                         </div>
                                     </div>
                                     
                                     <div class="col-12">
-                                        <div class="rs-contact-input" dir="ltr" style="text-align: left;">
-                                            <input type="tel" name="phone" required placeholder="رقم واتساب / WhatsApp">
+                                        <div class="rs-contact-input">
+                                            <input type="tel" name="phone" required data-i18n="meetup.form.phone" placeholder="WhatsApp Number">
                                         </div>
                                     </div>
                                     
                                     <div class="col-12">
-                                        <div class="rs-contact-input" dir="ltr" style="text-align: left;">
-                                            <input type="email" name="email" placeholder="البريد الإلكتروني (اختياري) / Email Address">
+                                        <div class="rs-contact-input">
+                                            <input type="email" name="email" data-i18n="meetup.form.email" placeholder="Email Address (Optional)">
                                         </div>
                                     </div>
 
                                     <div class="col-12">
                                         <div class="rs-contact-input">
-                                            <input type="text" name="city" required placeholder="المدينة / المحافظة / City">
+                                            <input type="text" name="city" required data-i18n="meetup.form.city" placeholder="City / Governorate">
                                         </div>
                                     </div>
                                     
                                     <div class="col-12">
                                         <div class="rs-contact-input">
-                                            <select name="role" required class="no-nice-select" style="width: 100%; border: 1px solid var(--gr-border); border-radius: 8px; padding: 15px 25px; outline: none; box-shadow: none; font-size: 16px; background: var(--gr-white);">
-                                                <option value="" disabled selected>الصفة / Role</option>
-                                                <option value="صاحب مصنع">صاحب مصنع / Factory Owner</option>
-                                                <option value="مستثمر">مستثمر / Investor</option>
-                                                <option value="تشغيل">هندسة تشغيل / Operation Eng.</option>
-                                                <option value="جودة">جودة / Quality</option>
-                                                <option value="R&D">بحث وتطوير / R&D</option>
-                                                <option value="صاحب براند">صاحب براند / Brand Owner</option>
-                                                <option value="أخرى">أخرى / Other</option>
+                                            <select name="role" required class="course-select">
+                                                <option value="" disabled selected data-i18n="meetup.form.role">Role / Job Title</option>
+                                                <option value="صاحب مصنع" data-i18n="meetup.form.role.owner">Factory Owner</option>
+                                                <option value="مستثمر" data-i18n="meetup.form.role.investor">Investor</option>
+                                                <option value="تشغيل" data-i18n="meetup.form.role.operation">Operation Engineer</option>
+                                                <option value="جودة" data-i18n="meetup.form.role.quality">Quality</option>
+                                                <option value="R&D" data-i18n="meetup.form.role.rd">R&D</option>
+                                                <option value="صاحب براند" data-i18n="meetup.form.role.brand">Brand Owner</option>
+                                                <option value="أخرى" data-i18n="meetup.form.role.other">Other</option>
                                             </select>
                                         </div>
                                     </div>
                                     
                                     <div class="col-12">
                                         <div class="rs-contact-input">
-                                            <select name="stage" required class="no-nice-select" style="width: 100%; border: 1px solid var(--gr-border); border-radius: 8px; padding: 15px 25px; outline: none; box-shadow: none; font-size: 16px; background: var(--gr-white);">
-                                                <option value="" disabled selected>مرحلة المشروع / Project Stage</option>
-                                                <option value="فكرة">فكرة / Idea</option>
-                                                <option value="تجهيز">تجهيز / Preparation</option>
-                                                <option value="شغال">شغال / In Production</option>
-                                                <option value="تطوير">تطوير / Expansion</option>
+                                            <select name="stage" required class="course-select">
+                                                <option value="" disabled selected data-i18n="meetup.form.stage">Project Stage</option>
+                                                <option value="فكرة" data-i18n="meetup.form.stage.idea">Idea</option>
+                                                <option value="تجهيز" data-i18n="meetup.form.stage.prep">Preparation</option>
+                                                <option value="شغال" data-i18n="meetup.form.stage.prod">In Production</option>
+                                                <option value="تطوير" data-i18n="meetup.form.stage.expand">Expansion</option>
                                             </select>
                                         </div>
                                     </div>
                                     
                                     <div class="col-12">
                                         <div class="rs-contact-input">
-                                            <input type="text" name="products" required placeholder="المنتجات الأساسية / Main products">
+                                            <input type="text" name="products" required data-i18n="meetup.form.products" placeholder="Main Products">
                                         </div>
                                     </div>
 
                                     <div class="col-12">
                                         <div class="rs-contact-input">
-                                            <textarea name="challenge" rows="3" placeholder="أكبر تحدّي أو سؤال (اختياري) / Your challenge or question"></textarea>
+                                            <textarea name="challenge" rows="3" data-i18n="meetup.form.challenge" placeholder="Your challenge or question (Optional)"></textarea>
                                         </div>
                                     </div>
 
                                     <div class="col-12 mt-2">
                                         <div class="rs-contact-btn">
                                             <button type="submit" class="rs-btn has-theme-orange w-100" id="meetup-submit-btn">
-                                                <span data-lang-show="ar">انضم لقائمة الحضور</span>
-                                                <span data-lang-show="en">Join The Interest List</span>
+                                                <span data-i18n="meetup.form.submit">Join The Interest List</span>
                                             </button>
                                         </div>
                                         <div id="meetup-messages" class="mt-3 text-center" style="font-weight: 600; font-size: 16px;"></div>
                                     </div>
                                 </div>
                             </form>
-                            <p class="text-center mt-4" style="font-size: 14px; color: #999;">
-                                <span data-lang-show="ar">بياناتك تستخدم للتواصل ولتأكيد الحجز فور تحديد الموعد.</span>
-                                <span data-lang-show="en">Your data is kept private & used only for meetup updates.</span>
+                            <p class="text-center mt-4" style="font-size: 14px; color: #999;" data-i18n="meetup.form.privacy">
+                                Your data is kept private & used only for meetup updates.
                             </p>
                         </div>
                     </div>
