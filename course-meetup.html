@@ -29,29 +29,50 @@
         .meetup-feature-list li { margin-bottom: 16px; display: flex; align-items: flex-start; gap: 12px; font-size: 18px; color: var(--gr-dark); font-weight: 500; }
         .meetup-feature-list li i { color: var(--gr-primary); font-size: 24px; margin-top: 2px; }
         p.descrip { font-size: 18px; line-height: 1.8; color: #444; }
-        /* Dropdown Styling */
-        .rs-contact-form.has-white .rs-contact-input select.course-select {
+        
+        /* Custom Native Dropdown Styling for Meetup Form */
+        .rs-contact-form.has-white .rs-contact-input select.meetup-custom-select {
+            display: block !important;
+            width: 100%;
             height: 60px;
             padding: 0 20px;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 0;
+            background-color: rgba(255, 255, 255, 0.1);
             color: #fff;
             font-size: 16px;
-            outline: none;
             cursor: pointer;
-            appearance: none;
             -webkit-appearance: none;
             -moz-appearance: none;
+            appearance: none;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
             background-repeat: no-repeat;
-            background-position: right 15px center;
+            background-position: right 20px center;
             background-size: 18px;
         }
-        .rs-contact-form.has-white .rs-contact-input select.course-select option {
+        
+        .rs-contact-form.has-white .rs-contact-input select.meetup-custom-select:focus {
+            outline: none;
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .rs-contact-form.has-white .rs-contact-input select.meetup-custom-select option {
             background-color: var(--gr-primary);
             color: #fff;
+        }
+        
+        /* RTL Adjustments for Meetup Form Dropdown */
+        [dir="rtl"] .rs-contact-form.has-white .rs-contact-input select.meetup-custom-select {
+            text-align: right;
+            padding-right: 20px;
+            padding-left: 45px;
+            background-position: left 20px center;
+            direction: rtl;
+        }
+        
+        [dir="rtl"] .rs-contact-form.has-white .rs-contact-input select.meetup-custom-select option {
+            direction: rtl;
+            text-align: right;
         }
     </style>
 </head>
@@ -68,7 +89,7 @@
                         <div class="rs-breadcrumb-content-wrapper text-center pb-5 pt-5">
                             <h1 class="rs-breadcrumb-title mb-4 text-white" style="line-height:1.3;" data-lang-show="ar">Karma Meet up</h1>
                             <h1 class="rs-breadcrumb-title mb-4 text-white" style="line-height:1.3;" data-lang-show="en">Karma Meet up</h1>
-                            <p class="rs-breadcrumb-desc text-white mb-3" data-lang-show="ar" style="font-size: 20px;">
+                            <p class="rs-breadcrumb-desc text-white mb-3 mx-auto" data-lang-show="ar" style="font-size: 20px; max-width: 800px; text-align: center;">
                                 لقاءات دورية مع د/ كارما لصنّاع ومصنّعي منتجات اللحوم والدواجن.
                             </p>
                             <p class="rs-breadcrumb-desc text-white mb-3" data-lang-show="en" style="font-size: 20px;">
@@ -140,7 +161,7 @@
                                     </div>
                                     
                                     <div class="col-12">
-                                        <div class="rs-contact-input">
+                                        <div class="rs-contact-input phone-input-container">
                                             <input type="tel" name="phone" required data-i18n="meetup.form.phone" placeholder="WhatsApp Number">
                                         </div>
                                     </div>
@@ -159,7 +180,7 @@
                                     
                                     <div class="col-12">
                                         <div class="rs-contact-input">
-                                            <select name="role" required class="course-select">
+                                            <select name="role" required class="meetup-custom-select no-nice-select">
                                                 <option value="" disabled selected data-i18n="meetup.form.role">Role / Job Title</option>
                                                 <option value="صاحب مصنع" data-i18n="meetup.form.role.owner">Factory Owner</option>
                                                 <option value="مستثمر" data-i18n="meetup.form.role.investor">Investor</option>
@@ -174,7 +195,7 @@
                                     
                                     <div class="col-12">
                                         <div class="rs-contact-input">
-                                            <select name="stage" required class="course-select">
+                                            <select name="stage" required class="meetup-custom-select no-nice-select">
                                                 <option value="" disabled selected data-i18n="meetup.form.stage">Project Stage</option>
                                                 <option value="فكرة" data-i18n="meetup.form.stage.idea">Idea</option>
                                                 <option value="تجهيز" data-i18n="meetup.form.stage.prep">Preparation</option>
