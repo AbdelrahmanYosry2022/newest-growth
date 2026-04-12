@@ -497,11 +497,6 @@
     object-position: center;
 }
 
-[dir="rtl"] .rs-services-three .rs-services-thumb img {
-    transform: scaleX(-1);
-    transform-origin: center;
-}
-
 [dir="rtl"] .rs-services-three .rs-services-content .descrip {
     display: block;
     overflow: hidden;
